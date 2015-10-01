@@ -2,7 +2,9 @@
 <html <?php language_attributes(); ?>>
 
 <head>
-    <title>Tutorial theme</title>
+    <title>
+        <?php bloginfo( 'name' ); ?>
+    </title>
 
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,7 +16,18 @@
 </head>
 
 <body>
-    <div id="wrapper">
-        <div id="header">
-            <h1>HEADER</h1>
-        </div>
+    <div id="chid-wrapper">
+        <nav class="navbar navbar-light bg-faded" role="navigation">
+                <?php
+                    $defaults = array(
+                        'menu'              => 'primary',
+                        'depth' => 2,
+                        'menu_class' => 'nav navbar-nav',
+                        'container' => false,
+                        'walker'            => new bootstrap_menuwalker()
+                    );
+
+                    wp_nav_menu( $defaults );
+                ?>
+            </div>
+        </nav>
