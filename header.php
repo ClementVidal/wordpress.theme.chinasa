@@ -16,18 +16,21 @@
 </head>
 
 <body>
-    <div id="chid-wrapper">
+    <div id="chi-header" class="container">
         <nav class="navbar navbar-light bg-faded" role="navigation">
-                <?php
-                    $defaults = array(
-                        'menu'              => 'primary',
-                        'depth' => 2,
-                        'menu_class' => 'nav navbar-nav',
-                        'container' => false,
-                        'walker'            => new bootstrap_menuwalker()
-                    );
+            <a class="navbar-brand" href="<?php echo home_url(); ?>">
+                <?php bloginfo('name'); ?>
+            </a>
+            <?php
+            $defaults = array(
+                'menu'              => 'primary',
+                'depth' => 2,
+                'menu_class' => 'nav navbar-nav',
+                'container' => false,
+                'walker'            => new bootstrap_menuwalker()
+            );
 
-                    wp_nav_menu( $defaults );
-                ?>
-            </div>
+            wp_nav_menu( $defaults );
+        ?>
         </nav>
+    </div>

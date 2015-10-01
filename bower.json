@@ -15,6 +15,7 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "v4.0.0-alpha"
+    "bootstrap": "v4.0.0-alpha",
+    "angular": "~1.4.7"
   }
 }

@@ -8,6 +8,7 @@ function chinasa_scripts()
 {
     wp_enqueue_script('jquery', get_template_directory_uri().'/vendor/jquery/dist/jquery.js' );
     wp_enqueue_script('bootstrap', get_template_directory_uri().'/vendor/bootstrap/dist/js/bootstrap.js' );
+    wp_enqueue_script('angularjs', get_template_directory_uri().'/vendor/angular/angular.js' );
 }
 add_action('wp_enqueue_scripts', 'chinasa_scripts');
 
