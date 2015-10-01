@@ -15,6 +15,15 @@ module.exports = function(grunt) {
                 dest: 'style.css'
             }
         },
+        concat: {
+            options: {
+                separator: ';'
+            },
+            build: {
+                src: ['js/src/modules.js', 'js/src/directives/*.js'],
+                dest: 'js/chinasa.js'
+            }
+        },
         autoprefixer: {
             options: {
                 browsers: [
@@ -37,9 +46,9 @@ module.exports = function(grunt) {
         }
     });
 
-
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-autoprefixer');
+    grunt.loadNpmTasks('grunt-contrib-concat');
 
-    grunt.registerTask('build', 'Build frontend assets: Concatenate Js and compile Sass', ['sass:build', 'autoprefixer:build']);
+    grunt.registerTask('build', 'Build frontend assets: Concatenate Js and compile Sass', ['sass:build', 'autoprefixer:build', 'concat:build']);
 };

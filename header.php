@@ -15,7 +15,7 @@
     <?php  wp_head(); ?>
 </head>
 
-<body>
+<body ng-app="chinasa">
     <div id="chi-header" class="container">
         <nav class="navbar navbar-light bg-faded" role="navigation">
             <a class="navbar-brand" href="<?php echo home_url(); ?>">
