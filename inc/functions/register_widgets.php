@@ -4,7 +4,7 @@
  * Register our sidebars and widgetized areas.
  *
  */
-function cinasa_widgets_init() {
+function cinasa_register_widgets() {
 
 	register_sidebar( array(
 		'name'          => 'Footer left sidebar',
@@ -25,4 +25,4 @@ function cinasa_widgets_init() {
     ) );
 
 }
-add_action( 'widgets_init', 'cinasa_widgets_init' );
+add_action( 'widgets_init', 'cinasa_register_widgets' );
