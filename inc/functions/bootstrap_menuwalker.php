@@ -29,8 +29,6 @@ class bootstrap_menuwalker extends Walker_Nav_Menu
      */
     public function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0)
     {
-
-
         $indent = ($depth) ? str_repeat("\t", $depth) : '';
 
         $classes = empty($item->classes) ? array() : (array) $item->classes;
