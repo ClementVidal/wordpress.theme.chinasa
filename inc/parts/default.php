@@ -1,4 +1,4 @@
-<div id="chi-body" class="container">
+<div id="chi-body" class="container-fluid">
     <div class="row">
         <div id="chi-content" class="col-md-12">
 

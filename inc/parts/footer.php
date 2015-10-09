@@ -1,4 +1,4 @@
-            <div id="chi-footer" class="container">
+            <div id="chi-footer" class="container-fluid">
                 <div class="row">
                 	<div id="primary-sidebar" class="col-md-4" role="complementary">
                 		<?php dynamic_sidebar( 'footer_left' ); ?>

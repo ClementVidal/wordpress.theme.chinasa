@@ -11,9 +11,13 @@ Tags:
 Text Domain:
 
 */
-
 @import 'variables';
 @import 'sidebar';
 @import 'body';
 @import 'header';
 @import 'footer';
+
+#wpadminbar {
+    bottom: 0;
+    top: initial;
+}

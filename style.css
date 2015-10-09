@@ -19,29 +19,47 @@ Text Domain:
   width: 12rem;
   height: 100%;
   margin-left: 0;
-  overflow-y: auto;
   background: #373a3c;
-  -webkit-transition: all 0.5s ease;
-       -o-transition: all 0.5s ease;
-          transition: all 0.5s ease;
   padding: 2rem 2rem; }
   #chi-sidebar ul {
     margin: 0;
     padding: 0; }
     #chi-sidebar ul.sub-menu {
       padding-left: 0.5rem; }
-  #chi-sidebar .chi-head {
-    max-width: 8rem; }
-    #chi-sidebar .chi-head * {
+  #chi-sidebar .chi-sidebar-head {
+    max-width: 8rem;
+    margin-bottom: 2rem; }
+    #chi-sidebar .chi-sidebar-head * {
       max-width: 8rem; }
+  #chi-sidebar .chi-sidebar-foot {
+    max-width: 8rem;
+    margin-bottom: 2rem;
+    position: fixed;
+    bottom: 0;
+    color: #818a91; }
+    #chi-sidebar .chi-sidebar-foot * {
+      max-width: 8rem; }
+    #chi-sidebar .chi-sidebar-foot i {
+      font-size: 2rem;
+      -webkit-transition: color 0.5s ease;
+           -o-transition: color 0.5s ease;
+              transition: color 0.5s ease; }
+      #chi-sidebar .chi-sidebar-foot i:hover {
+        color: white; }
 
 #chi-body {
-  margin-left: 14rem; }
+  margin-left: 14rem;
+  margin-right: 1rem; }
 
 #chi-header {
   margin-left: 14rem; }
 
 #chi-footer {
-  margin-left: 14rem; }
+  margin-left: 14rem;
+  margin-right: 1rem; }
+
+#wpadminbar {
+  bottom: 0;
+  top: initial; }
 
 /*# sourceMappingURL=style.css.map */

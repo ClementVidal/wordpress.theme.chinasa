@@ -1,16 +1,15 @@
 @import 'bootstrap/scss/variables';
-
 #chi-sidebar {
     z-index: 1000;
     position: fixed;
     top: 0;
-    left: $sidebar-hmargin ;
+    left: $sidebar-hmargin;
     width: $sidebar-width;
     height: 100%;
     margin-left: 0;
-    overflow-y: auto;
+
+    //overflow-y: auto;
     background: $gray-dark;
-    transition: all 0.5s ease;
     padding: $sidebar-vpadding $sidebar-hpadding;
     & ul {
         margin: 0;
@@ -19,12 +18,32 @@
             padding-left: 0.5rem;
         }
     }
-
-    & .chi-head {
-        max-width: $sidebar-width - 2 * $sidebar-hpadding ;
-
+    & .chi-sidebar-head {
+        max-width: $sidebar-width - 2 * $sidebar-hpadding;
+        margin-bottom: 2rem;
         & * {
             max-width: $sidebar-width - 2 * $sidebar-hpadding;
         }
     }
+    & .chi-sidebar-foot {
+        max-width: $sidebar-width - 2 * $sidebar-hpadding;
+        margin-bottom: 2rem;
+        position: fixed;
+        bottom: 0;
+        & * {
+            max-width: $sidebar-width - 2 * $sidebar-hpadding;
+        }
+        color: $gray-light;
+
+        & i {
+            font-size:2rem;
+            transition: color 0.5s ease;
+
+            &:hover {
+                color: white;
+            }
+        }
+
+    }
+
 }
