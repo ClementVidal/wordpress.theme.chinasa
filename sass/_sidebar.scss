@@ -1,0 +1,30 @@
+@import 'bootstrap/scss/variables';
+
+#chi-sidebar {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: $sidebar-hmargin ;
+    width: $sidebar-width;
+    height: 100%;
+    margin-left: 0;
+    overflow-y: auto;
+    background: $gray-dark;
+    transition: all 0.5s ease;
+    padding: $sidebar-vpadding $sidebar-hpadding;
+    & ul {
+        margin: 0;
+        padding: 0;
+        &.sub-menu {
+            padding-left: 0.5rem;
+        }
+    }
+
+    & .chi-head {
+        max-width: $sidebar-width - 2 * $sidebar-hpadding ;
+
+        & * {
+            max-width: $sidebar-width - 2 * $sidebar-hpadding;
+        }
+    }
+}

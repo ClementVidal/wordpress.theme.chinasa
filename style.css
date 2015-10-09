@@ -4,12 +4,44 @@ Theme URI:
 Author: Clement Vidal
 Author URI: http://www.clement-vidal.fr
 Description:
-Version: 1.0
+Version: 0.0.0
 License:
 License
 Tags:
 Text Domain:
 
 */
+#chi-sidebar {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 1rem;
+  width: 12rem;
+  height: 100%;
+  margin-left: 0;
+  overflow-y: auto;
+  background: #373a3c;
+  -webkit-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+  padding: 2rem 2rem; }
+  #chi-sidebar ul {
+    margin: 0;
+    padding: 0; }
+    #chi-sidebar ul.sub-menu {
+      padding-left: 0.5rem; }
+  #chi-sidebar .chi-head {
+    max-width: 8rem; }
+    #chi-sidebar .chi-head * {
+      max-width: 8rem; }
+
+#chi-body {
+  margin-left: 14rem; }
+
+#chi-header {
+  margin-left: 14rem; }
+
+#chi-footer {
+  margin-left: 14rem; }
 
 /*# sourceMappingURL=style.css.map */

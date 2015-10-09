@@ -24,6 +24,16 @@ module.exports = function(grunt) {
                 dest: 'js/chinasa.js'
             }
         },
+
+        /**
+         * Watch for every change in sass files js front end files and jade files
+         **/
+        watch: {
+            build: {
+                files: ['sass/*.scss', 'js/src/*/*.js'],
+                tasks: ['build']
+            }
+        },
         autoprefixer: {
             options: {
                 browsers: [
@@ -49,6 +59,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-watch');
 
     grunt.registerTask('build', 'Build frontend assets: Concatenate Js and compile Sass', ['sass:build', 'autoprefixer:build', 'concat:build']);
 };
