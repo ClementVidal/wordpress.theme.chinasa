@@ -19,7 +19,6 @@ add_action('wp_enqueue_scripts', 'chinasa_scripts');
 function chinasa_style()
 {
     wp_enqueue_style('chinasa-style', get_stylesheet_uri());
-    wp_enqueue_style('bootstrap', get_template_directory_uri().'/vendor/bootstrap/dist/css/bootstrap.css' );
     wp_enqueue_style('fontawesome', get_template_directory_uri().'/vendor/fontawesome/css/font-awesome.css' );
 
     wp_register_style('wpb-googleFonts', 'http://fonts.googleapis.com/css?family=Noto+Serif');

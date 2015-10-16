@@ -1,5 +1,6 @@
 <div id="chi-sidebar">
 
+<!--
     <div class='chi-sidebar-head'>
         <?php if (get_theme_mod('chi_logo')) : ?>
 
@@ -11,12 +12,13 @@
             <h1>
                 <a href='<?php echo esc_url(home_url('/')); ?>' title='<?php echo esc_attr(get_bloginfo('name', 'display')); ?>' rel='home'><?php bloginfo('name'); ?></a>
             </h1>
-        
+
         <?php endif; ?>
     </div>
+-->
 
+    <div class='chi-sidebar-menu'>
     <?php
-
     $defaults = array(
         'menu' => 'primary',
         'menu_class' => '',
@@ -27,6 +29,8 @@
 
     wp_nav_menu($defaults);
     ?>
+    </div>
+
     <div class='chi-sidebar-foot'>
         <i class="fa fa-github-square"></i>
         <i class="fa fa-linkedin-square"></i>

@@ -11,7 +11,11 @@ Tags:
 Text Domain:
 
 */
+
 @import 'variables';
+
+@import 'bootstrap/scss/bootstrap';
+
 @import 'sidebar';
 @import 'body';
 @import 'header';

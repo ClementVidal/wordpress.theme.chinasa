@@ -2,3 +2,9 @@ $sidebar-hmargin: 1rem;
 $sidebar-width: 16rem;
 $sidebar-hpadding: 2rem;
 $sidebar-vpadding: 2rem;
+
+// Bootstrap ovveride
+$enable-flex:               true;
+$link-color:                 white ;
+$link-hover-color:           darken($link-color, 15%);
+$link-hover-decoration:         none;
