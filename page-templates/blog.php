@@ -4,24 +4,25 @@ Template Name: Blog
 */
 ?>
 
-<?php get_template_part( '/inc/site', 'header' ); ?>
-<?php get_template_part( '/inc/site', 'sidebar' ); ?>
+<?php
+get_template_part( '/inc/site', 'header' );
+get_template_part( '/inc/site', 'sidebar' );
 
+get_template_part( '/inc/body', 'header' );
 
-<?php get_template_part( '/inc/body', 'header' ); ?>
+// We assume that this page will always display a single post
+the_post();
+the_title();
+the_content();
 
-    <?php
-    if ( have_posts() ) :
-        while ( have_posts() ) :
-            the_post();
+// Display all posts
+$recent_posts = wp_get_recent_posts( );
 
-            the_title();
-            the_content();
-        endwhile;
-    else: ?>
-    <p>Sorry, no posts matched your criteria.</p>
-    <?php endif; ?>
+echo '<ul>';
+foreach( $recent_posts as $recent ){
+	echo '<li><a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> </li> ';
+}
+echo '</ul>';
 
-<?php get_template_part( '/inc/body', 'footer' ); ?>
-
-<?php get_template_part( '/inc/site', 'footer' ); ?>
+get_template_part( '/inc/body', 'footer' );
+get_template_part( '/inc/site', 'footer' );
