@@ -16,7 +16,7 @@ Text Domain:
   position: fixed;
   top: 0;
   left: 1rem;
-  width: 12rem;
+  width: 16rem;
   height: 100%;
   margin-left: 0;
   background: #373a3c;
@@ -27,18 +27,18 @@ Text Domain:
     #chi-sidebar ul.sub-menu {
       padding-left: 0.5rem; }
   #chi-sidebar .chi-sidebar-head {
-    max-width: 8rem;
+    max-width: 12rem;
     margin-bottom: 2rem; }
     #chi-sidebar .chi-sidebar-head * {
-      max-width: 8rem; }
+      max-width: 12rem; }
   #chi-sidebar .chi-sidebar-foot {
-    max-width: 8rem;
+    max-width: 12rem;
     margin-bottom: 2rem;
     position: fixed;
     bottom: 0;
     color: #818a91; }
     #chi-sidebar .chi-sidebar-foot * {
-      max-width: 8rem; }
+      max-width: 12rem; }
     #chi-sidebar .chi-sidebar-foot i {
       font-size: 2rem;
       -webkit-transition: color 0.5s ease;
@@ -48,14 +48,14 @@ Text Domain:
         color: white; }
 
 #chi-body {
-  margin-left: 14rem;
+  margin-left: 18rem;
   margin-right: 1rem; }
 
 #chi-header {
-  margin-left: 14rem; }
+  margin-left: 18rem; }
 
 #chi-footer {
-  margin-left: 14rem;
+  margin-left: 18rem;
   margin-right: 1rem; }
 
 #wpadminbar {
