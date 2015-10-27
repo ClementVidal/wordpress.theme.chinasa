@@ -21,7 +21,7 @@ module.exports = function(grunt) {
             },
             build: {
                 src: ['js/src/modules.js', 'js/src/directives/*.js'],
-                dest: 'js/chinasa.js'
+                dest: 'js/release/chinasa.js'
             }
         },
 
