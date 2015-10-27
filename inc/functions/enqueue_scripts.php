@@ -6,10 +6,11 @@
  */
 function chinasa_scripts()
 {
-    wp_enqueue_script('jquery', get_template_directory_uri().'/vendor/jquery/dist/jquery.js' );
-    wp_enqueue_script('bootstrap', get_template_directory_uri().'/vendor/bootstrap/dist/js/bootstrap.js' );
-    wp_enqueue_script('angularjs', get_template_directory_uri().'/vendor/angular/angular.js' );
-    wp_enqueue_script('chinasa', get_template_directory_uri().'/js/chinasa.js' );
+    wp_enqueue_script('chi-jquery', get_template_directory_uri().'/vendor/jquery/dist/jquery.js' );
+    wp_enqueue_script('chi-bootstrap', get_template_directory_uri().'/vendor/bootstrap/dist/js/bootstrap.js' );
+    wp_enqueue_script('chi-angularjs', get_template_directory_uri().'/vendor/angular/angular.js' );
+    wp_enqueue_script('chi-angular-ui-router', get_template_directory_uri().'/vendor/angular-ui-router/release/angular-ui-router.js' );
+    wp_enqueue_script('chinasa', get_template_directory_uri().'/js/release/chinasa.js' );
 }
 add_action('wp_enqueue_scripts', 'chinasa_scripts');
 
