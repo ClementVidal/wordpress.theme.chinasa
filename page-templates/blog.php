@@ -12,6 +12,10 @@ get_template_part( '/inc/body', 'header' );
 
 // We assume that this page will always display a single post
 the_post();
+
+
+echo '<div id="chi-blog">';
+
 the_title();
 the_content();
 
@@ -23,6 +27,9 @@ foreach( $recent_posts as $recent ){
 	echo '<li><a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> </li> ';
 }
 echo '</ul>';
+
+
+echo '</div>';
 
 get_template_part( '/inc/body', 'footer' );
 get_template_part( '/inc/site', 'footer' );

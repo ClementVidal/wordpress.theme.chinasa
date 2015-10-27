@@ -4,24 +4,16 @@ Template Name: Partners
 */
 ?>
 
-<?php get_template_part( '/inc/site', 'header' ); ?>
-<?php get_template_part( '/inc/site', 'sidebar' ); ?>
+<?php
+get_template_part( '/inc/site', 'header' );
+get_template_part( '/inc/site', 'sidebar' );
 
+get_template_part( '/inc/body', 'header' );
 
-<?php get_template_part( '/inc/body', 'header' ); ?>
+// We assume that this page will always display a single post
+the_post();
+the_title();
+the_content();
 
-    <?php
-    if ( have_posts() ) :
-        while ( have_posts() ) :
-            the_post();
-
-            the_title();
-            the_content();
-        endwhile;
-    else: ?>
-    <p>Sorry, no posts matched your criteria.</p>
-    <?php endif; ?>
-
-<?php get_template_part( '/inc/body', 'footer' ); ?>
-
-<?php get_template_part( '/inc/site', 'footer' ); ?>
+get_template_part( '/inc/body', 'footer' );
+get_template_part( '/inc/site', 'footer' );

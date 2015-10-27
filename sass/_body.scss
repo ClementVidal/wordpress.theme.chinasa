@@ -1,4 +1,10 @@
 #chi-body {
     margin-left: 2 * $sidebar-hmargin + $sidebar-width;
-    margin-right: $sidebar-hmargin;    
+    margin-right: $sidebar-hmargin;
+
+    @extend .container-fluid;
+
+    &>div{
+        @extend .row;
+    }
 }

@@ -13,13 +13,17 @@ Text Domain:
 */
 
 @import 'variables';
+@import 'mixins';
 
 @import 'bootstrap/scss/bootstrap';
 
 @import 'sidebar';
+@import 'home';
 @import 'body';
 @import 'header';
 @import 'footer';
+@import 'blog';
+@import 'tag';
 
 #wpadminbar {
     bottom: 0;

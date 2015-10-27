@@ -1,0 +1,21 @@
+@mixin flex-box( $dir, $axis-align, $cross-axis-alig ) {
+    display: flex;
+    flex-direction: $dir;
+    flex-wrap: nowrap;
+    justify-content: $axis-align;
+    align-items: $cross-axis-alig;
+}
+@mixin vertical-line( $side, $gutter-space, $color ) {
+    content: " ";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    @if $side == "right" {
+        right: $gutter-space;
+        border-right: (1 / 16) + rem solid $color;
+    }
+    @else if $side == "left" {
+        left: $gutter-space;
+        border-left: (1 / 16) + rem solid $color;
+    }
+}

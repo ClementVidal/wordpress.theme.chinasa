@@ -1,23 +1,20 @@
-
 #chi-sidebar {
-    z-index: 1000;
     position: fixed;
+    z-index: 1000;
     top: 0;
+    bottom: 0;
     left: $sidebar-hmargin;
     width: $sidebar-width;
-    height: 100%;
-    margin-left: 0;
-
-    background: $gray-dark;
     padding: $sidebar-vpadding $sidebar-hpadding;
+    background: $gray-dark;
+    @include flex-box( column, center, center );
 
-    // Flex container setup
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-
+    &:before {
+        @include vertical-line( left, $sidebar-hpadding, $gray-light );
+    }
+    &:after {
+        @include vertical-line( right, $sidebar-hpadding, $gray-light );
+    }
     & .chi-sidebar-menu {
         & ul {
             margin: 0;
@@ -26,27 +23,22 @@
                 padding-left: 0.5rem;
             }
         }
-        &>ul>li{
+        &>ul>li {
             margin-bottom: 1rem;
         }
     }
     & .chi-sidebar-head {
-        max-width: $sidebar-width - 2 * $sidebar-hpadding;
         margin-bottom: 2rem;
-        & * {
-            max-width: $sidebar-width - 2 * $sidebar-hpadding;
-        }
     }
     & .chi-sidebar-foot {
-        max-width: $sidebar-width - 2 * $sidebar-hpadding;
-        margin-bottom: 2rem;
         position: fixed;
         bottom: 0;
+        width: $sidebar-width - 2 * $sidebar-hpadding;
+        margin-bottom: 2rem;
         color: $gray-light;
-        & * {
-            max-width: $sidebar-width - 2 * $sidebar-hpadding;
-        }
+        @include flex-box( row, center, center );
         & i {
+            background: $gray-dark;
             font-size: 2rem;
             transition: color 0.5s ease;
             &:hover {
