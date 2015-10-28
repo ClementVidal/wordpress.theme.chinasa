@@ -5,17 +5,17 @@
     justify-content: $axis-align;
     align-items: $cross-axis-alig;
 }
-@mixin vertical-line( $side, $gutter-space, $color ) {
+@mixin vertical-line( $side, $gutter-space, $color, $style:solid ) {
     content: " ";
     position: absolute;
     top: 0;
     bottom: 0;
     @if $side == "right" {
         right: $gutter-space;
-        border-right: (1 / 16) + rem solid $color;
+        border-right: (1 / 16) + rem $style $color;
     }
     @else if $side == "left" {
         left: $gutter-space;
-        border-left: (1 / 16) + rem solid $color;
+        border-left: (1 / 16) + rem $style $color;
     }
 }

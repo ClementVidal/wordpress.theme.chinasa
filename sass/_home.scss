@@ -2,3 +2,12 @@
     @extend .col-md-12;
     margin-top: $section-hmargin;
 }
+#chi-section-landing {
+    @extend .container;
+
+    text-align: center;
+    & h2 {
+        font-family: $font-family-cursive;
+    }
+    min-height: 40rem;
+}

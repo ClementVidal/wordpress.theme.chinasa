@@ -32,10 +32,10 @@
     </div>
 
     <div class='chi-sidebar-foot'>
-        <i class="fa fa-github-square"></i>
-        <i class="fa fa-linkedin-square"></i>
-        <i class="fa fa-twitter-square"></i>
-        <i class="fa fa-rss-square"></i>
+        <i class="fa fa-github"></i>
+        <i class="fa fa-linkedin"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-rss"></i>
     </div>
 
 </div>

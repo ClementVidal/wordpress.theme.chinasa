@@ -7,11 +7,13 @@ Template Name: Home
 <?php
 get_template_part( '/inc/site', 'header' );
 get_template_part( '/inc/site', 'sidebar' );
-
 get_template_part( '/inc/body', 'header' );
 
 // We assume that this page will always display a single post
 the_post();
+
+
+get_template_part( '/inc/section', 'landing' );
 
 // Display what is in Home page
 echo "<div id=\"chi-section-"; echo $post->post_name; echo "\">";

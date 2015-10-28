@@ -6,17 +6,19 @@
     left: $sidebar-hmargin;
     width: $sidebar-width;
     padding: $sidebar-vpadding $sidebar-hpadding;
-    background: $gray-dark;
+    background: $sidebar-color;
     @include flex-box( column, center, center );
 
     &:before {
-        @include vertical-line( left, $sidebar-hpadding, $gray-light );
+        @include vertical-line( left, $sidebar-hpadding, lighten( $sidebar-color, 20% ), dashed );
     }
     &:after {
-        @include vertical-line( right, $sidebar-hpadding, $gray-light );
+        @include vertical-line( right, $sidebar-hpadding, lighten( $sidebar-color, 20% ), dashed );
     }
     & .chi-sidebar-menu {
         & ul {
+            font-size: $sidebar-font-size;
+            list-style-type: none;
             margin: 0;
             padding: 0;
             &.sub-menu {
@@ -25,6 +27,13 @@
         }
         &>ul>li {
             margin-bottom: 1rem;
+        }
+
+        &>ul>li a {
+            transition: color 0.5s ease;
+            &:hover {
+                color: $gray-light;
+            }
         }
     }
     & .chi-sidebar-head {
@@ -35,10 +44,10 @@
         bottom: 0;
         width: $sidebar-width - 2 * $sidebar-hpadding;
         margin-bottom: 2rem;
+        padding: 0 2rem;
         color: $gray-light;
-        @include flex-box( row, center, center );
+        @include flex-box( row, space-between, center );
         & i {
-            background: $gray-dark;
             font-size: 2rem;
             transition: color 0.5s ease;
             &:hover {

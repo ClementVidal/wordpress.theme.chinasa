@@ -21,7 +21,7 @@ module.exports = function(grunt) {
             },
             build: {
                 src: ['js/src/modules.js', 'js/src/directives/*.js'],
-                dest: 'js/release/chinasa.js'
+                dest: 'js/dist/chinasa.js'
             }
         },
 
@@ -31,7 +31,10 @@ module.exports = function(grunt) {
         watch: {
             build: {
                 files: ['sass/*.scss', 'js/src/*/*.js'],
-                tasks: ['build']
+                tasks: ['build'],
+                options: {
+                    livereload: true,
+                },
             }
         },
         autoprefixer: {

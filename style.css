@@ -280,7 +280,7 @@ html {
   -webkit-tap-highlight-color: transparent; }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans Condensed", sans-serif;
   font-size: 1rem;
   line-height: 1.5;
   color: #373a3c;
@@ -599,26 +599,26 @@ pre {
   max-height: 340px;
   overflow-y: scroll; }
 
-.container {
+.container, #chi-section-landing {
   margin-left: auto;
   margin-right: auto;
   padding-left: 0.9375rem;
   padding-right: 0.9375rem; }
-  .container::after {
+  .container::after, #chi-section-landing::after {
     content: "";
     display: table;
     clear: both; }
   @media (min-width: 544px) {
-    .container {
+    .container, #chi-section-landing {
       max-width: 576px; } }
   @media (min-width: 768px) {
-    .container {
+    .container, #chi-section-landing {
       max-width: 720px; } }
   @media (min-width: 992px) {
-    .container {
+    .container, #chi-section-landing {
       max-width: 940px; } }
   @media (min-width: 1200px) {
-    .container {
+    .container, #chi-section-landing {
       max-width: 1140px; } }
 
 .container-fluid, #chi-body {
@@ -3845,7 +3845,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans Condensed", sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -3924,7 +3924,7 @@ button.close {
   display: block;
   max-width: 276px;
   padding: 1px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans Condensed", sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -4687,21 +4687,29 @@ a.bg-danger:focus, a.bg-danger:hover {
     top: 0;
     bottom: 0;
     left: 0.25rem;
-    border-left: 0.0625rem solid #818a91; }
+    border-left: 0.0625rem dashed #686d71; }
   #chi-sidebar:after {
     content: " ";
     position: absolute;
     top: 0;
     bottom: 0;
     right: 0.25rem;
-    border-right: 0.0625rem solid #818a91; }
+    border-right: 0.0625rem dashed #686d71; }
   #chi-sidebar .chi-sidebar-menu ul {
+    font-size: 1.35rem;
+    list-style-type: none;
     margin: 0;
     padding: 0; }
     #chi-sidebar .chi-sidebar-menu ul.sub-menu {
       padding-left: 0.5rem; }
   #chi-sidebar .chi-sidebar-menu > ul > li {
     margin-bottom: 1rem; }
+  #chi-sidebar .chi-sidebar-menu > ul > li a {
+    -webkit-transition: color 0.5s ease;
+         -o-transition: color 0.5s ease;
+            transition: color 0.5s ease; }
+    #chi-sidebar .chi-sidebar-menu > ul > li a:hover {
+      color: #818a91; }
   #chi-sidebar .chi-sidebar-head {
     margin-bottom: 2rem; }
   #chi-sidebar .chi-sidebar-foot {
@@ -4709,6 +4717,7 @@ a.bg-danger:focus, a.bg-danger:hover {
     bottom: 0;
     width: 15.5rem;
     margin-bottom: 2rem;
+    padding: 0 2rem;
     color: #818a91;
     display: -webkit-box;
     display: -webkit-flex;
@@ -4722,16 +4731,15 @@ a.bg-danger:focus, a.bg-danger:hover {
     -webkit-flex-wrap: nowrap;
         -ms-flex-wrap: nowrap;
             flex-wrap: nowrap;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-align: center;
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center; }
     #chi-sidebar .chi-sidebar-foot i {
-      background: #373a3c;
       font-size: 2rem;
       -webkit-transition: color 0.5s ease;
            -o-transition: color 0.5s ease;
@@ -4742,9 +4750,16 @@ a.bg-danger:focus, a.bg-danger:hover {
 [id^='chi-section'] {
   margin-top: 4rem; }
 
+#chi-section-landing {
+  text-align: center;
+  min-height: 40rem; }
+  #chi-section-landing h2 {
+    font-family: "Great Vibes", cursive; }
+
 #chi-body {
   margin-left: 18rem;
-  margin-right: 1rem; }
+  margin-right: 1rem;
+  padding: 2rem 4rem; }
 
 #chi-header {
   margin-left: 18rem; }
