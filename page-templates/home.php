@@ -6,8 +6,6 @@ Template Name: Home
 
 <?php
 get_template_part( '/inc/site', 'header' );
-get_template_part( '/inc/site', 'sidebar' );
-get_template_part( '/inc/body', 'header' );
 
 // We assume that this page will always display a single post
 the_post();
@@ -17,14 +15,16 @@ get_template_part( '/inc/section', 'landing' );
 ?>
 
 <?php// Display what is in Home page?>
-<section id="chi-section-<?php echo $post->post_name;?>" >
-	<h1>
-		<?php echo $post->post_title;?>
-	</h1>
-	<div>
-		<?php the_content();?>
-	</div>
-</section>
+<div id="chi-section-<?php echo $post->post_name;?>" >
+	<section>
+		<h1>
+			<?php echo $post->post_title;?>
+		</h1>
+		<div>
+			<?php the_content();?>
+		</div>
+	</section>
+</div>
 <div class="chi-section-sep"></div>
 
 
@@ -37,18 +37,19 @@ $pages = get_pages($args);
 foreach( $pages as $page ):
 ?>
 
-	<section id="chi-section-<?php echo $page->post_name;?>" >
-		<h1>
-			<?php echo $page->post_title;?>
-		</h1>
-		<div>
-			<?php echo $page->post_content;?>
-		</div>
-	</section>
+	<div id="chi-section-<?php echo $page->post_name;?>" >
+		<section>
+			<h1>
+				<?php echo $page->post_title;?>
+			</h1>
+			<div>
+				<?php echo $page->post_content;?>
+			</div>
+		</section>
+	</div>
 	<div class="chi-section-sep"></div>
 
 <?php
 endforeach;
 
-get_template_part( '/inc/body', 'footer' );
 get_template_part( '/inc/site', 'footer' );

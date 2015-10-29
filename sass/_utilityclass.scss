@@ -1,0 +1,14 @@
+
+
+.chi-round-img-300 {
+    width: pixel-to-rem(300);
+    height: pixel-to-rem(300);
+    border-radius: pixel-to-rem(150);
+}
+.chi-card {
+    width: pixel-to-rem(400);
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    border-top: pixel-to-rem() solid lighten( $page-color, 20% );
+    @extend .center-block;
+}

@@ -16,3 +16,7 @@
 </head>
 
 <body ng-app="chinasa">
+
+    <?php get_template_part( '/inc/site', 'sidebar' ); ?>
+
+    <div id="chi-body">

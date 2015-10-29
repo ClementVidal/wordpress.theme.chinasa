@@ -1,0 +1,10 @@
+// Bootstrap overide
+$link-color:                 white ;
+$link-hover-color:           darken($link-color, 15%);
+$link-hover-decoration:      none;
+
+$font-family-sans-serif:     'Open Sans Condensed', sans-serif;
+$font-family-base:           $font-family-sans-serif;
+
+
+@import 'bootstrap/scss/bootstrap';

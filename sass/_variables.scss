@@ -1,3 +1,6 @@
+// Global
+$font-family-cursive:           'Great Vibes', cursive;
+
 // Sidebar
 $sidebar-hmargin: 1rem;
 $sidebar-width: 16rem;
@@ -5,19 +8,13 @@ $sidebar-hpadding: 0.25rem;
 $sidebar-vpadding: 2rem;
 $sidebar-font-size: 1.35rem;
 $sidebar-color: #373a3c;
+$sidebar-font-color: white;
 
+// Section
 $section-hmargin: 4rem;
 
-// Global
+// Section - Landing
+$section-landing-h1-size: 4rem;
+
+// Page
 $page-color: black;
-$font-family-cursive:           'Great Vibes', cursive;
-
-
-// Bootstrap overide
-$enable-flex:               false;
-$link-color:                 white ;
-$link-hover-color:           darken($link-color, 15%);
-$link-hover-decoration:         none;
-
-$font-family-sans-serif:     'Open Sans Condensed', sans-serif;
-$font-family-base:           $font-family-sans-serif;

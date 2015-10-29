@@ -1,4 +1,10 @@
 #chi-sidebar {
+
+    $sidebar-font-color-dark: darken( $sidebar-font-color, 20% );
+    $sidebar-font-color-ligth: lighten( $sidebar-font-color, 20% );
+    $sidebar-color-dark: darken( $sidebar-color, 20% );
+    $sidebar-color-ligth: lighten( $sidebar-color, 20% );
+
     position: fixed;
     z-index: 1000;
     top: 0;
@@ -7,15 +13,15 @@
     width: $sidebar-width;
     padding: $sidebar-vpadding $sidebar-hpadding;
     background: $sidebar-color;
-    border-left: 1px solid darken( $sidebar-color, 10% );
-    border-right: 1px solid darken( $sidebar-color, 10% );
+    border-left: 1px solid $sidebar-color-dark;
+    border-right: 1px solid $sidebar-color-dark;
     @include flex-box( column, center, center );
 
     &:before {
-        @include vertical-line( left, $sidebar-hpadding, lighten( $sidebar-color, 20% ), dashed );
+        @include vertical-line( left, $sidebar-hpadding, $sidebar-color-ligth, dashed );
     }
     &:after {
-        @include vertical-line( right, $sidebar-hpadding, lighten( $sidebar-color, 20% ), dashed );
+        @include vertical-line( right, $sidebar-hpadding, $sidebar-color-ligth, dashed );
     }
     & .chi-sidebar-menu {
         & ul {
@@ -34,8 +40,9 @@
 
         &>ul>li a {
             transition: color 0.5s ease;
+            color: $sidebar-font-color;
             &:hover {
-                color: $gray-light;
+                color: $sidebar-font-color-dark;
             }
         }
     }
@@ -48,14 +55,13 @@
         width: $sidebar-width - 2 * $sidebar-hpadding;
         margin-bottom: 2rem;
         padding: 0 2rem;
-        color: $gray-light;
         @include flex-box( row, space-between, center );
         & a {
             font-size: 2rem;
             transition: color 0.5s ease;
-            color: $gray-light;
+            color: $sidebar-font-color-dark;
             &:hover {
-                color: white;
+                color: $sidebar-font-color;
             }
         }
     }

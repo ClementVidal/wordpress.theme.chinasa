@@ -12,16 +12,14 @@ Text Domain:
 
 */
 
+@import 'bootstrap';
+
 @import 'variables';
 @import 'mixins';
-
-@import 'bootstrap/scss/bootstrap';
+@import 'utilityclass';
 
 @import 'sidebar';
 @import 'home';
-@import 'body';
-@import 'header';
-@import 'footer';
 @import 'blog';
 @import 'tag';
 

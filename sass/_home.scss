@@ -1,25 +1,41 @@
 [id^='chi-section'] {
-    @extend .col-md-12;
-    margin-top: $section-hmargin / 2;
-    margin-bottom: $section-hmargin / 2;
+    &>section {
+        @extend .container-fluid;
+        margin-top:0;
+        margin-bottom: 0;
+        margin-left: 2 * $sidebar-hmargin + $sidebar-width;
+        margin-right: $sidebar-hmargin;
+        padding: 2rem 4rem;
+
+        & h1 {
+            text-align: center;
+        }
+    }
 }
 .chi-section-sep {
-    @extend .col-md-12;
-    border-bottom: (1 / 16) + rem dashed lighten( $page-color, 20% );
+    @extend .container-fluid;
+    border-bottom: pixel-to-rem() dashed lighten( $page-color, 10% );
 }
+
+
 #chi-section-landing {
+    background-color: $page-color;
     @extend .container;
     text-align: center;
+    & h1 {
+        font-size: $section-landing-h1-size;
+    }
     & h2 {
         font-family: $font-family-cursive;
     }
     min-height: 40rem;
 }
-
-
-
-.chi-round-img-300 {
-    width: 300px;
-    height: 300px;
-    border-radius: 150px;
+#chi-section-home {
+    background-color: lighten( $page-color, 10% );
+}
+#chi-section-back-end {
+    background-color: lighten( $page-color, 10% );
+}
+#chi-section-mobile {
+    background-color: lighten( $page-color, 10% );
 }

@@ -22,3 +22,6 @@
         border-left: (1 / 16) + rem $style darken( $color, 30% );
     }
 }
+@function pixel-to-rem( $pixel:1 ) {
+    @return ( $pixel / 16 )+rem;
+}
