@@ -15,7 +15,7 @@ get_template_part( '/inc/section', 'landing' );
 ?>
 
 <?php// Display what is in Home page?>
-<div id="chi-section-<?php echo $post->post_name;?>" >
+<div chi-smooth-apparition chi-class="chi-visible" id="chi-section-<?php echo $post->post_name;?>" >
 	<section>
 		<h1>
 			<?php echo $post->post_title;?>
@@ -37,7 +37,7 @@ $pages = get_pages($args);
 foreach( $pages as $page ):
 ?>
 
-	<div id="chi-section-<?php echo $page->post_name;?>" >
+	<div chi-smooth-apparition chi-class="chi-visible" id="chi-section-<?php echo $page->post_name;?>" >
 		<section>
 			<h1>
 				<?php echo $page->post_title;?>

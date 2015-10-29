@@ -1,4 +1,4 @@
-<div id="chi-section-landing">
+<div id="chi-section-landing" class="chi-visible">
 
     <section>
         <h1>

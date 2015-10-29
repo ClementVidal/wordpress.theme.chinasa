@@ -4768,14 +4768,21 @@ a.bg-danger:focus, a.bg-danger:hover {
       #chi-sidebar .chi-sidebar-foot a:hover {
         color: white; }
 
-[id^='chi-section'] > section {
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: 18rem;
-  margin-right: 1rem;
-  padding: 2rem 4rem; }
-  [id^='chi-section'] > section h1 {
-    text-align: center; }
+[id^='chi-section'] {
+  opacity: 0;
+  -webkit-transition: opacity 1.5s ease;
+       -o-transition: opacity 1.5s ease;
+          transition: opacity 1.5s ease; }
+  [id^='chi-section'].chi-visible {
+    opacity: 1; }
+  [id^='chi-section'] > section {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 18rem;
+    margin-right: 1rem;
+    padding: 2rem 4rem; }
+    [id^='chi-section'] > section h1 {
+      text-align: center; }
 
 .chi-section-sep {
   border-bottom: 0.0625rem dashed #1a1a1a; }
