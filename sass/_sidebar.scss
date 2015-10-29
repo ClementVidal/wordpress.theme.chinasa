@@ -7,6 +7,8 @@
     width: $sidebar-width;
     padding: $sidebar-vpadding $sidebar-hpadding;
     background: $sidebar-color;
+    border-left: 1px solid darken( $sidebar-color, 10% );
+    border-right: 1px solid darken( $sidebar-color, 10% );
     @include flex-box( column, center, center );
 
     &:before {
@@ -22,7 +24,8 @@
             margin: 0;
             padding: 0;
             &.sub-menu {
-                padding-left: 0.5rem;
+                padding-left: 1.0rem;
+                font-size: $sidebar-font-size / 1.2;
             }
         }
         &>ul>li {
@@ -47,9 +50,10 @@
         padding: 0 2rem;
         color: $gray-light;
         @include flex-box( row, space-between, center );
-        & i {
+        & a {
             font-size: 2rem;
             transition: color 0.5s ease;
+            color: $gray-light;
             &:hover {
                 color: white;
             }

@@ -32,10 +32,10 @@
     </div>
 
     <div class='chi-sidebar-foot'>
-        <i class="fa fa-github"></i>
-        <i class="fa fa-linkedin"></i>
-        <i class="fa fa-twitter"></i>
-        <i class="fa fa-rss"></i>
+        <a href="https://github.com/ClementVidal"><i class="fa fa-github"></i></a>
+        <a href="https://fr.linkedin.com/pub/clement-vidal/6/413/147"><i class="fa fa-linkedin"></i></a>
+        <a href="https://twitter.com/_clementvidal_"><i class="fa fa-twitter"></i></a>
+        <a href="<?php bloginfo('rss2_url');?>"><i class="fa fa-rss"></i></a>
     </div>
 
 </div>

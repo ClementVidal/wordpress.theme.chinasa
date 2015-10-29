@@ -30,7 +30,7 @@ module.exports = function(grunt) {
          **/
         watch: {
             build: {
-                files: ['sass/*.scss', 'js/src/*/*.js'],
+                files: ['sass/*.scss', 'js/src/*.js', 'js/src/*/*.js'],
                 tasks: ['build'],
                 options: {
                     livereload: true,

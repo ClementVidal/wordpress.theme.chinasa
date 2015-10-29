@@ -10,12 +10,15 @@
     position: absolute;
     top: 0;
     bottom: 0;
+    box-shadow:0px 0px 0.4rem darken( $color, 30% );
     @if $side == "right" {
         right: $gutter-space;
         border-right: (1 / 16) + rem $style $color;
+        border-left: (1 / 16) + rem $style darken( $color, 30% );
     }
     @else if $side == "left" {
         left: $gutter-space;
-        border-left: (1 / 16) + rem $style $color;
+        border-right: (1 / 16) + rem $style $color;
+        border-left: (1 / 16) + rem $style darken( $color, 30% );
     }
 }

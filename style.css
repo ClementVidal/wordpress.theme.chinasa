@@ -639,7 +639,7 @@ pre {
     display: table;
     clear: both; }
 
-.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, [id^='chi-section'], .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12 {
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, [id^='chi-section'], .chi-section-sep, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12 {
   position: relative;
   min-height: 1px;
   padding-left: 0.9375rem;
@@ -958,7 +958,7 @@ pre {
   .col-sm-offset-12 {
     margin-left: 100%; } }
 @media (min-width: 768px) {
-  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, [id^='chi-section'] {
+  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, [id^='chi-section'], .chi-section-sep {
     float: left; }
 
   .col-md-1 {
@@ -994,7 +994,7 @@ pre {
   .col-md-11 {
     width: 91.66667%; }
 
-  .col-md-12, [id^='chi-section'] {
+  .col-md-12, [id^='chi-section'], .chi-section-sep {
     width: 100%; }
 
   .col-md-pull-0 {
@@ -4661,6 +4661,8 @@ a.bg-danger:focus, a.bg-danger:hover {
   width: 16rem;
   padding: 2rem 0.25rem;
   background: #373a3c;
+  border-left: 1px solid #1f2021;
+  border-right: 1px solid #1f2021;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4686,22 +4688,29 @@ a.bg-danger:focus, a.bg-danger:hover {
     position: absolute;
     top: 0;
     bottom: 0;
+    -webkit-box-shadow: 0px 0px 0.4rem #1f2021;
+            box-shadow: 0px 0px 0.4rem #1f2021;
     left: 0.25rem;
-    border-left: 0.0625rem dashed #686d71; }
+    border-right: 0.0625rem dashed #686d71;
+    border-left: 0.0625rem dashed #1f2021; }
   #chi-sidebar:after {
     content: " ";
     position: absolute;
     top: 0;
     bottom: 0;
+    -webkit-box-shadow: 0px 0px 0.4rem #1f2021;
+            box-shadow: 0px 0px 0.4rem #1f2021;
     right: 0.25rem;
-    border-right: 0.0625rem dashed #686d71; }
+    border-right: 0.0625rem dashed #686d71;
+    border-left: 0.0625rem dashed #1f2021; }
   #chi-sidebar .chi-sidebar-menu ul {
     font-size: 1.35rem;
     list-style-type: none;
     margin: 0;
     padding: 0; }
     #chi-sidebar .chi-sidebar-menu ul.sub-menu {
-      padding-left: 0.5rem; }
+      padding-left: 1.0rem;
+      font-size: 1.125rem; }
   #chi-sidebar .chi-sidebar-menu > ul > li {
     margin-bottom: 1rem; }
   #chi-sidebar .chi-sidebar-menu > ul > li a {
@@ -4739,22 +4748,32 @@ a.bg-danger:focus, a.bg-danger:hover {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center; }
-    #chi-sidebar .chi-sidebar-foot i {
+    #chi-sidebar .chi-sidebar-foot a {
       font-size: 2rem;
       -webkit-transition: color 0.5s ease;
            -o-transition: color 0.5s ease;
-              transition: color 0.5s ease; }
-      #chi-sidebar .chi-sidebar-foot i:hover {
+              transition: color 0.5s ease;
+      color: #818a91; }
+      #chi-sidebar .chi-sidebar-foot a:hover {
         color: white; }
 
 [id^='chi-section'] {
-  margin-top: 4rem; }
+  margin-top: 2rem;
+  margin-bottom: 2rem; }
+
+.chi-section-sep {
+  border-bottom: 0.0625rem dashed #333333; }
 
 #chi-section-landing {
   text-align: center;
   min-height: 40rem; }
   #chi-section-landing h2 {
     font-family: "Great Vibes", cursive; }
+
+.chi-round-img-300 {
+  width: 300px;
+  height: 300px;
+  border-radius: 150px; }
 
 #chi-body {
   margin-left: 18rem;

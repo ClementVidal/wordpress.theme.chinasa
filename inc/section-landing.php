@@ -1,4 +1,4 @@
-<div id="chi-section-landing">
+<section id="chi-section-landing">
 
     <h1>
         Clement <br>
@@ -10,4 +10,5 @@
         Developeur Web avec une affection pour le design
     </h2>
 
-</div>
+</section>
+<div class="chi-section-sep"></div>
