@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Portfolio
+Template Name: Skills
 */
 ?>
 

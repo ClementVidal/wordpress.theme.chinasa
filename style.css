@@ -631,15 +631,15 @@ pre {
     display: table;
     clear: both; }
 
-.row {
+.row, #chi-section-contact form > div {
   margin-left: -0.9375rem;
   margin-right: -0.9375rem; }
-  .row::after {
+  .row::after, #chi-section-contact form > div::after {
     content: "";
     display: table;
     clear: both; }
 
-.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12 {
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, #chi-section-contact form > div > label, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, #chi-section-contact form > div > div, .col-md-11, .col-md-12, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12 {
   position: relative;
   min-height: 1px;
   padding-left: 0.9375rem;
@@ -958,13 +958,13 @@ pre {
   .col-sm-offset-12 {
     margin-left: 100%; } }
 @media (min-width: 768px) {
-  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+  .col-md-1, .col-md-2, #chi-section-contact form > div > label, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, #chi-section-contact form > div > div, .col-md-11, .col-md-12 {
     float: left; }
 
   .col-md-1 {
     width: 8.33333%; }
 
-  .col-md-2 {
+  .col-md-2, #chi-section-contact form > div > label {
     width: 16.66667%; }
 
   .col-md-3 {
@@ -988,7 +988,7 @@ pre {
   .col-md-9 {
     width: 75%; }
 
-  .col-md-10 {
+  .col-md-10, #chi-section-contact form > div > div {
     width: 83.33333%; }
 
   .col-md-11 {
@@ -1660,7 +1660,7 @@ pre {
   line-height: 1.33333;
   border-radius: 0.3rem; }
 
-.form-group {
+.form-group, #chi-section-contact form > div {
   margin-bottom: 1rem; }
 
 .radio,
@@ -1782,7 +1782,7 @@ input[type="checkbox"].disabled {
   background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkNyb3NzIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDYxMiA3OTIiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDYxMiA3OTIiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwYXRoIGZpbGw9IiNEOTUzNEYiIGQ9Ik00NDcsNTQ0LjRjLTE0LjQsMTQuNC0zNy42LDE0LjQtNTEuOSwwTDMwNiw0NTEuN2wtODkuMSw5Mi43Yy0xNC40LDE0LjQtMzcuNiwxNC40LTUxLjksMGMtMTQuNC0xNC40LTE0LjQtMzcuNiwwLTUxLjlsOTIuNC05Ni40TDE2NSwyOTkuNmMtMTQuNC0xNC40LTE0LjQtMzcuNiwwLTUxLjlzMzcuNi0xNC40LDUxLjksMGw4OS4yLDkyLjdsODkuMS05Mi43YzE0LjQtMTQuNCwzNy42LTE0LjQsNTEuOSwwYzE0LjQsMTQuNCwxNC40LDM3LjYsMCw1MS45TDM1NC43LDM5Nmw5Mi40LDk2LjRDNDYxLjQsNTA2LjgsNDYxLjQsNTMwLDQ0Nyw1NDQuNHoiLz48L3N2Zz4="); }
 
 @media (min-width: 544px) {
-  .form-inline .form-group {
+  .form-inline .form-group, .form-inline #chi-section-contact form > div, #chi-section-contact .form-inline form > div {
     display: inline-block;
     margin-bottom: 0;
     vertical-align: middle; }
@@ -4659,8 +4659,8 @@ a.bg-danger:focus, a.bg-danger:hover {
 
 .chi-card {
   width: 25rem;
-  margin-top: 4rem;
-  margin-bottom: 4rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   padding-top: 1rem;
   border-top: 0.0625rem solid #333333; }
 
@@ -4783,7 +4783,8 @@ a.bg-danger:focus, a.bg-danger:hover {
     margin-right: 1rem;
     padding: 2rem 4rem; }
     [id^='chi-section'] > section h1 {
-      text-align: center; }
+      text-align: center;
+      margin-bottom: 2rem; }
 
 .chi-section-sep {
   border-bottom: 0.0625rem dashed #1a1a1a; }
