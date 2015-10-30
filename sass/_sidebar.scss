@@ -39,8 +39,9 @@
         }
 
         &>ul>li a {
-            transition: color 0.5s ease;
+            transition: all 0.5s ease;
             color: $sidebar-font-color;
+
             &:hover {
                 color: $sidebar-font-color-dark;
             }

@@ -1,9 +1,8 @@
-
-
 .chi-round-img-300 {
     width: pixel-to-rem(300);
     height: pixel-to-rem(300);
     border-radius: pixel-to-rem(150);
+    border: pixel-to-rem(2) solid lighten( $page-color, 20% );
 }
 .chi-card {
     width: pixel-to-rem(400);
@@ -11,5 +10,13 @@
     margin-bottom: 2rem;
     padding-top: 1rem;
     border-top: pixel-to-rem() solid lighten( $page-color, 20% );
-    @extend .center-block;
+
+    //@extend .center-block;
+}
+.chi-section-sign {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-family: $font-family-cursive;
+    font-size: 1.5rem;
+    width: 1rem;
 }

@@ -4206,7 +4206,7 @@ button.close {
   display: table;
   clear: both; }
 
-.center-block, .chi-card {
+.center-block {
   display: block;
   margin-left: auto;
   margin-right: auto; }
@@ -4655,7 +4655,8 @@ a.bg-danger:focus, a.bg-danger:hover {
 .chi-round-img-300 {
   width: 18.75rem;
   height: 18.75rem;
-  border-radius: 9.375rem; }
+  border-radius: 9.375rem;
+  border: 0.125rem solid #333333; }
 
 .chi-card {
   width: 25rem;
@@ -4663,6 +4664,13 @@ a.bg-danger:focus, a.bg-danger:hover {
   margin-bottom: 2rem;
   padding-top: 1rem;
   border-top: 0.0625rem solid #333333; }
+
+.chi-section-sign {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-family: "Great Vibes", cursive;
+  font-size: 1.5rem;
+  width: 1rem; }
 
 #chi-sidebar {
   position: fixed;
@@ -4716,19 +4724,19 @@ a.bg-danger:focus, a.bg-danger:hover {
     border-right: 0.0625rem dashed #686d71;
     border-left: 0.0625rem dashed #1f2021; }
   #chi-sidebar .chi-sidebar-menu ul {
-    font-size: 1.35rem;
+    font-size: 1.4rem;
     list-style-type: none;
     margin: 0;
     padding: 0; }
     #chi-sidebar .chi-sidebar-menu ul.sub-menu {
       padding-left: 1.0rem;
-      font-size: 1.125rem; }
+      font-size: 1.16667rem; }
   #chi-sidebar .chi-sidebar-menu > ul > li {
     margin-bottom: 1rem; }
   #chi-sidebar .chi-sidebar-menu > ul > li a {
-    -webkit-transition: color 0.5s ease;
-         -o-transition: color 0.5s ease;
-            transition: color 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+         -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
     color: white; }
     #chi-sidebar .chi-sidebar-menu > ul > li a:hover {
       color: #cccccc; }
@@ -4781,10 +4789,17 @@ a.bg-danger:focus, a.bg-danger:hover {
     margin-bottom: 0;
     margin-left: 18rem;
     margin-right: 1rem;
-    padding: 2rem 4rem; }
+    padding: 2rem 4rem;
+    font-size: 1.4rem; }
+    [id^='chi-section'] > section > h1 {
+      font-family: "Great Vibes", cursive; }
     [id^='chi-section'] > section h1 {
       text-align: center;
-      margin-bottom: 2rem; }
+      margin-bottom: 2rem;
+      font-size: 3rem; }
+    [id^='chi-section'] > section h2 {
+      margin-bottom: 1rem;
+      font-size: 2rem; }
 
 .chi-section-sep {
   border-bottom: 0.0625rem dashed #1a1a1a; }

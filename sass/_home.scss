@@ -15,9 +15,21 @@
         margin-right: $sidebar-hmargin;
         padding: 2rem 4rem;
 
+        font-size: $section-font-size;
+
+        &>h1 {
+            font-family: $font-family-cursive;
+        }
+
         & h1 {
             text-align: center;
             margin-bottom: 2rem;
+            font-size: $section-h1-size;
+        }
+
+        & h2 {
+            margin-bottom: 1rem;
+            font-size: $section-h2-size;
         }
     }
 

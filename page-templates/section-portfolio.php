@@ -9,9 +9,8 @@ Template Name: Portfolio
         <h1>
             <?php echo $page->post_title;?>
         </h1>
-        <div>
-            <?php echo $page->post_content;?>
-        </div>
+
+        <?php echo $page->post_content;?>
     </section>
 </div>
 <div class="chi-section-sep"></div>
