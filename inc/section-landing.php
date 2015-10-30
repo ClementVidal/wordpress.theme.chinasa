@@ -1,4 +1,4 @@
-<div id="chi-section-landing" class="chi-visible">
+<div chi-resize-to-full-screen id="chi-section-landing" class="chi-visible">
 
     <section>
         <h1>

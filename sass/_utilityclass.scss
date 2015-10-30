@@ -9,6 +9,7 @@
     width: pixel-to-rem(400);
     margin-top: 4rem;
     margin-bottom: 4rem;
+    padding-top: 1rem;
     border-top: pixel-to-rem() solid lighten( $page-color, 20% );
     @extend .center-block;
 }

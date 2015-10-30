@@ -599,26 +599,26 @@ pre {
   max-height: 340px;
   overflow-y: scroll; }
 
-.container, #chi-section-landing {
+.container {
   margin-left: auto;
   margin-right: auto;
   padding-left: 0.9375rem;
   padding-right: 0.9375rem; }
-  .container::after, #chi-section-landing::after {
+  .container::after {
     content: "";
     display: table;
     clear: both; }
   @media (min-width: 544px) {
-    .container, #chi-section-landing {
+    .container {
       max-width: 576px; } }
   @media (min-width: 768px) {
-    .container, #chi-section-landing {
+    .container {
       max-width: 720px; } }
   @media (min-width: 992px) {
-    .container, #chi-section-landing {
+    .container {
       max-width: 940px; } }
   @media (min-width: 1200px) {
-    .container, #chi-section-landing {
+    .container {
       max-width: 1140px; } }
 
 .container-fluid, [id^='chi-section'] > section, .chi-section-sep {
@@ -4661,6 +4661,7 @@ a.bg-danger:focus, a.bg-danger:hover {
   width: 25rem;
   margin-top: 4rem;
   margin-bottom: 4rem;
+  padding-top: 1rem;
   border-top: 0.0625rem solid #333333; }
 
 #chi-sidebar {
@@ -4789,8 +4790,7 @@ a.bg-danger:focus, a.bg-danger:hover {
 
 #chi-section-landing {
   background-color: black;
-  text-align: center;
-  min-height: 40rem; }
+  text-align: center; }
   #chi-section-landing h1 {
     font-size: 4rem; }
   #chi-section-landing h2 {

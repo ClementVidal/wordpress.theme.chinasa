@@ -27,7 +27,6 @@
 
 #chi-section-landing {
     background-color: $page-color;
-    @extend .container;
     text-align: center;
     & h1 {
         font-size: $section-landing-h1-size;
@@ -35,7 +34,6 @@
     & h2 {
         font-family: $font-family-cursive;
     }
-    min-height: 40rem;
 }
 #chi-section-home {
     background-color: lighten( $page-color, 10% );
