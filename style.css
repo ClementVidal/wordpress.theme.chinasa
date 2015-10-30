@@ -4796,13 +4796,19 @@ a.bg-danger:focus, a.bg-danger:hover {
   #chi-section-landing h2 {
     font-family: "Great Vibes", cursive; }
 
-#chi-section-home {
+#chi-section-about {
   background-color: #1a1a1a; }
 
 #chi-section-back-end {
   background-color: #1a1a1a; }
 
 #chi-section-mobile {
+  background-color: #1a1a1a; }
+
+#chi-section-portfolio {
+  background-color: #1a1a1a; }
+
+#chi-section-contact {
   background-color: #1a1a1a; }
 
 #chi-blog ul {

@@ -18,6 +18,7 @@
             text-align: center;
         }
     }
+
 }
 .chi-section-sep {
     @extend .container-fluid;
@@ -35,12 +36,21 @@
         font-family: $font-family-cursive;
     }
 }
-#chi-section-home {
+#chi-section-about {
     background-color: lighten( $page-color, 10% );
 }
 #chi-section-back-end {
     background-color: lighten( $page-color, 10% );
 }
 #chi-section-mobile {
+    background-color: lighten( $page-color, 10% );
+}
+#chi-section-portfolio {
+    background-color: lighten( $page-color, 10% );
+}
+#chi-section-partenaires {
+
+}
+#chi-section-contact {
     background-color: lighten( $page-color, 10% );
 }
