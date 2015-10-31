@@ -9,7 +9,6 @@ function chinasa_scripts()
     wp_enqueue_script('chi-jquery', get_template_directory_uri().'/vendor/jquery/dist/jquery.js' );
     wp_enqueue_script('chi-bootstrap', get_template_directory_uri().'/vendor/bootstrap/dist/js/bootstrap.js' );
     wp_enqueue_script('chi-angularjs', get_template_directory_uri().'/vendor/angular/angular.js' );
-    wp_enqueue_script('chi-angular-inview', get_template_directory_uri().'/vendor/angular-inview/angular-inview.js' );
     wp_enqueue_script('chi-chinasa', get_template_directory_uri().'/js/dist/chinasa.js' );
 }
 add_action('wp_enqueue_scripts', 'chinasa_scripts');
