@@ -1,21 +1,5 @@
 <div id="chi-sidebar">
 
-<!--
-    <div class='chi-sidebar-head'>
-        <?php if (get_theme_mod('chi_logo')) : ?>
-
-            <a href='<?php echo esc_url(home_url('/')); ?>' title='<?php echo esc_attr(get_bloginfo('name', 'display')); ?>' rel='home'>
-                <img src='<?php echo esc_url(get_theme_mod('chi_logo')); ?>' alt='<?php echo esc_attr(get_bloginfo('name', 'display')); ?>'>
-            </a>
-
-        <?php else : ?>
-            <h1>
-                <a href='<?php echo esc_url(home_url('/')); ?>' title='<?php echo esc_attr(get_bloginfo('name', 'display')); ?>' rel='home'><?php bloginfo('name'); ?></a>
-            </h1>
-
-        <?php endif; ?>
-    </div>
--->
 
     <div class='chi-sidebar-menu'>
     <?php
@@ -32,9 +16,9 @@
     </div>
 
     <div class='chi-sidebar-foot'>
-        <a href="https://github.com/ClementVidal"><i class="fa fa-github"></i></a>
-        <a href="https://fr.linkedin.com/pub/clement-vidal/6/413/147"><i class="fa fa-linkedin"></i></a>
-        <a href="https://twitter.com/_clementvidal_"><i class="fa fa-twitter"></i></a>
+        <a href="<?php echo get_theme_mod( 'chi_social_github' );?>"><i class="fa fa-github"></i></a>
+        <a href="<?php echo get_theme_mod( 'chi_social_linkedin' );?>"><i class="fa fa-linkedin"></i></a>
+        <a href="<?php echo get_theme_mod( 'chi_social_twitter' );?>"><i class="fa fa-twitter"></i></a>
         <a href="<?php bloginfo('rss2_url');?>"><i class="fa fa-rss"></i></a>
     </div>
 

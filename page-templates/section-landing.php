@@ -7,8 +7,8 @@ Template Name: Landing
 
     <section>
         <h1>
-            Clement <br>
-            Vidal
+            <?php the_author_meta('first_name'); ?><br>
+            <?php the_author_meta('last_name'); ?>
         </h1>
 
 
