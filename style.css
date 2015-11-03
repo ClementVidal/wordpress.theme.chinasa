@@ -4612,7 +4612,7 @@ a.bg-danger:focus, a.bg-danger:hover {
     display: none !important; } }
 
 @media (max-width: 991px) {
-  .hidden-md-down {
+  .hidden-md-down, #chi-sidebar {
     display: none !important; } }
 
 @media (min-width: 992px) {
@@ -4653,8 +4653,9 @@ a.bg-danger:focus, a.bg-danger:hover {
     display: none !important; } }
 
 .chi-round-img-300 {
-  width: 18.75rem;
-  height: 18.75rem;
+  width: 100%;
+  height: auto;
+  max-width: 18.75rem;
   border-radius: 9.375rem;
   border: 0.125rem solid #333333; }
 
@@ -4790,6 +4791,7 @@ a.bg-danger:focus, a.bg-danger:hover {
     margin-left: 18rem;
     margin-right: 1rem;
     padding: 2rem 4rem;
+    text-align: justify;
     font-size: 1.4rem; }
     [id^='chi-section'] > section > h1 {
       font-family: "Great Vibes", cursive; }
@@ -4800,6 +4802,10 @@ a.bg-danger:focus, a.bg-danger:hover {
     [id^='chi-section'] > section h2 {
       margin-bottom: 1rem;
       font-size: 2rem; }
+  @media (max-width: 991px) {
+    [id^='chi-section'] > section {
+      padding: 1rem 1rem;
+      margin-left: 1rem; } }
 
 .chi-section-sep {
   border-bottom: 0.0625rem dashed #1a1a1a; }

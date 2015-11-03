@@ -15,6 +15,7 @@
         margin-right: $sidebar-hmargin;
         padding: 2rem 4rem;
 
+        text-align: justify;
         font-size: $section-font-size;
 
         &>h1 {
@@ -33,6 +34,12 @@
         }
     }
 
+    @include media-breakpoint-down(md) {
+        &>section {
+            padding: 1rem 1rem;
+            margin-left: $sidebar-hmargin;
+        }
+    }
 }
 .chi-section-sep {
     @extend .container-fluid;
