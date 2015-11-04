@@ -4660,7 +4660,6 @@ a.bg-danger:focus, a.bg-danger:hover {
   border: 0.125rem solid #333333; }
 
 .chi-card {
-  width: 25rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
   padding-top: 1rem;
@@ -4734,6 +4733,15 @@ a.bg-danger:focus, a.bg-danger:hover {
       font-size: 1.16667rem; }
   #chi-sidebar .chi-sidebar-menu > ul > li {
     margin-bottom: 1rem; }
+    #chi-sidebar .chi-sidebar-menu > ul > li a.active::before {
+      position: absolute;
+      left: 3rem;
+      content: "\f101";
+      font-family: FontAwesome;
+      font-weight: normal;
+      font-style: normal;
+      display: inline-block;
+      text-decoration: inherit; }
   #chi-sidebar .chi-sidebar-menu > ul > li a {
     -webkit-transition: all 0.5s ease;
          -o-transition: all 0.5s ease;

@@ -38,7 +38,19 @@
         }
         &>ul>li {
             margin-bottom: 1rem;
+
+            & a.active::before {
+                position: absolute;
+                left: 3rem;
+                 content: "\f101";
+                font-family: FontAwesome;
+                font-weight: normal;
+                font-style: normal;
+                display: inline-block;
+                text-decoration: inherit;
+            }
         }
+
 
         &>ul>li a {
             transition: all 0.5s ease;
@@ -47,6 +59,8 @@
             &:hover {
                 color: $sidebar-font-color-dark;
             }
+
+
         }
     }
     & .chi-sidebar-head {

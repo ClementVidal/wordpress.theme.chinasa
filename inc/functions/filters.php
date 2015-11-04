@@ -6,6 +6,7 @@
 function chinasa_nav_menu_link_attributes( $atts, $item, $args )
 {
     $atts['du-smooth-scroll'] = $atts['href'];
+    $atts['du-scrollspy'] = ' ';
 
     return $atts;
 }
