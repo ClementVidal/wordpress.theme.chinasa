@@ -5,6 +5,13 @@
     border-radius: pixel-to-rem(150);
     border: pixel-to-rem(2) solid lighten( $page-color, 20% );
 }
+.chi-round-img-200 {
+    width: 100%;
+    height: auto;
+    max-width: pixel-to-rem(200);
+    border-radius: pixel-to-rem(100);
+    border: pixel-to-rem(2) solid lighten( $page-color, 20% );
+}
 .chi-card {
     //width: pixel-to-rem(400);
     margin-top: 2rem;

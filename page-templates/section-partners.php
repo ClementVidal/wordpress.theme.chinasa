@@ -24,8 +24,9 @@ Template Name: Partners
                 ?>
 
             	<div class="col-lg-4 col-md-12">
-            		<div class="chi-card">
-            			<h2><?php the_title(); ?></h2>
+            		<div chi-smooth-apparition chi-class="visible" class="chi-card">
+            			<div><?php the_title(); ?></div>
+                        <?php the_post_thumbnail( array(200, 200) );?>
             			<p>
             			<?php the_content(); ?>
             			</p>

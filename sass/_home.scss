@@ -72,7 +72,23 @@
 #chi-section-portfolio {
 }
 #chi-section-partenaires {
-
+    & .chi-card {
+        transform: translateY( 4rem );
+        transition: transform 1.0s ease;
+        &.visible {
+            transform: translateY( -0rem );
+        }
+        & div {
+            text-align: center;
+            margin-bottom: 1rem;
+            font-size: $section-h2-size;
+        }
+        & img {
+            margin: auto;
+            display: block;
+            @extend .chi-round-img-200 ;
+        }
+    }
 }
 #chi-section-competences {
 

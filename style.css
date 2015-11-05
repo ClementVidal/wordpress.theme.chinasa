@@ -4659,6 +4659,13 @@ a.bg-danger:focus, a.bg-danger:hover {
   border-radius: 9.375rem;
   border: 0.125rem solid #333333; }
 
+.chi-round-img-200, #chi-section-partenaires .chi-card img {
+  width: 100%;
+  height: auto;
+  max-width: 12.5rem;
+  border-radius: 6.25rem;
+  border: 0.125rem solid #333333; }
+
 .chi-card {
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -4835,6 +4842,27 @@ a.bg-danger:focus, a.bg-danger:hover {
 
 #chi-section-mobile {
   background-color: #1a1a1a; }
+
+#chi-section-partenaires .chi-card {
+  -webkit-transform: translateY(4rem);
+      -ms-transform: translateY(4rem);
+       -o-transform: translateY(4rem);
+          transform: translateY(4rem);
+  -webkit-transition: -webkit-transform 1.0s ease;
+       -o-transition: -o-transform 1.0s ease;
+          transition: transform 1.0s ease; }
+  #chi-section-partenaires .chi-card.visible {
+    -webkit-transform: translateY(0rem);
+        -ms-transform: translateY(0rem);
+         -o-transform: translateY(0rem);
+            transform: translateY(0rem); }
+  #chi-section-partenaires .chi-card div {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2rem; }
+  #chi-section-partenaires .chi-card img {
+    margin: auto;
+    display: block; }
 
 #chi-section-competences {
   background-color: #1a1a1a; }

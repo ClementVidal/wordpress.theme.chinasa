@@ -30,6 +30,7 @@
     margin-right: $sidebar-hmargin;
     padding: 2rem 4rem;
 }
+
 @function pixel-to-rem( $pixel:1 ) {
     @return ( $pixel / 16 )+rem;
 }
