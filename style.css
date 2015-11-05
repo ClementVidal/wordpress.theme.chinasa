@@ -631,15 +631,15 @@ pre {
     display: table;
     clear: both; }
 
-.row, #chi-section-contact form > div {
+.row, #chi-section-competences ul, #chi-section-contact form > div {
   margin-left: -0.9375rem;
   margin-right: -0.9375rem; }
-  .row::after, #chi-section-contact form > div::after {
+  .row::after, #chi-section-competences ul::after, #chi-section-contact form > div::after {
     content: "";
     display: table;
     clear: both; }
 
-.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, #chi-section-contact form > div > label, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, #chi-section-contact form > div > div, .col-md-11, .col-md-12, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12 {
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm-1, .col-sm-2, #chi-section-competences ul > li, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, #chi-section-contact form > div > label, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, #chi-section-contact form > div > div, .col-md-11, .col-md-12, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12 {
   position: relative;
   min-height: 1px;
   padding-left: 0.9375rem;
@@ -802,13 +802,13 @@ pre {
   margin-left: 100%; }
 
 @media (min-width: 544px) {
-  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+  .col-sm-1, .col-sm-2, #chi-section-competences ul > li, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
     float: left; }
 
   .col-sm-1 {
     width: 8.33333%; }
 
-  .col-sm-2 {
+  .col-sm-2, #chi-section-competences ul > li {
     width: 16.66667%; }
 
   .col-sm-3 {
@@ -4790,7 +4790,8 @@ a.bg-danger:focus, a.bg-danger:hover {
   opacity: 0;
   -webkit-transition: opacity 1.5s ease;
        -o-transition: opacity 1.5s ease;
-          transition: opacity 1.5s ease; }
+          transition: opacity 1.5s ease;
+  overflow-y: hidden; }
   [id^='chi-section'].chi-visible {
     opacity: 1; }
   [id^='chi-section'] > section {
@@ -4835,8 +4836,30 @@ a.bg-danger:focus, a.bg-danger:hover {
 #chi-section-mobile {
   background-color: #1a1a1a; }
 
-#chi-section-portfolio {
+#chi-section-competences {
   background-color: #1a1a1a; }
+  #chi-section-competences ul {
+    list-style-type: none; }
+    #chi-section-competences ul > li {
+      min-width: 10rem;
+      margin-bottom: 3rem;
+      -webkit-transform: translateY(4rem);
+          -ms-transform: translateY(4rem);
+           -o-transform: translateY(4rem);
+              transform: translateY(4rem);
+      -webkit-transition: -webkit-transform 1.0s ease;
+           -o-transition: -o-transform 1.0s ease;
+              transition: transform 1.0s ease; }
+      #chi-section-competences ul > li h3 {
+        display: inline; }
+      #chi-section-competences ul > li img {
+        border: 0.0625rem solid #373a3c;
+        border-radius: 0.25rem; }
+      #chi-section-competences ul > li.visible {
+        -webkit-transform: translateY(0rem);
+            -ms-transform: translateY(0rem);
+             -o-transform: translateY(0rem);
+                transform: translateY(0rem); }
 
 #chi-section-contact {
   background-color: #1a1a1a; }

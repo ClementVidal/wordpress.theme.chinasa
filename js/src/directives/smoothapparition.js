@@ -16,6 +16,11 @@
                 class: '@chiClass'
             },
             link: function(scope, element, attrs, graphNode) {
+
+                if( ! angular.isDefined( scope.class ) ) {
+                    scope.class = "visible";
+                }
+                
                 scope.isVisible = false;
 
                 // Attach event handler

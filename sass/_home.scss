@@ -7,13 +7,10 @@
         opacity: 1;
     }
 
+    overflow-y: hidden;
+
     &>section {
-        @extend .container-fluid;
-        margin-top:0;
-        margin-bottom: 0;
-        margin-left: 2 * $sidebar-hmargin + $sidebar-width;
-        margin-right: $sidebar-hmargin;
-        padding: 2rem 4rem;
+        @include content-container();
 
         text-align: justify;
         font-size: $section-font-size;
@@ -60,16 +57,50 @@
 #chi-section-about {
     background-color: lighten( $page-color, 10% );
 }
+#chi-section-front-end {
+
+}
 #chi-section-back-end {
     background-color: lighten( $page-color, 10% );
+}
+#chi-section-custom {
+
 }
 #chi-section-mobile {
     background-color: lighten( $page-color, 10% );
 }
 #chi-section-portfolio {
-    background-color: lighten( $page-color, 10% );
 }
 #chi-section-partenaires {
+
+}
+#chi-section-competences {
+
+    background-color: lighten( $page-color, 10% );
+    & ul {
+        @extend .row;
+        list-style-type: none;
+        &>li {
+            @extend .col-sm-2;
+            min-width: 10rem;
+            margin-bottom: 3rem;
+            & h3 {
+                display: inline;
+            }
+
+            & img {
+                border: pixel-to-rem( ) solid $sidebar-color;
+                border-radius: pixel-to-rem( 4 );
+            }
+
+            transform: translateY( 4rem );
+            transition: transform 1.0s ease;
+            &.visible {
+                transform: translateY( -0rem );
+            }
+        }
+    }
+
 
 }
 #chi-section-contact {

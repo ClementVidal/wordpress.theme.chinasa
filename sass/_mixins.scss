@@ -22,6 +22,14 @@
         border-left: (1 / 16) + rem $style darken( $color, 30% );
     }
 }
+@mixin content-container() {
+    @extend .container-fluid;
+    margin-top:0;
+    margin-bottom: 0;
+    margin-left: 2 * $sidebar-hmargin + $sidebar-width;
+    margin-right: $sidebar-hmargin;
+    padding: 2rem 4rem;
+}
 @function pixel-to-rem( $pixel:1 ) {
     @return ( $pixel / 16 )+rem;
 }
