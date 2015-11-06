@@ -13,11 +13,10 @@
     bottom: 0;
     left: $sidebar-hmargin;
     width: $sidebar-width;
-    padding: $sidebar-vpadding $sidebar-hpadding;
     background: $sidebar-color;
     border-left: 1px solid $sidebar-color-dark;
     border-right: 1px solid $sidebar-color-dark;
-    @include flex-box( column, center, center );
+    @include flex-box( column, space-between, center );
 
     &:before {
         @include vertical-line( left, $sidebar-hpadding, $sidebar-color-ligth, dashed );
@@ -25,7 +24,10 @@
     &:after {
         @include vertical-line( right, $sidebar-hpadding, $sidebar-color-ligth, dashed );
     }
+
     & .chi-sidebar-menu {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
         & ul {
             font-size: $sidebar-font-size;
             list-style-type: none;
@@ -64,13 +66,14 @@
         }
     }
     & .chi-sidebar-head {
-        margin-bottom: 2rem;
+        &>img {
+            max-width: 8rem;
+        }
+        margin-top: 2rem;
     }
     & .chi-sidebar-foot {
-        position: fixed;
-        bottom: 0;
         width: $sidebar-width - 2 * $sidebar-hpadding;
-        margin-bottom: 2rem;
+        margin-bottom: 0.5rem;
         padding: 0 2rem;
         @include flex-box( row, space-between, center );
         & a {

@@ -25,7 +25,7 @@ Template Name: Skills
 
                 <li chi-smooth-apparition chi-class="visible">
                     <?php the_post_thumbnail( array(50, 50) );?>
-                    <h3> <?php the_title(); ?> </h3>
+                    <span> <?php the_title(); ?> </span>
                     <div>
                         <?php
 
