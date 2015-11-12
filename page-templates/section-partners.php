@@ -24,12 +24,14 @@ Template Name: Partners
                 ?>
 
             	<div class="col-lg-4 col-md-12">
-            		<article chi-smooth-apparition chi-class="visible" class="chi-card">
-            			<span><?php the_title(); ?></span>
-                        <?php the_post_thumbnail( array(200, 200) );?>
-            			<p>
-            			<?php the_content(); ?>
-            			</p>
+            		<article chi-smooth-apparition chi-class="visible">
+                		<?php the_post_thumbnail( array(200, 200) );?>
+                        <div>
+                            <span><?php the_title(); ?></span>
+                			<p>
+                			<?php the_content(); ?>
+                			</p>
+                        </div>
             		</article>
             	</div>
 
@@ -38,4 +40,3 @@ Template Name: Partners
         </div>
     </section>
 </div>
-<div class="chi-section-sep"></div>

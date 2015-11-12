@@ -1,6 +1,9 @@
 // Common to all section
+//
+
 [id^='chi-section'] {
 
+    background-color: $section-background-color1;
     opacity: 0;
     transition: opacity 1.5s ease;
     &.chi-visible {
@@ -8,8 +11,12 @@
     }
 
     overflow-y: hidden;
+    color: $section-font-color;
+
+    border-bottom: pixel-to-rem() dashed $page-decoration;
 
     &>section {
+
         @include content-container();
 
         text-align: justify;
@@ -17,13 +24,13 @@
 
         &>h1 {
             margin-top: 2rem;
-            font-family: $font-family-cursive;
         }
 
         & h1 {
             text-align: center;
             margin-bottom: 2rem;
             font-size: $section-h1-size;
+            font-family: $font-family-cursive;
         }
 
         & h2 {
@@ -39,87 +46,82 @@
         }
     }
 }
-.chi-section-sep {
-    @extend .container-fluid;
-    border-bottom: pixel-to-rem() dashed lighten( $page-color, 10% );
-}
 
 // Per section settings
 #chi-section-landing {
-    background-color: $page-color;
 
+    background-color: $brand-primary-color;
     & header{
         width: 40rem;
         margin-left: auto;
         margin-right: auto;
-        margin-top: 10rem;
+        margin-top: 4rem;
         margin-bottom: 2rem;
+        padding-bottom: 2rem;
+        border-bottom: pixel-to-rem() solid $page-decoration;
 
         &>div {
+            text-align: center;
+
             &>img {
                 height: 12rem;
+                vertical-align: baseline;
             }
 
             &>span{
                 display: inline-block;
-                vertical-align: middle;
                 margin-left: 2rem;
                 &>h1 {
                     text-align: left;
                     margin-bottom: 0;
                     font-weight: bold;
                     font-size: $section-landing-h1-size;
+                    color: $section-landing-h1-color;
                 }
             }
+            margin-bottom: 1rem;
         }
 
-        & h2 {
-            margin-top: 2rem;
-            font-size: 2.5rem;
-            font-family: $font-family-cursive;
-        }
+
+    }
+    & h2 {
+        text-align: center;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+        font-size: 2.5rem;
+        font-family: $font-family-cursive;
+        font-size: $section-landing-h2-size;
+        color: $section-landing-h2-color;
+    }
+    & i {
+        margin: auto;
+        width: 0px;
+        display: block;
     }
 
 }
 #chi-section-about {
-    background-color: lighten( $page-color, 10% );
+    background-color: $section-background-color2;
 }
 #chi-section-front-end {
-
+    background-color: $brand-primary-color;
 }
 #chi-section-back-end {
-    background-color: lighten( $page-color, 10% );
+    background-color: $section-background-color2;
 }
 #chi-section-custom {
-
+    background-color: $brand-primary-color;
 }
 #chi-section-mobile {
-    background-color: lighten( $page-color, 10% );
+    background-color: $section-background-color2;
 }
 #chi-section-portfolio {
+    background-color: $brand-primary-color;
 }
-#chi-section-partenaires {
-    & .chi-card {
-        transform: translateY( 4rem );
-        transition: transform 1.0s ease;
-        &.visible {
-            transform: translateY( -0rem );
-        }
-        & div {
-            text-align: center;
-            margin-bottom: 1rem;
-            font-size: $section-h2-size;
-        }
-        & img {
-            margin: auto;
-            display: block;
-            @extend .chi-round-img-200 ;
-        }
-    }
-}
+
 #chi-section-competences {
 
-    background-color: lighten( $page-color, 10% );
+    background-color: $section-background-color2;
     & ul {
         @extend .row;
         list-style-type: none;
@@ -132,8 +134,12 @@
                 font-size: 1rem;
             }
 
+            & i {
+                color: $section-kill-stars-color;
+            }
+
             & img {
-                border: pixel-to-rem( ) solid $sidebar-color;
+                border: pixel-to-rem( ) solid $page-decoration;
                 border-radius: pixel-to-rem( 4 );
             }
 
@@ -144,12 +150,43 @@
             }
         }
     }
+}
+#chi-section-partenaires {
+    background-color: $brand-primary-color;
 
+    & article {
+        transform: translateY( 4rem );
+        transition: transform 1.0s ease;
+        &.visible {
+            transform: translateY( -0rem );
+        }
 
+        border-radius: pixel-to-rem( 4 );
+        border-top: none;
+        & div {
+            margin: 1rem;
+            text-align: center;
+            margin-top: 1rem;
+            padding-bottom: 1rem;
+            border-top: pixel-to-rem() solid $page-decoration;
+            & span {
+                font-size: $section-h2-size;
+            }
+
+            & p {
+                text-indent: 1.5rem;
+                text-align: justify;
+            }
+        }
+        & img {
+            margin: auto;
+            display: block;
+            @extend .chi-round-img-200 ;
+        }
+    }
 }
 #chi-section-contact {
-    background-color: lighten( $page-color, 10% );
-
+    background-color: $section-background-color2;
 
     & form>div {
         @extend .form-group ;

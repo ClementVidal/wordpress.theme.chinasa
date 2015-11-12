@@ -1,12 +1,21 @@
+// Meta:
+$brand-primary-color: #06294B;
+$brand-secondary-color: #744500;
+
+
+//Bleu: 06294B
+//Marron: 744500
+
+
 // Global
-$font-family-cursive:           'Great Vibes', cursive;
+$font-family-cursive:           'Satisfy', cursive;
 
 // Sidebar
 $sidebar-hmargin: 1rem;
 $sidebar-width: 16rem;
 $sidebar-hpadding: 0.25rem;
 $sidebar-font-size: 1.4rem;
-$sidebar-color: #373a3c;
+$sidebar-color: darken( $brand-primary-color, 10% );
 $sidebar-font-color: white;
 
 // Section
@@ -14,10 +23,19 @@ $section-hmargin: 4.5rem;
 $section-h1-size: 3rem;
 $section-h2-size: 2rem;
 $section-font-size: 1.4rem;
-
+$section-background-color1: #323137;//lighten( black, 30% );
+$section-background-color2: lighten( black, 40% );
+$section-font-color: darken( white, 10% );
 
 // Section - Landing
 $section-landing-h1-size: 6rem;
+$section-landing-h2-size: 2.5rem;
+$section-landing-h1-color: darken( white, 10% );
+$section-landing-h2-color: darken( white, 10% );
+
+// Section - Skill
+$section-kill-stars-color: darken( white, 20% );;
 
 // Page
-$page-color: black;
+$page-color: darken( $brand-primary-color, 15% );
+$page-decoration: lighten( black, 70% );

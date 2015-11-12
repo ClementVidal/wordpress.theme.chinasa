@@ -19,10 +19,10 @@
     @include flex-box( column, space-between, center );
 
     &:before {
-        @include vertical-line( left, $sidebar-hpadding, $sidebar-color-ligth, dashed );
+        @include vertical-line( left, $sidebar-hpadding, $brand-primary-color, dashed );
     }
     &:after {
-        @include vertical-line( right, $sidebar-hpadding, $sidebar-color-ligth, dashed );
+        @include vertical-line( right, $sidebar-hpadding, $brand-primary-color, dashed );
     }
 
     & .chi-sidebar-menu {

@@ -9,4 +9,3 @@
         <?php echo $page->post_content;?>
     </section>
 </div>
-<div class="chi-section-sep"></div>

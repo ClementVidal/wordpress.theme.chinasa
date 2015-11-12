@@ -22,7 +22,10 @@ function chinasa_style()
     wp_enqueue_style('chi-style', get_stylesheet_uri());
     wp_enqueue_style('chi-fontawesome', get_template_directory_uri().'/vendor/fontawesome/css/font-awesome.css' );
 
-    wp_enqueue_style('chi-gf-1', 'https://fonts.googleapis.com/css?family=Great+Vibes');
+    wp_enqueue_style('chi-gf-1', 'https://fonts.googleapis.com/css?family=Satisfy');
     wp_enqueue_style('chi-gf-2', 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic');
+
+
+
 }
 add_action('wp_enqueue_scripts', 'chinasa_style');

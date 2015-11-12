@@ -52,4 +52,3 @@ Template Name: Skills
         </ul>
     </section>
 </div>
-<div class="chi-section-sep"></div>

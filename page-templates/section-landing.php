@@ -24,13 +24,13 @@ Template Name: Landing
                 </span>
             </div>
 
-            <h2>
-                Developeur Web avec une affection pour le design
-            </h2>
 
         </header>
 
 
+                    <h2>
+                        &laquo; Developeur Web avec une affection pour le design &raquo;
+                    </h2>
+
     </section>
 </div>
-<div class="chi-section-sep"></div>

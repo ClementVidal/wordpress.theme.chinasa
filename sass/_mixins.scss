@@ -22,6 +22,7 @@
         border-left: (1 / 16) + rem $style darken( $color, 30% );
     }
 }
+
 @mixin content-container() {
     @extend .container-fluid;
     margin-top:0;

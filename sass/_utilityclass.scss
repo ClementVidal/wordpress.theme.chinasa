@@ -3,23 +3,23 @@
     height: auto;
     max-width: pixel-to-rem(300);
     border-radius: pixel-to-rem(150);
-    border: pixel-to-rem(2) solid lighten( $page-color, 20% );
+    border: pixel-to-rem(1) solid $page-decoration;
 }
 .chi-round-img-200 {
     width: 100%;
     height: auto;
     max-width: pixel-to-rem(200);
     border-radius: pixel-to-rem(100);
-    border: pixel-to-rem(2) solid lighten( $page-color, 20% );
+    border: pixel-to-rem(1) solid $page-decoration;
 }
 .chi-card {
     //width: pixel-to-rem(400);
     margin-top: 2rem;
     margin-bottom: 2rem;
     padding-top: 1rem;
-    border-top: pixel-to-rem() solid lighten( $page-color, 20% );
+    border-top: pixel-to-rem(1) solid $page-decoration;
 
-    //@extend .center-block;
+    //background-color: $brand-primary-color;
 }
 .chi-section-sign {
     margin-top: 1rem;

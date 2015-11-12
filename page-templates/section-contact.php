@@ -45,4 +45,3 @@ Template Name: Contact
         </form>
     </section>
 </div>
-<div class="chi-section-sep"></div>
