@@ -23,8 +23,8 @@ $section-hmargin: 4.5rem;
 $section-h1-size: 3rem;
 $section-h2-size: 2rem;
 $section-font-size: 1.4rem;
-$section-background-color1: #323137;//lighten( black, 30% );
-$section-background-color2: lighten( black, 40% );
+$section-background-color1: $brand-primary-color;
+$section-background-color2: desaturate( lighten( $brand-primary-color, 20% ), 20% );
 $section-font-color: darken( white, 10% );
 
 // Section - Landing

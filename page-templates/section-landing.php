@@ -3,34 +3,41 @@
 Template Name: Landing
 */
 ?>
-<div chi-resize-to-full-screen id="chi-section-landing" class="chi-visible">
+<div  id="chi-section-landing" class="chi-visible">
 
-    <section>
+    <section chi-resize-to-full-screen>
 
-        <header>
+        <div>
+            <header>
 
-            <div>
-                <?php if ( get_theme_mod( 'chi_logo' ) ) : ?>
-                <img src='<?php echo esc_url( get_theme_mod( 'chi_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'>
-                <?php endif; ?>
+                <div>
+                    <?php if ( get_theme_mod( 'chi_logo' ) ) : ?>
+                    <img src='<?php echo esc_url( get_theme_mod( 'chi_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'>
+                    <?php endif; ?>
 
-                <span>
-                    <h1>
-                        <?php the_author_meta('first_name'); ?>
-                    </h1>
-                    <h1>
-                        <?php the_author_meta('last_name'); ?>
-                    </h1>
-                </span>
-            </div>
+                    <span>
+                        <h1>
+                            <?php the_author_meta('first_name'); ?>
+                        </h1>
+                        <h1>
+                            <?php the_author_meta('last_name'); ?>
+                        </h1>
+                    </span>
+                </div>
+
+            </header>
 
 
-        </header>
+            <h2>
+                &laquo; Developeur Web avec une affection pour le design &raquo;
+            </h2>
+        </div>
 
+        <div>
+            <i class="fa fa-arrow-down" ></i>
+        </div>
 
-                    <h2>
-                        &laquo; Developeur Web avec une affection pour le design &raquo;
-                    </h2>
 
     </section>
+
 </div>

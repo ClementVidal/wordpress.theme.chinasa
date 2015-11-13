@@ -29,6 +29,7 @@
         margin-top: 2rem;
         margin-bottom: 2rem;
         & ul {
+            @include outline-text(  );
             font-size: $sidebar-font-size;
             list-style-type: none;
             margin: 0;
@@ -77,6 +78,7 @@
         padding: 0 2rem;
         @include flex-box( row, space-between, center );
         & a {
+            @include outline-text( );
             font-size: 2rem;
             transition: color 0.5s ease;
             color: $sidebar-font-color-dark;

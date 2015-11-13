@@ -4,6 +4,7 @@
     max-width: pixel-to-rem(300);
     border-radius: pixel-to-rem(150);
     border: pixel-to-rem(1) solid $page-decoration;
+    margin-bottom: 1rem;
 }
 .chi-round-img-200 {
     width: 100%;
@@ -11,6 +12,7 @@
     max-width: pixel-to-rem(200);
     border-radius: pixel-to-rem(100);
     border: pixel-to-rem(1) solid $page-decoration;
+    margin-bottom: 1rem;
 }
 .chi-card {
     //width: pixel-to-rem(400);

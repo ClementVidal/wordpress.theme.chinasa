@@ -4657,14 +4657,16 @@ a.bg-danger:focus, a.bg-danger:hover {
   height: auto;
   max-width: 18.75rem;
   border-radius: 9.375rem;
-  border: 0.0625rem solid #b3b3b3; }
+  border: 0.0625rem solid #b3b3b3;
+  margin-bottom: 1rem; }
 
 .chi-round-img-200, #chi-section-partenaires article img {
   width: 100%;
   height: auto;
   max-width: 12.5rem;
   border-radius: 6.25rem;
-  border: 0.0625rem solid #b3b3b3; }
+  border: 0.0625rem solid #b3b3b3;
+  margin-bottom: 1rem; }
 
 .chi-card {
   margin-top: 2rem;
@@ -4733,6 +4735,7 @@ a.bg-danger:focus, a.bg-danger:hover {
     margin-top: 2rem;
     margin-bottom: 2rem; }
     #chi-sidebar .chi-sidebar-menu ul {
+      text-shadow: 0 0 0.125rem black, 0 0 0.125rem black;
       font-size: 1.4rem;
       list-style-type: none;
       margin: 0;
@@ -4787,6 +4790,7 @@ a.bg-danger:focus, a.bg-danger:hover {
         -ms-flex-align: center;
             align-items: center; }
     #chi-sidebar .chi-sidebar-foot a {
+      text-shadow: 0 0 0.125rem black, 0 0 0.125rem black;
       font-size: 2rem;
       -webkit-transition: color 0.5s ease;
            -o-transition: color 0.5s ease;
@@ -4796,7 +4800,7 @@ a.bg-danger:focus, a.bg-danger:hover {
         color: white; }
 
 [id^='chi-section'] {
-  background-color: #323137;
+  background-color: #06294B;
   opacity: 0;
   -webkit-transition: opacity 1.5s ease;
        -o-transition: opacity 1.5s ease;
@@ -4817,6 +4821,7 @@ a.bg-danger:focus, a.bg-danger:hover {
     [id^='chi-section'] > section > h1 {
       margin-top: 2rem; }
     [id^='chi-section'] > section h1 {
+      text-shadow: 0 0 0.125rem black, 0 0 0.125rem black;
       text-align: center;
       margin-bottom: 2rem;
       font-size: 3rem;
@@ -4831,62 +4836,99 @@ a.bg-danger:focus, a.bg-danger:hover {
 
 #chi-section-landing {
   background-color: #06294B; }
-  #chi-section-landing header {
-    width: 40rem;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 4rem;
-    margin-bottom: 2rem;
-    padding-bottom: 2rem;
-    border-bottom: 0.0625rem solid #b3b3b3; }
-    #chi-section-landing header > div {
+  #chi-section-landing section {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    #chi-section-landing section header {
+      width: 40rem;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 4rem;
+      padding-bottom: 2rem;
+      border-bottom: 0.0625rem solid #b3b3b3; }
+      #chi-section-landing section header > div {
+        text-align: center;
+        margin-bottom: 1rem; }
+        #chi-section-landing section header > div > img {
+          height: 12rem;
+          vertical-align: baseline; }
+        #chi-section-landing section header > div > span {
+          display: inline-block;
+          margin-left: 2rem; }
+          #chi-section-landing section header > div > span > h1 {
+            text-shadow: 0 0 0.125rem black, 0 0 0.125rem black;
+            text-align: left;
+            margin-bottom: 0;
+            font-weight: bold;
+            font-size: 6rem;
+            color: #e6e6e6; }
+    #chi-section-landing section h2 {
+      text-shadow: 0 0 0.125rem black, 0 0 0.125rem black;
       text-align: center;
-      margin-bottom: 1rem; }
-      #chi-section-landing header > div > img {
-        height: 12rem;
-        vertical-align: baseline; }
-      #chi-section-landing header > div > span {
-        display: inline-block;
-        margin-left: 2rem; }
-        #chi-section-landing header > div > span > h1 {
-          text-align: left;
-          margin-bottom: 0;
-          font-weight: bold;
-          font-size: 6rem;
-          color: #e6e6e6; }
-  #chi-section-landing h2 {
-    text-align: center;
-    margin-top: 4rem;
-    margin-bottom: 4rem;
-    font-size: 2.5rem;
-    font-family: "Satisfy", cursive;
-    font-size: 2.5rem;
-    color: #e6e6e6; }
-  #chi-section-landing i {
-    margin: auto;
-    width: 0px;
-    display: block; }
+      margin-top: 4rem;
+      font-size: 2.5rem;
+      font-family: "Satisfy", cursive;
+      font-size: 2.5rem;
+      color: #e6e6e6; }
+@-webkit-keyframes arrowAnim {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-o-keyframes arrowAnim {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@keyframes arrowAnim {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+    #chi-section-landing section i {
+      text-shadow: 0 0 0.125rem black, 0 0 0.125rem black;
+      font-size: 3rem;
+      -webkit-animation: arrowAnim 2s ease-in-out 0s infinite alternate;
+           -o-animation: arrowAnim 2s ease-in-out 0s infinite alternate;
+              animation: arrowAnim 2s ease-in-out 0s infinite alternate; }
 
 #chi-section-about {
-  background-color: #666666; }
+  background-color: #205c97; }
 
 #chi-section-front-end {
   background-color: #06294B; }
 
 #chi-section-back-end {
-  background-color: #666666; }
+  background-color: #205c97; }
 
 #chi-section-custom {
   background-color: #06294B; }
 
 #chi-section-mobile {
-  background-color: #666666; }
+  background-color: #205c97; }
 
 #chi-section-portfolio {
   background-color: #06294B; }
 
 #chi-section-competences {
-  background-color: #666666; }
+  background-color: #205c97; }
   #chi-section-competences ul {
     list-style-type: none; }
     #chi-section-competences ul > li {
@@ -4946,7 +4988,9 @@ a.bg-danger:focus, a.bg-danger:hover {
       display: block; }
 
 #chi-section-contact {
-  background-color: #666666; }
+  background-color: #205c97; }
+  #chi-section-contact li {
+    list-style: none; }
 
 #chi-blog ul {
   border: 1px solid black; }

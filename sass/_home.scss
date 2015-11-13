@@ -27,6 +27,7 @@
         }
 
         & h1 {
+            @include outline-text( );
             text-align: center;
             margin-bottom: 2rem;
             font-size: $section-h1-size;
@@ -50,73 +51,82 @@
 // Per section settings
 #chi-section-landing {
 
-    background-color: $brand-primary-color;
-    & header{
-        width: 40rem;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 4rem;
-        margin-bottom: 2rem;
-        padding-bottom: 2rem;
-        border-bottom: pixel-to-rem() solid $page-decoration;
+    background-color: $section-background-color1;
 
-        &>div {
-            text-align: center;
+    & section {
 
-            &>img {
-                height: 12rem;
-                vertical-align: baseline;
-            }
+        @include flex-box( column, space-around, center );
 
-            &>span{
-                display: inline-block;
-                margin-left: 2rem;
-                &>h1 {
-                    text-align: left;
-                    margin-bottom: 0;
-                    font-weight: bold;
-                    font-size: $section-landing-h1-size;
-                    color: $section-landing-h1-color;
+        & header{
+            width: 40rem;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 4rem;
+            padding-bottom: 2rem;
+            border-bottom: pixel-to-rem() solid $page-decoration;
+
+            &>div {
+                text-align: center;
+
+                &>img {
+                    height: 12rem;
+                    vertical-align: baseline;
                 }
+
+                &>span{
+                    display: inline-block;
+                    margin-left: 2rem;
+                    &>h1 {
+                        @include outline-text(  );
+                        text-align: left;
+                        margin-bottom: 0;
+                        font-weight: bold;
+                        font-size: $section-landing-h1-size;
+                        color: $section-landing-h1-color;
+                    }
+                }
+                margin-bottom: 1rem;
             }
-            margin-bottom: 1rem;
+
+
         }
-
-
+        & h2 {
+            @include outline-text();
+            text-align: center;
+            margin-top: 4rem;
+            font-size: 2.5rem;
+            font-family: $font-family-cursive;
+            font-size: $section-landing-h2-size;
+            color: $section-landing-h2-color;
+        }
+        @keyframes arrowAnim{
+             from { opacity: 0; }
+             to   { opacity: 1;}
+        }
+        & i {
+            @include outline-text(  );
+            font-size:3rem;
+            animation: arrowAnim 2s ease-in-out 0s infinite alternate;
+        }
     }
-    & h2 {
-        text-align: center;
-        margin-top: 4rem;
-        margin-bottom: 4rem;
-        font-size: 2.5rem;
-        font-family: $font-family-cursive;
-        font-size: $section-landing-h2-size;
-        color: $section-landing-h2-color;
-    }
-    & i {
-        margin: auto;
-        width: 0px;
-        display: block;
-    }
-
 }
 #chi-section-about {
     background-color: $section-background-color2;
 }
 #chi-section-front-end {
-    background-color: $brand-primary-color;
+    background-color: $section-background-color1;
 }
 #chi-section-back-end {
     background-color: $section-background-color2;
 }
 #chi-section-custom {
-    background-color: $brand-primary-color;
+    background-color: $section-background-color1;
 }
 #chi-section-mobile {
     background-color: $section-background-color2;
 }
 #chi-section-portfolio {
-    background-color: $brand-primary-color;
+    background-color: $section-background-color1;
 }
 
 #chi-section-competences {
@@ -152,7 +162,7 @@
     }
 }
 #chi-section-partenaires {
-    background-color: $brand-primary-color;
+    background-color: $section-background-color1;
 
     & article {
         transform: translateY( 4rem );
@@ -188,6 +198,9 @@
 #chi-section-contact {
     background-color: $section-background-color2;
 
+    & li {
+        list-style: none;
+    }
     & form>div {
         @extend .form-group ;
         @extend .row;
