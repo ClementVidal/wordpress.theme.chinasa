@@ -10,16 +10,16 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    box-shadow:0px 0px 0.4rem darken( $color, 30% );
+    box-shadow:0px 0px 0.4rem darken( $color, 80% );
     @if $side == "right" {
         right: $gutter-space;
         border-right: pixel-to-rem() $style $color;
-        border-left: pixel-to-rem() $style darken( $color, 30% );
+        border-left: pixel-to-rem() $style darken( $color, 50% );
     }
     @else if $side == "left" {
         left: $gutter-space;
-        border-right: pixel-to-rem()$style $color;
-        border-left: pixel-to-rem() $style darken( $color, 30% );
+        border-right: pixel-to-rem() $style $color;
+        border-left: pixel-to-rem() $style darken( $color, 50% );
     }
 }
 @mixin outline-text( $color: black, $width: pixel-to-rem( 2 ) ){

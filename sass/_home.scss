@@ -13,7 +13,12 @@
     overflow-y: hidden;
     color: $section-font-color;
 
-    border-bottom: pixel-to-rem() dashed $page-decoration;
+    &:not( :last-child ) {
+        border-bottom: pixel-to-rem() dashed darken( $page-decoration, 20% );
+    }
+    &:not( :first-child ) {
+        border-top: pixel-to-rem() dashed $page-decoration;
+    }
 
     &>section {
 
@@ -37,6 +42,10 @@
         & h2 {
             margin-bottom: 1rem;
             font-size: $section-h2-size;
+        }
+
+        & ul>li i {
+            width: 2rem;
         }
     }
 
@@ -145,6 +154,7 @@
             }
 
             & i {
+                width: 1.2rem;
                 color: $section-kill-stars-color;
             }
 
@@ -197,6 +207,15 @@
 }
 #chi-section-contact {
     background-color: $section-background-color2;
+
+    & article>h2 {
+        display: inline-block;
+        vertical-align: top;
+    }
+    & article>ul {
+        display: inline-block;
+        vertical-align: top;
+    }
 
     & li {
         list-style: none;

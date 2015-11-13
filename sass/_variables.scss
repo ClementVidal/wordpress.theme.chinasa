@@ -2,10 +2,8 @@
 $brand-primary-color: #06294B;
 $brand-secondary-color: #744500;
 
-
 //Bleu: 06294B
 //Marron: 744500
-
 
 // Global
 $font-family-cursive:           'Satisfy', cursive;
@@ -15,7 +13,7 @@ $sidebar-hmargin: 1rem;
 $sidebar-width: 16rem;
 $sidebar-hpadding: 0.25rem;
 $sidebar-font-size: 1.4rem;
-$sidebar-color: darken( $brand-primary-color, 10% );
+$sidebar-color: darken( $brand-primary-color, 5% );
 $sidebar-font-color: white;
 
 // Section
@@ -23,7 +21,7 @@ $section-hmargin: 4.5rem;
 $section-h1-size: 3rem;
 $section-h2-size: 2rem;
 $section-font-size: 1.4rem;
-$section-background-color1: $brand-primary-color;
+$section-background-color1: desaturate( lighten( $brand-primary-color, 5% ), 20% );
 $section-background-color2: desaturate( lighten( $brand-primary-color, 20% ), 20% );
 $section-font-color: darken( white, 10% );
 
