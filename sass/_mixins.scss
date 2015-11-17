@@ -33,6 +33,25 @@
     margin-right: $sidebar-hmargin;
     padding: 2rem 4rem;
 }
+@mixin translate-on-visible( $axis:"Y", $offset:4rem ) {
+
+    transition: transform 1.0s ease;
+    @if( $axis == "Y" ) {
+        transform: translateY( $offset );
+        &.visible {
+            transform: translateY( 0rem );
+        }
+    }
+    @else if( $axis == "X" ) {
+        transform: translateX( $offset );
+        &.visible {
+            transform: translateX( 0rem );
+        }
+    }
+    @else {
+        @error "Invalid argument to translate-on-visible";
+    }
+}
 
 @function pixel-to-rem( $pixel:1 ) {
     @return ( $pixel / 16 )+rem;

@@ -1,4 +1,4 @@
-<div chi-smooth-apparition chi-class="chi-visible" id="chi-section-<?php echo $page->post_name;?>" >
+<div chi-smooth-apparition id="chi-section-<?php echo $page->post_name;?>" >
     <section>
         <?php if( get_post_meta( $page->ID, 'hideTitle', true ) != 'true' ): ?>
             <h1>
