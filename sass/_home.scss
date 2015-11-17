@@ -47,6 +47,11 @@
         & ul>li i {
             width: 2rem;
         }
+
+        & p {
+            text-indent: 1.5rem;
+            text-align: justify;
+        }
     }
 
     @include media-breakpoint-down(md) {
@@ -61,10 +66,43 @@
 #chi-section-landing {
 
     background-color: $section-background-color1;
+    overflow: hidden;
+
+
+
 
     & section {
 
+        &>#chi-bg-shapes {
+            background-color: blue;
+
+            transform:rotateZ(22.5deg);
+            transform-origin: top left;
+            position: absolute;
+
+            width: 54rem;
+            height: 100rem;
+            top:-30rem;
+            right: -9rem;
+            z-index: 0;
+
+            opacity: 0;
+            transition: opacity 2.0s ease;
+            &.visible {
+                opacity: 1;
+            }
+            background:url(
+data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAFCAYAAAB8ZH1oAAAAF0lEQVQIW2NkYGCQZGBgeM5AADAOAYUAREYFBuSMALIAAAAASUVORK5CYII=
+            ) repeat;
+        }
+
+        position: relative;
         @include flex-box( column, space-around, center );
+
+        &>div {
+            z-index: 1;
+
+        }
 
         & header{
             width: 40rem;
@@ -193,10 +231,6 @@
                 font-size: $section-h2-size;
             }
 
-            & p {
-                text-indent: 1.5rem;
-                text-align: justify;
-            }
         }
         & img {
             margin: auto;
@@ -213,22 +247,34 @@
         vertical-align: top;
     }
     & article>ul {
-        display: inline-block;
+        //display: inline-block;
         vertical-align: top;
     }
 
     & li {
         list-style: none;
     }
-    & form>div {
-        @extend .form-group ;
-        @extend .row;
 
-        &>label {
-            @extend .col-md-2;
-        }
+
+    & form {
+        margin-top: 2rem;
         &>div {
-            @extend .col-md-10;
+            @extend .form-group ;
+            @extend .row;
+
+            & input, & textarea {
+                @extend  .form-control;
+            }
+            &>label {
+                @extend .col-md-3;
+            }
+            &>span {
+                @extend .col-md-9;
+            }
+        }
+        & input[type="submit"] {
+            @extend .btn;
+            @extend .btn-secondary;
         }
     }
 }

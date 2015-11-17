@@ -5,8 +5,12 @@ Template Name: Landing
 ?>
 <div  id="chi-section-landing" class="chi-visible">
 
+
     <section chi-resize-to-full-screen>
 
+        <div chi-smooth-apparition id="chi-bg-shapes">
+
+        </div>
         <div>
             <header>
 

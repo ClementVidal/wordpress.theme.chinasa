@@ -13,6 +13,6 @@
 
 <body ng-app="chinasa">
 
-    <?php the_post(); get_template_part( '/inc/site', 'sidebar' ); ?>
+    <?php get_template_part( '/inc/site', 'sidebar' ); ?>
 
     <div id="chi-body">

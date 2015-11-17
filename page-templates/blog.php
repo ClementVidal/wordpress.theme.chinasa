@@ -10,9 +10,6 @@ get_template_part( '/inc/site', 'header' );
 // We assume that this page will always display a single post
 the_post();
 
-
-echo '<div id="chi-blog">';
-
 the_title();
 the_content();
 
@@ -21,10 +18,15 @@ $recent_posts = wp_get_recent_posts( );
 
 echo '<ul>';
 foreach( $recent_posts as $recent ){
-	echo '<li><a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> </li> ';
+	echo '<li>';
+	echo '<a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a>';
+	echo '<p>';
+	echo $recent["post_content"];
+	echo '</p>';
+	echo '</li> ';
+
 }
 echo '</ul>';
-
 
 echo '</div>';
 
