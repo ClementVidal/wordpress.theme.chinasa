@@ -5015,8 +5015,10 @@ a.bg-danger:focus, a.bg-danger:hover {
     position: absolute;
     width: 50rem;
     height: 50rem;
-    bottom: 0rem;
+    bottom: initial;
     left: 0rem;
+    top: 0rem;
+    right: initial;
     z-index: 0;
     opacity: 0;
     -webkit-transition: opacity 2.0s ease;
@@ -5028,19 +5030,40 @@ a.bg-danger:focus, a.bg-danger:hover {
     #chi-section-front-end #chi-bg-shapes.visible {
       opacity: 0.1; }
 
-#chi-section-back-end .chi-card {
-  -webkit-transition: -webkit-transform 1.0s ease;
-       -o-transition: -o-transform 1.0s ease;
-          transition: transform 1.0s ease;
-  -webkit-transform: translateX(-2rem);
-      -ms-transform: translateX(-2rem);
-       -o-transform: translateX(-2rem);
-          transform: translateX(-2rem); }
-  #chi-section-back-end .chi-card.visible {
-    -webkit-transform: translateX(0rem);
-        -ms-transform: translateX(0rem);
-         -o-transform: translateX(0rem);
-            transform: translateX(0rem); }
+#chi-section-back-end {
+  position: relative;
+  overflow: hidden; }
+  #chi-section-back-end .chi-card {
+    -webkit-transition: -webkit-transform 1.0s ease;
+         -o-transition: -o-transform 1.0s ease;
+            transition: transform 1.0s ease;
+    -webkit-transform: translateX(-2rem);
+        -ms-transform: translateX(-2rem);
+         -o-transform: translateX(-2rem);
+            transform: translateX(-2rem); }
+    #chi-section-back-end .chi-card.visible {
+      -webkit-transform: translateX(0rem);
+          -ms-transform: translateX(0rem);
+           -o-transform: translateX(0rem);
+              transform: translateX(0rem); }
+  #chi-section-back-end #chi-bg-shapes {
+    position: absolute;
+    width: 50rem;
+    height: 40rem;
+    bottom: 0rem;
+    left: initial;
+    top: initial;
+    right: 0rem;
+    z-index: 0;
+    opacity: 0;
+    -webkit-transition: opacity 2.0s ease;
+         -o-transition: opacity 2.0s ease;
+            transition: opacity 2.0s ease; }
+    #chi-section-back-end #chi-bg-shapes img {
+      width: 100%;
+      height: 100%; }
+    #chi-section-back-end #chi-bg-shapes.visible {
+      opacity: 0.1; }
 
 #chi-section-mobile .chi-card {
   -webkit-transition: -webkit-transform 1.0s ease;

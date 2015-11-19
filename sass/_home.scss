@@ -92,9 +92,7 @@
             &.visible {
                 opacity: 0.5;
             }
-            background:url(
-data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAFCAYAAACXU8ZrAAAAHElEQVQIW2NkQAMsssb//zw+y4gsjMIBSQwCRQAHyRQGOT1yQAAAAABJRU5ErkJggg==
-            ) repeat;
+            background:url( data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAFCAYAAACXU8ZrAAAAHElEQVQIW2NkQAMsssb//zw+y4gsjMIBSQwCRQAHyRQGOT1yQAAAAABJRU5ErkJggg== ) repeat;
         }
 
         position: relative;
@@ -158,26 +156,20 @@ data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAFCAYAAACXU8ZrAAAAHElEQVQIW2
         }
     }
 }
-#chi-section-about {
-}
-#chi-section-front-end {
-    & .chi-card {
-        @include translate-on-visible("X", 2rem);
-    }
-    position: relative;
-    overflow: hidden;
-    & #chi-bg-shapes {
 
+@mixin chi-bg-shapes( $width, $height, $top, $bottom, $left, $right ) {
         & img {
             width: 100%;
             height: 100%;
         }
         position: absolute;
 
-        width: 50rem;
-        height: 50rem;
-        bottom:0rem;
-        left: 0rem;
+        width: $width;
+        height: $height;
+        bottom:$bottom;
+        left: $left;
+        top: $top;
+        right: $right;
         z-index: 0;
 
         opacity: 0;
@@ -185,12 +177,29 @@ data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAFCAYAAACXU8ZrAAAAHElEQVQIW2
         &.visible {
             opacity: 0.1;
         }
+    }
+#chi-section-about {
+}
+#chi-section-front-end {
+    position: relative;
+    overflow: hidden;
+    & .chi-card {
+        @include translate-on-visible("X", 2rem);
+    }
 
+    & #chi-bg-shapes {
+        @include  chi-bg-shapes( 50rem, 50rem, 0rem, initial, 0rem, initial );
     }
 }
 #chi-section-back-end {
+    position: relative;
+    overflow: hidden;
     & .chi-card {
         @include translate-on-visible("X", -2rem);
+    }
+
+    & #chi-bg-shapes {
+        @include  chi-bg-shapes( 50rem, 40rem, initial, 0rem, initial, 0rem  );
     }
 }
 #chi-section-custom {
