@@ -33,7 +33,7 @@ Template Name: Landing
 
 
             <h2>
-                &laquo; Developeur Web avec une affection pour le design &raquo;
+                &laquo; <?php echo get_bloginfo( 'description' ); ?>  &raquo;
             </h2>
         </div>
 
