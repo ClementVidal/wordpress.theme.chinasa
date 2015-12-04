@@ -46,5 +46,12 @@ function chinase_theme_customizer($wp_customize)
         'section'  => 'chi_social_section',
         'settings' => 'chi_social_linkedin',
     ) ) );
+
+    $wp_customize->add_setting( 'chi_social_pinterest' );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'chi_social_pinterest', array(
+        'label'    => __( 'Pinterest account', 'pinterest' ),
+        'section'  => 'chi_social_section',
+        'settings' => 'chi_social_pinterest',
+    ) ) );
 }
 add_action('customize_register', 'chinase_theme_customizer');

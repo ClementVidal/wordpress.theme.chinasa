@@ -18,6 +18,7 @@ get_template_part( '/inc/site', 'header' );
 
 
 // Fetch all pages  which are childs to this one
+//
 $args = array('parent' => $post->ID,'post_type' => 'page','post_status' => 'publish','sort_column' => 'menu_order');
 $pages = get_pages($args);
 

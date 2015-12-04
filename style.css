@@ -4780,22 +4780,39 @@ a.bg-danger:focus, a.bg-danger:hover {
     right: 0.25rem;
     border-right: 0.0625rem dashed #b3b3b3;
     border-left: 0.0625rem dashed #333333; }
+  #chi-sidebar .chi-sidebar-head {
+    margin-top: 2rem; }
+    #chi-sidebar .chi-sidebar-head > img {
+      max-width: 8rem; }
   #chi-sidebar .chi-sidebar-menu {
-    margin-top: 2rem;
-    margin-bottom: 2rem; }
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    padding: 0 3rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    list-style-type: none; }
+    #chi-sidebar .chi-sidebar-menu li > div:first-child {
+      margin-bottom: .5rem;
+      font-size: 1.7rem;
+      font-family: "Satisfy", cursive; }
     #chi-sidebar .chi-sidebar-menu ul {
       text-shadow: 0 0 0.125rem black, 0 0 0.125rem black;
-      font-size: 1.3rem;
-      font-weight: bold;
-      list-style-type: none;
       margin: 0;
-      padding: 0; }
+      padding: 0;
+      border-left: 0.0625rem dashed rgba(179, 179, 179, 0.2);
+      padding-left: 1.0rem;
+      margin-left: .5rem; }
       #chi-sidebar .chi-sidebar-menu ul.sub-menu {
         padding-left: 1.0rem;
+        border-left: 0;
         font-size: 1.08333rem; }
-    #chi-sidebar .chi-sidebar-menu > ul > li {
-      margin-bottom: 1rem; }
-      #chi-sidebar .chi-sidebar-menu > ul > li a.active::before {
+    #chi-sidebar .chi-sidebar-menu ul > li {
+      margin-bottom: 0.7rem;
+      list-style-type: none; }
+      #chi-sidebar .chi-sidebar-menu ul > li a.active::before {
         position: absolute;
         left: 2.5rem;
         content: "\f101";
@@ -4803,21 +4820,21 @@ a.bg-danger:focus, a.bg-danger:hover {
         font-weight: normal;
         font-style: normal;
         display: inline-block;
-        text-decoration: inherit; }
-    #chi-sidebar .chi-sidebar-menu > ul > li a {
+        text-decoration: inherit;
+        text-shadow: none;
+        color: rgba(179, 179, 179, 0.2); }
+    #chi-sidebar .chi-sidebar-menu a {
       -webkit-transition: all 0.5s ease;
            -o-transition: all 0.5s ease;
               transition: all 0.5s ease;
       color: #cccccc; }
-      #chi-sidebar .chi-sidebar-menu > ul > li a:hover {
+      #chi-sidebar .chi-sidebar-menu a.visible {
         color: white; }
-  #chi-sidebar .chi-sidebar-head {
-    margin-top: 2rem; }
-    #chi-sidebar .chi-sidebar-head > img {
-      max-width: 8rem; }
+      #chi-sidebar .chi-sidebar-menu a:hover {
+        color: white; }
   #chi-sidebar .chi-sidebar-foot {
     width: 15.5rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     padding: 0 2rem;
     display: -webkit-box;
     display: -webkit-flex;
@@ -4977,20 +4994,18 @@ a.bg-danger:focus, a.bg-danger:hover {
   from {
     opacity: 0; }
   to {
-    opacity: 1; } }
+    opacity: 0.4; } }
 @-o-keyframes arrowAnim {
   from {
     opacity: 0; }
   to {
-    opacity: 1; } }
+    opacity: 0.4; } }
 @keyframes arrowAnim {
   from {
     opacity: 0; }
   to {
-    opacity: 1; } }
+    opacity: 0.4; } }
     #chi-section-landing section i {
-      border: 0.1875rem solid #e6e6e6;
-      border-radius: 0.5625rem;
       text-shadow: 0 0 0.125rem black, 0 0 0.125rem black;
       font-size: 3rem;
       -webkit-animation: arrowAnim 2s ease-in-out 0s infinite alternate;
@@ -5053,7 +5068,7 @@ a.bg-danger:focus, a.bg-danger:hover {
     width: 50rem;
     height: 40rem;
     bottom: 0rem;
-    left: initial;
+    left: 10;
     top: initial;
     right: 0rem;
     z-index: 0;
@@ -5067,19 +5082,40 @@ a.bg-danger:focus, a.bg-danger:hover {
     #chi-section-back-end #chi-bg-shapes.visible {
       opacity: 0.1; }
 
-#chi-section-mobile .chi-card {
-  -webkit-transition: -webkit-transform 1.0s ease;
-       -o-transition: -o-transform 1.0s ease;
-          transition: transform 1.0s ease;
-  -webkit-transform: translateX(2rem);
-      -ms-transform: translateX(2rem);
-       -o-transform: translateX(2rem);
-          transform: translateX(2rem); }
-  #chi-section-mobile .chi-card.visible {
-    -webkit-transform: translateX(0rem);
-        -ms-transform: translateX(0rem);
-         -o-transform: translateX(0rem);
-            transform: translateX(0rem); }
+#chi-section-mobile {
+  position: relative;
+  overflow: hidden; }
+  #chi-section-mobile .chi-card {
+    -webkit-transition: -webkit-transform 1.0s ease;
+         -o-transition: -o-transform 1.0s ease;
+            transition: transform 1.0s ease;
+    -webkit-transform: translateX(2rem);
+        -ms-transform: translateX(2rem);
+         -o-transform: translateX(2rem);
+            transform: translateX(2rem); }
+    #chi-section-mobile .chi-card.visible {
+      -webkit-transform: translateX(0rem);
+          -ms-transform: translateX(0rem);
+           -o-transform: translateX(0rem);
+              transform: translateX(0rem); }
+  #chi-section-mobile #chi-bg-shapes {
+    position: absolute;
+    width: 50rem;
+    height: 50rem;
+    bottom: initial;
+    left: 15rem;
+    top: 0rem;
+    right: initial;
+    z-index: 0;
+    opacity: 0;
+    -webkit-transition: opacity 2.0s ease;
+         -o-transition: opacity 2.0s ease;
+            transition: opacity 2.0s ease; }
+    #chi-section-mobile #chi-bg-shapes img {
+      width: 100%;
+      height: 100%; }
+    #chi-section-mobile #chi-bg-shapes.visible {
+      opacity: 0.1; }
 
 #chi-section-competences ul {
   list-style-type: none; }
