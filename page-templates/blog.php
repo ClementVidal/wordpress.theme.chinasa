@@ -10,24 +10,30 @@ get_template_part( '/inc/site', 'header' );
 // We assume that this page will always display a single post
 the_post();
 
-the_title();
-the_content();
+?>
+<div chi-smooth-apparition id="chi-section-blog-header" >
 
-// Display all posts
+	<section>
+		<h1> <?php the_title(); ?> </h1>
+		<p><?php the_content(); ?></p>
+	</section>
+</div>
+
+
+<?php
 $recent_posts = wp_get_recent_posts( );
+foreach( $recent_posts as $recent ): ?>
 
-echo '<ul>';
-foreach( $recent_posts as $recent ){
-	echo '<li>';
-	echo '<a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a>';
-	echo '<p>';
-	echo $recent["post_content"];
-	echo '</p>';
-	echo '</li> ';
+	<div chi-smooth-apparition id="chi-section-blog-post" >
+		<section>
+			<h1> <?php echo $recent["post_title"]; ?> </h1>
+			<p><?php echo $recent["post_content"]; ?></p>
 
-}
-echo '</ul>';
+		</section>
+	</div>
 
-echo '</div>';
+<?php   endforeach; ?>
 
-get_template_part( '/inc/site', 'footer' );
+
+
+<?php get_template_part( '/inc/site', 'footer' ); ?>

@@ -11,7 +11,7 @@
     <?php  wp_head(); ?>
 </head>
 
-<body ng-app="chinasa">
+<body ng-app="chinasa" ng-controller="bodyController">
 
     <?php get_template_part( '/inc/site', 'sidebar' ); ?>
 
