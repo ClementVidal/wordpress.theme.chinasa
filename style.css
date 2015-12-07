@@ -4752,7 +4752,6 @@ a.bg-danger:focus, a.bg-danger:hover {
 .chi-card {
   margin-top: 2rem;
   margin-bottom: 2rem;
-  padding-top: 1rem;
   border-top: 0.0625rem solid #b3b3b3; }
 
 .chi-section-sign:after {
@@ -4916,6 +4915,8 @@ a.bg-danger:focus, a.bg-danger:hover {
     background-color: #153d65; }
   [id^='chi-section'].visible {
     opacity: 1; }
+  [id^='chi-section'] small {
+    font-size: 0.9375rem; }
   [id^='chi-section']:not(:last-child) {
     border-bottom: 0.0625rem dashed gray; }
   [id^='chi-section']:not(:first-child) {
@@ -4927,18 +4928,23 @@ a.bg-danger:focus, a.bg-danger:hover {
     margin-right: 1rem;
     padding: 2rem 4rem;
     text-align: justify;
-    font-size: 1.4rem; }
+    font-size: 1.1875rem;
+    line-height: 1.875rem; }
     [id^='chi-section'] > section > h1 {
       margin-top: 2rem; }
     [id^='chi-section'] > section h1 {
       text-shadow: 0 0 0.125rem black, 0 0 0.125rem black;
       text-align: center;
       margin-bottom: 2rem;
-      font-size: 3rem;
+      font-size: 1.9375rem;
       font-family: "Satisfy", cursive; }
     [id^='chi-section'] > section h2 {
+      text-align: center;
       margin-bottom: 1rem;
-      font-size: 2rem; }
+      font-size: 1.5rem; }
+    [id^='chi-section'] > section article h2 {
+      padding: 1rem;
+      background-color: rgba(0, 0, 0, 0.05); }
     [id^='chi-section'] > section ul > li i {
       width: 2rem; }
     [id^='chi-section'] > section p {
@@ -5180,6 +5186,8 @@ a.bg-danger:focus, a.bg-danger:hover {
            -o-transform: translateY(0rem);
               transform: translateY(0rem); }
 
+#chi-section-partenaires section:first-child {
+  text-align: center; }
 #chi-section-partenaires article {
   -webkit-transition: -webkit-transform 1.0s ease;
        -o-transition: -o-transform 1.0s ease;
@@ -5202,14 +5210,11 @@ a.bg-danger:focus, a.bg-danger:hover {
     padding-bottom: 1rem;
     border-top: 0.0625rem solid #b3b3b3; }
     #chi-section-partenaires article div span {
-      font-size: 2rem; }
+      font-size: 1.5rem; }
   #chi-section-partenaires article img {
     margin: auto;
     display: block; }
 
-#chi-section-contact article > h2 {
-  display: inline-block;
-  vertical-align: top; }
 #chi-section-contact article > ul {
   vertical-align: top; }
 #chi-section-contact li {

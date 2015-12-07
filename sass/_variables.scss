@@ -18,9 +18,11 @@ $sidebar-font-color: white;
 
 // Section
 $section-hmargin: 4.5rem;
-$section-h1-size: 3rem;
-$section-h2-size: 2rem;
-$section-font-size: 1.4rem;
+$section-h1-size: pixel-to-rem( 31 );
+$section-h2-size: pixel-to-rem( 24 );
+$section-font-size: pixel-to-rem( 19 );
+$section-font-size-small: pixel-to-rem( 15 );
+$section-line-height: pixel-to-rem( 30 );
 $section-background-color1: desaturate( lighten( $brand-primary-color, 8% ), 20% );
 $section-background-color2: desaturate( lighten( $brand-primary-color, 20% ), 20% );
 $section-font-color: darken( white, 10% );

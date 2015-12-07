@@ -15,13 +15,9 @@
     margin-bottom: 1rem;
 }
 .chi-card {
-    //width: pixel-to-rem(400);
     margin-top: 2rem;
     margin-bottom: 2rem;
-    padding-top: 1rem;
     border-top: pixel-to-rem(1) solid $page-decoration;
-
-    //background-color: $brand-primary-color;
 }
 .chi-section-sign {
     &:after {

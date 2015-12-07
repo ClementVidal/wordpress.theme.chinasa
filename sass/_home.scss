@@ -20,6 +20,12 @@
     overflow-y: hidden;
     color: $section-font-color;
 
+    // Attributes for small font
+    small {
+        font-size: $section-font-size-small;
+    }
+
+    // Setup horizontal dashed separator
     &:not( :last-child ) {
         border-bottom: pixel-to-rem() dashed darken( $page-decoration, 20% );
     }
@@ -27,18 +33,19 @@
         border-top: pixel-to-rem() dashed $page-decoration;
     }
 
-    &>section {
+    >section {
 
         @include content-container();
 
         text-align: justify;
         font-size: $section-font-size;
+        line-height: $section-line-height;
 
-        &>h1 {
+        >h1 {
             margin-top: 2rem;
         }
 
-        & h1 {
+        h1 {
             @include outline-text( );
             text-align: center;
             margin-bottom: 2rem;
@@ -46,23 +53,29 @@
             font-family: $font-family-cursive;
         }
 
-        & h2 {
+        h2 {
+            text-align: center;
             margin-bottom: 1rem;
             font-size: $section-h2-size;
         }
 
-        & ul>li i {
+        article h2 {
+            padding: 1rem;
+            background-color: rgba( 0,0,0, 0.05);
+        }
+
+        ul>li i {
             width: 2rem;
         }
 
-        & p {
+        p {
             text-indent: 1.5rem;
             text-align: justify;
         }
     }
 
     @include media-breakpoint-down(md) {
-        &>section {
+        >section {
             padding: 1rem 1rem;
             margin-left: $sidebar-hmargin;
         }
@@ -73,9 +86,9 @@
 #chi-section-landing {
     overflow: hidden;
     opacity: 1.0;
-    & section {
+    section {
 
-        &>#chi-bg-shapes {
+        >#chi-bg-shapes {
 
             transform:rotateZ(22.5deg);
             transform-origin: top left;
@@ -98,12 +111,12 @@
         position: relative;
         @include flex-box( column, space-around, center );
 
-        &>div {
+        >div {
             z-index: 1;
 
         }
 
-        & header{
+        header{
             width: 40rem;
             margin-left: auto;
             margin-right: auto;
@@ -111,18 +124,18 @@
             padding-bottom: 2rem;
             border-bottom: pixel-to-rem() solid $page-decoration;
 
-            &>div {
+            >div {
                 text-align: center;
 
-                &>img {
+                >img {
                     height: 12rem;
                     vertical-align: baseline;
                 }
 
-                &>span{
+                >span{
                     display: inline-block;
                     margin-left: 2rem;
-                    &>h1 {
+                    >h1 {
                         @include outline-text(  );
                         text-align: left;
                         margin-bottom: 0;
@@ -136,7 +149,7 @@
 
 
         }
-        & h2 {
+        h2 {
             @include outline-text();
             text-align: center;
             margin-top: 4rem;
@@ -149,7 +162,7 @@
              from { opacity: 0; }
              to   { opacity: 0.4;}
         }
-        & i {
+        i {
             @include outline-text(  );
             font-size:3rem;
             animation: arrowAnim 2s ease-in-out 0s infinite alternate;
@@ -245,6 +258,12 @@
     }
 }
 #chi-section-partenaires {
+
+    section:first-child {
+        text-align: center;
+    }
+
+
     & article {
         @include translate-on-visible();
 
@@ -269,36 +288,32 @@
     }
 }
 #chi-section-contact {
-    & article>h2 {
-        display: inline-block;
-        vertical-align: top;
-    }
-    & article>ul {
+    article>ul {
         vertical-align: top;
     }
 
-    & li {
+    li {
         list-style: none;
     }
 
 
-    & form {
+    form {
         margin-top: 2rem;
-        &>div {
+        >div {
             @extend .form-group ;
             @extend .row;
 
-            & input, & textarea {
+            input, textarea {
                 @extend  .form-control;
             }
-            &>label {
+            >label {
                 @extend .col-md-3;
             }
-            &>span {
+            >span {
                 @extend .col-md-9;
             }
         }
-        & input[type="submit"] {
+        input[type="submit"] {
             @extend .btn;
             @extend .btn-secondary;
         }
