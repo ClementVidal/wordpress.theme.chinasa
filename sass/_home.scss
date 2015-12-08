@@ -22,7 +22,7 @@
 
     // Attributes for small font
     small {
-        font-size: $section-font-size-small;
+        font-size: $font-size-small;
     }
 
     // Setup horizontal dashed separator
@@ -38,8 +38,8 @@
         @include content-container();
 
         text-align: justify;
-        font-size: $section-font-size;
-        line-height: $section-line-height;
+        font-size: $font-size;
+        line-height: $line-height;
 
         >h1 {
             margin-top: 2rem;
@@ -49,14 +49,14 @@
             @include outline-text( );
             text-align: center;
             margin-bottom: 2rem;
-            font-size: $section-h1-size;
+            font-size: $font-h1-size;
             font-family: $font-family-cursive;
         }
 
         h2 {
             text-align: center;
             margin-bottom: 1rem;
-            font-size: $section-h2-size;
+            font-size: $font-h2-size;
         }
 
         article h2 {
@@ -276,7 +276,7 @@
             padding-bottom: 1rem;
             border-top: pixel-to-rem() solid $page-decoration;
             & span {
-                font-size: $section-h2-size;
+                font-size: $font-h2-size;
             }
 
         }

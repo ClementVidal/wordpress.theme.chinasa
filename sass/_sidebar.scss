@@ -2,11 +2,6 @@
 
     @extend .hidden-md-down;
 
-    $sidebar-font-color-dark: darken( $sidebar-font-color, 20% );
-    $sidebar-font-color-ligth: lighten( $sidebar-font-color, 20% );
-    $sidebar-color-dark: darken( $sidebar-color, 20% );
-    $sidebar-color-ligth: lighten( $sidebar-color, 20% );
-
     position: fixed;
     z-index: 1000;
     top: 0;

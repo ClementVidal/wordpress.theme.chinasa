@@ -9,11 +9,12 @@
         return {
             restrict: 'A',
             link: function(scope, element, attrs, graphNode) {
-                var clh = ($window.innerHeight || $document.documentElement.clientHeight);
+                var clh = ( $window.innerHeight );
 
-                // Do not resize if there full screen height is less than the container original size
+                // Do not resize if the full screen height is less than the container original size
                 if( clh > element.height() ){
-                    element.height( clh );
+                    element.innerHeight( clh );
+                    console.log( "set height: ", clh);
                 }
             }
         };
