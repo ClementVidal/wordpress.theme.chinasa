@@ -97,7 +97,7 @@
             width: 50rem;
             height: 100rem;
             top:-30rem;
-            right: -7.5rem;
+            right: -3.5rem;
             z-index: 0;
 
             opacity: 0;
@@ -120,52 +120,53 @@
             width: 40rem;
             margin-left: auto;
             margin-right: auto;
-            margin-top: 4rem;
-            padding-bottom: 2rem;
+            margin-top: 1rem;
             border-bottom: pixel-to-rem() solid $page-decoration;
+            margin-bottom: 1rem;
+            text-align: center;
 
-            >div {
-                text-align: center;
 
-                >img {
-                    height: 12rem;
-                    vertical-align: baseline;
-                }
-
-                >span{
-                    display: inline-block;
-                    margin-left: 2rem;
-                    >h1 {
-                        @include outline-text(  );
-                        text-align: left;
-                        margin-bottom: 0;
-                        font-weight: bold;
-                        font-size: $section-landing-h1-size;
-                        color: $section-landing-h1-color;
-                    }
-                }
-                margin-bottom: 1rem;
+            h1 {
+                @include outline-text(  );
+                display: inline;
+                text-align: left;
+                margin-bottom: 0;
+                font-weight: bold;
+                font-size: $section-landing-h1-size;
+                color: $section-landing-h1-color;
             }
 
+            img {
+                margin-bottom: 3rem;
+            }
 
         }
         h2 {
             @include outline-text();
             text-align: center;
-            margin-top: 4rem;
+            margin-top: 2rem;
             font-size: 2.5rem;
             font-family: $font-family-cursive;
             font-size: $section-landing-h2-size;
             color: $section-landing-h2-color;
         }
-        @keyframes arrowAnim{
-             from { opacity: 0; }
-             to   { opacity: 0.4;}
-        }
-        i {
-            @include outline-text(  );
-            font-size:3rem;
-            animation: arrowAnim 2s ease-in-out 0s infinite alternate;
+
+
+        .chi-icon {
+            bottom: 0px;
+            margin-bottom: 1rem;
+            position: absolute;
+            left: 49%;
+            i {
+                @keyframes arrowAnim{
+                     from { opacity: 0; }
+                     to   { opacity: 0.4;}
+                }
+
+                @include outline-text(  );
+                font-size:$icon-font-size;
+                animation: arrowAnim 2s ease-in-out 0s infinite alternate;
+            }
         }
     }
 }
@@ -232,6 +233,10 @@
 
 #chi-section-competences {
     & ul {
+        margin: 0;
+        margin-top:1rem;
+        padding: 0;
+
         @extend .row;
         list-style-type: none;
         &>li {

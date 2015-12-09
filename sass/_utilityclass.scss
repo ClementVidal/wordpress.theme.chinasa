@@ -3,7 +3,7 @@
     height: auto;
     max-width: pixel-to-rem(300);
     border-radius: pixel-to-rem(150);
-    border: pixel-to-rem(1) solid $page-decoration;
+    border: pixel-to-rem(3) solid $page-decoration;
     margin-bottom: 1rem;
 }
 .chi-round-img-200 {
@@ -11,13 +11,13 @@
     height: auto;
     max-width: pixel-to-rem(200);
     border-radius: pixel-to-rem(100);
-    border: pixel-to-rem(1) solid $page-decoration;
+    border: pixel-to-rem(2) solid $page-decoration;
     margin-bottom: 1rem;
 }
 .chi-card {
     margin-top: 2rem;
     margin-bottom: 2rem;
-    border-top: pixel-to-rem(1) solid $page-decoration;
+    border-top: pixel-to-rem(2) solid $page-decoration;
 }
 .chi-section-sign {
     &:after {
