@@ -10,13 +10,14 @@ $font-h3-size:      pixel-to-rem( 27 );
 $font-size:         pixel-to-rem( 21 );
 $font-size-small:   pixel-to-rem( 17 );
 $line-height:       pixel-to-rem( 34 );
+$icon-font-size: 2rem;
 
 // Sidebar
 $sidebar-hmargin: 1rem;
-$sidebar-width: 16rem;
+$sidebar-width: 14rem;
 $sidebar-hpadding: 0.25rem;
 $sidebar-font-size: 1.3rem;
-$sidebar-color: darken( $brand-primary-color, 5% );
+$sidebar-color: #893202;
 $sidebar-font-color: white;
 $sidebar-font-color-dark: darken( $sidebar-font-color, 20% );
 $sidebar-font-color-ligth: lighten( $sidebar-font-color, 20% );

@@ -4,7 +4,7 @@ Template Name: Landing
 */
 ?>
 <div  id="chi-section-landing" class="chi-visible">
-    
+
     <section chi-resize-to-full-screen>
 
         <div chi-smooth-apparition id="chi-bg-shapes">
@@ -13,20 +13,17 @@ Template Name: Landing
         <div>
             <header>
 
-                <div>
-                    <?php if ( get_theme_mod( 'chi_logo' ) ) : ?>
-                    <img src='<?php echo esc_url( get_theme_mod( 'chi_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'>
-                    <?php endif; ?>
+                    <img src="http://clement-vidal.fr.dev/wp-content/uploads/2015/11/profile_picture_1.png"
+                    alt="Clement Vidal Developeur Web Freelance Marseille Aix"
+                    class="chi-round-img-300 center-block alignnone size-full wp-image-120">
 
-                    <span>
-                        <h1>
-                            <?php the_author_meta('first_name'); ?>
-                        </h1>
-                        <h1>
-                            <?php the_author_meta('last_name'); ?>
-                        </h1>
-                    </span>
-                </div>
+                    <h1>
+                        <?php the_author_meta('first_name'); ?>
+
+                        <?php the_author_meta('last_name'); ?>
+                    </h1>
+
+
 
             </header>
 
@@ -37,6 +34,10 @@ Template Name: Landing
         </div>
 
         <div>
+            <?php echo $page->post_content;?>
+        </div>
+
+        <div class="chi-icon">
             <i class="fa fa-arrow-down" ></i>
         </div>
 

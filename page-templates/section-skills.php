@@ -11,9 +11,7 @@ Template Name: Skills
         </h1>
 
         <?php echo $page->post_content;?>
-    </section>
 
-    <section>
         <ul>
 
             <?php
