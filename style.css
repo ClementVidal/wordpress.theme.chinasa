@@ -4657,7 +4657,7 @@ a.bg-danger:focus, a.bg-danger:hover {
     display: none !important; } }
 
 @media (max-width: 991px) {
-  .hidden-md-down, #chi-sidebar {
+  .hidden-md-down, #chi-sidebar .chi-sidebar-content {
     display: none !important; } }
 
 @media (min-width: 992px) {
@@ -4729,16 +4729,67 @@ a.bg-danger:focus, a.bg-danger:hover {
   margin-left: auto;
   margin-right: auto; }
 
-#chi-sidebar {
+#chi-sidebar .chi-sidebar-block {
   position: fixed;
   z-index: 1000;
-  top: 0;
-  bottom: 0;
+  border: 1px solid black;
+  height: 6rem;
+  width: 14rem;
+  background: #03172a; }
+  #chi-sidebar .chi-sidebar-block:before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    -webkit-box-shadow: 0px 0px 0.4rem black;
+            box-shadow: 0px 0px 0.4rem black;
+    left: 0.25rem;
+    border-right: 0.0625rem dashed gray;
+    border-left: 0.0625rem dashed black; }
+  #chi-sidebar .chi-sidebar-block:after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    -webkit-box-shadow: 0px 0px 0.4rem black;
+            box-shadow: 0px 0px 0.4rem black;
+    right: 0.25rem;
+    border-right: 0.0625rem dashed gray;
+    border-left: 0.0625rem dashed black; }
+  #chi-sidebar .chi-sidebar-block.chi-sidebar-top {
+    top: 0rem; }
+  #chi-sidebar .chi-sidebar-block.chi-sidebar-bottom {
+    top: 38rem;
+    height: 100%; }
+#chi-sidebar .chi-sidebar-skew {
+  position: fixed;
+  z-index: 1000;
+  height: 2rem;
+  left: 0.5rem;
+  width: 14rem;
+  background: black; }
+  #chi-sidebar .chi-sidebar-skew.chi-sidebar-top {
+    top: 4rem;
+    -webkit-transform: skew(-26deg, 0deg);
+        -ms-transform: skew(-26deg, 0deg);
+         -o-transform: skew(-26deg, 0deg);
+            transform: skew(-26deg, 0deg); }
+  #chi-sidebar .chi-sidebar-skew.chi-sidebar-bottom {
+    top: 38rem;
+    -webkit-transform: skew(26deg, 0deg);
+        -ms-transform: skew(26deg, 0deg);
+         -o-transform: skew(26deg, 0deg);
+            transform: skew(26deg, 0deg); }
+#chi-sidebar .chi-sidebar-content {
+  position: fixed;
+  z-index: 1001;
+  top: 4rem;
   left: 1rem;
-  width: 16rem;
+  width: 14rem;
+  height: 36rem;
   background: #041c33;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
+  border: 1px solid black;
+  padding: 1.5rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4759,7 +4810,7 @@ a.bg-danger:focus, a.bg-danger:hover {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center; }
-  #chi-sidebar:before {
+  #chi-sidebar .chi-sidebar-content:before {
     content: " ";
     position: absolute;
     top: 0;
@@ -4769,7 +4820,7 @@ a.bg-danger:focus, a.bg-danger:hover {
     left: 0.25rem;
     border-right: 0.0625rem dashed #b3b3b3;
     border-left: 0.0625rem dashed #333333; }
-  #chi-sidebar:after {
+  #chi-sidebar .chi-sidebar-content:after {
     content: " ";
     position: absolute;
     top: 0;
@@ -4779,41 +4830,39 @@ a.bg-danger:focus, a.bg-danger:hover {
     right: 0.25rem;
     border-right: 0.0625rem dashed #b3b3b3;
     border-left: 0.0625rem dashed #333333; }
-  #chi-sidebar .chi-sidebar-head {
+  #chi-sidebar .chi-sidebar-content .chi-sidebar-head {
     margin-top: 2rem; }
-    #chi-sidebar .chi-sidebar-head > img {
+    #chi-sidebar .chi-sidebar-content .chi-sidebar-head > img {
       max-width: 8rem; }
-  #chi-sidebar .chi-sidebar-menu {
+  #chi-sidebar .chi-sidebar-content .chi-sidebar-menu {
     width: 100%;
     height: 100%;
     margin: 0;
-    margin-top: 3rem;
-    margin-bottom: 2rem;
-    padding: 0 3rem;
+    padding: 0;
     font-size: 1.3rem;
     font-weight: bold;
     list-style-type: none; }
-    #chi-sidebar .chi-sidebar-menu li > div:first-child {
-      margin-bottom: .5rem;
+    #chi-sidebar .chi-sidebar-content .chi-sidebar-menu li > div:first-child {
+      margin-bottom: 0.5rem;
       font-size: 1.7rem;
       font-family: "Satisfy", cursive; }
-    #chi-sidebar .chi-sidebar-menu ul {
+    #chi-sidebar .chi-sidebar-content .chi-sidebar-menu ul {
       text-shadow: 0 0 0.125rem black, 0 0 0.125rem black;
       margin: 0;
       padding: 0;
       border-left: 0.0625rem dashed rgba(179, 179, 179, 0.2);
       padding-left: 1.0rem;
-      margin-left: .5rem; }
-      #chi-sidebar .chi-sidebar-menu ul.sub-menu {
+      margin-left: 0.5rem; }
+      #chi-sidebar .chi-sidebar-content .chi-sidebar-menu ul.sub-menu {
         padding-left: 1.0rem;
         border-left: 0;
         font-size: 1.08333rem; }
-    #chi-sidebar .chi-sidebar-menu ul > li {
+    #chi-sidebar .chi-sidebar-content .chi-sidebar-menu ul > li {
       margin-bottom: 0.7rem;
       list-style-type: none; }
-      #chi-sidebar .chi-sidebar-menu ul > li a.active::before {
+      #chi-sidebar .chi-sidebar-content .chi-sidebar-menu ul > li a.active::before {
         position: absolute;
-        left: 2.5rem;
+        left: 1rem;
         content: "\f101";
         font-family: FontAwesome;
         font-weight: normal;
@@ -4822,48 +4871,47 @@ a.bg-danger:focus, a.bg-danger:hover {
         text-decoration: inherit;
         text-shadow: none;
         color: rgba(179, 179, 179, 0.2); }
-    #chi-sidebar .chi-sidebar-menu a {
+    #chi-sidebar .chi-sidebar-content .chi-sidebar-menu a {
       -webkit-transition: all 0.5s ease;
            -o-transition: all 0.5s ease;
               transition: all 0.5s ease;
       color: #cccccc; }
-      #chi-sidebar .chi-sidebar-menu a.visible {
+      #chi-sidebar .chi-sidebar-content .chi-sidebar-menu a.visible {
         color: white; }
-      #chi-sidebar .chi-sidebar-menu a:hover {
+      #chi-sidebar .chi-sidebar-content .chi-sidebar-menu a:hover {
         color: white; }
-  #chi-sidebar .chi-sidebar-foot {
-    width: 15.5rem;
-    margin-bottom: 1rem;
-    padding: 0 2rem;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-flex-wrap: nowrap;
-        -ms-flex-wrap: nowrap;
-            flex-wrap: nowrap;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center; }
-    #chi-sidebar .chi-sidebar-foot a {
-      text-shadow: 0 0 0.125rem black, 0 0 0.125rem black;
-      font-size: 2rem;
-      -webkit-transition: color 0.5s ease;
-           -o-transition: color 0.5s ease;
-              transition: color 0.5s ease;
-      color: #cccccc; }
-      #chi-sidebar .chi-sidebar-foot a:hover {
-        color: white; }
+#chi-sidebar .chi-sidebar-foot {
+  width: 100%;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  #chi-sidebar .chi-sidebar-foot a {
+    text-shadow: 0 0 0.125rem black, 0 0 0.125rem black;
+    font-size: 2rem;
+    -webkit-transition: color 0.5s ease;
+         -o-transition: color 0.5s ease;
+            transition: color 0.5s ease;
+    color: #cccccc; }
+    #chi-sidebar .chi-sidebar-foot a:hover {
+      color: white; }
 
 [id^='chi-section'] {
   background-color: #153d65;
@@ -4888,7 +4936,7 @@ a.bg-danger:focus, a.bg-danger:hover {
   [id^='chi-section'] > section {
     margin-top: 0;
     margin-bottom: 0;
-    margin-left: 18rem;
+    margin-left: 16rem;
     margin-right: 1rem;
     padding: 2rem 4rem;
     text-align: justify;

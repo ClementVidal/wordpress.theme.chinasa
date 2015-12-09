@@ -1,102 +1,144 @@
 #chi-sidebar {
 
-    @extend .hidden-md-down;
+    $sidebar-content-height: 36rem;
+    $sidebar-content-top: 4rem;
+    $sidebar-overlap-height: 2rem;
 
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    bottom: 0;
-    left: $sidebar-hmargin;
-    width: $sidebar-width;
-    background: $sidebar-color;
-    border-left: 1px solid $sidebar-color-dark;
-    border-right: 1px solid $sidebar-color-dark;
+    .chi-sidebar-block {
+        position: fixed;
+        z-index: 1000;
+        border: 1px solid $sidebar-color-dark;
 
-    @include flex-box( column, space-between, center );
+        height: $sidebar-content-top + $sidebar-overlap-height;
+        width: $sidebar-width;
+        background: darken( $sidebar-color, 2% );
 
-    &:before {
-        @include vertical-line( left, $sidebar-hpadding, $page-decoration, dashed );
-    }
-    &:after {
-        @include vertical-line( right, $sidebar-hpadding, $page-decoration, dashed );
-    }
-    & .chi-sidebar-head {
-        &>img {
-            max-width: 8rem;
+        &:before {
+            @include vertical-line( left, $sidebar-hpadding, darken( $page-decoration, 20% ), dashed );
         }
-        margin-top: 2rem;
-    }
-    & .chi-sidebar-menu {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        margin-top: 3rem;
-        margin-bottom: 2rem;
-        padding: 0 3rem;
-        font-size: $sidebar-font-size;
-        font-weight: bold;
-        list-style-type: none;
-
-        // Main menu
-        li>div:first-child {
-            margin-bottom: .5rem;
-            font-size: 1.7rem;
-            font-family: $font-family-cursive;
+        &:after {
+            @include vertical-line( right, $sidebar-hpadding, darken( $page-decoration, 20% ), dashed );
         }
 
+        &.chi-sidebar-top {
+            top: 0rem;
+        }
+
+        &.chi-sidebar-bottom {
+            top: $sidebar-content-top + $sidebar-content-height - $sidebar-overlap-height;
+            height: 100%;
+        }
+    }
+
+    .chi-sidebar-skew {
+
+        position: fixed;
+        z-index: 1000;
+        height: 2rem;
+        left: $sidebar-hmargin / 2;
+        width: $sidebar-width;
+        background: black;
 
 
-        ul {
-            @include outline-text(  );
+        &.chi-sidebar-top {
+            top: $sidebar-content-top;
+            transform: skew(-26deg, 0deg);
+        }
+
+        &.chi-sidebar-bottom {
+            top: $sidebar-content-top + $sidebar-content-height - $sidebar-overlap-height;
+            transform: skew(26deg, 0deg);
+        }
+    }
+
+    .chi-sidebar-content {
+        @extend .hidden-md-down;
+        position: fixed;
+        z-index: 1001;
+        top: 4rem;
+        left: $sidebar-hmargin;
+        width: $sidebar-width;
+        height: $sidebar-content-height;
+        background: $sidebar-color;
+        border: 1px solid $sidebar-color-dark;
+        padding: 1.5rem;
+
+        @include flex-box( column, space-between, center );
+        &:before {
+            @include vertical-line( left, $sidebar-hpadding, $page-decoration, dashed );
+        }
+        &:after {
+            @include vertical-line( right, $sidebar-hpadding, $page-decoration, dashed );
+        }
+        & .chi-sidebar-head {
+            &>img {
+                max-width: 8rem;
+            }
+            margin-top: 2rem;
+        }
+
+        .chi-sidebar-menu {
+            width: 100%;
+            height: 100%;
             margin: 0;
             padding: 0;
-            border-left: pixel-to-rem( ) dashed transparentize( $page-decoration, 0.8);
-            padding-left: 1.0rem;
-            margin-left: .5rem;
-
-            &.sub-menu {
-                padding-left: 1.0rem;
-                border-left:0;
-                font-size: $sidebar-font-size / 1.2;
-            }
-        }
-        ul>li {
-            margin-bottom: 0.7rem;
+            font-size: $sidebar-font-size;
+            font-weight: bold;
             list-style-type: none;
 
-            & a.active::before {
-                position: absolute;
-                left: 2.5rem;
-                content: "\f101";
-                font-family: FontAwesome;
-                font-weight: normal;
-                font-style: normal;
-                display: inline-block;
-                text-decoration: inherit;
-
-                text-shadow: none;
-                color: transparentize( $page-decoration, 0.8);
+            // Main menu
+            li>div:first-child {
+                margin-bottom: 0.5rem;
+                font-size: 1.7rem;
+                font-family: $font-family-cursive;
+            }
+            ul {
+                @include outline-text( );
+                margin: 0;
+                padding: 0;
+                border-left: pixel-to-rem( ) dashed transparentize( $page-decoration, 0.8);
+                padding-left: 1.0rem;
+                margin-left: 0.5rem;
+                &.sub-menu {
+                    padding-left: 1.0rem;
+                    border-left: 0;
+                    font-size: $sidebar-font-size / 1.2;
+                }
+            }
+            ul>li {
+                margin-bottom: 0.7rem;
+                list-style-type: none;
+                & a.active::before {
+                    position: absolute;
+                    left: 1rem;
+                    content: "\f101";
+                    font-family: FontAwesome;
+                    font-weight: normal;
+                    font-style: normal;
+                    display: inline-block;
+                    text-decoration: inherit;
+                    text-shadow: none;
+                    color: transparentize( $page-decoration, 0.8);
+                }
+            }
+            a {
+                transition: all 0.5s ease;
+                color: $sidebar-font-color-dark;
+                &.visible {
+                    color: $sidebar-font-color;
+                }
+                &:hover {
+                    color: $sidebar-font-color;
+                }
             }
         }
 
-         a {
-            transition: all 0.5s ease;
-            color: $sidebar-font-color-dark;
 
-            &.visible{
-                color: $sidebar-font-color;
-            }
-
-            &:hover {
-                color: $sidebar-font-color;
-            }
-        }
     }
 
-    & .chi-sidebar-foot {
-        width: $sidebar-width - 2 * $sidebar-hpadding;
+    .chi-sidebar-foot {
+        width: 100%;
         margin-bottom: 1rem;
-        padding: 0 2rem;
         @include flex-box( row, space-between, center );
         & a {
             @include outline-text( );
