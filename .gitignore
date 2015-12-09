@@ -1,5 +1,6 @@
 .sass-cache
 .style
+style.css
 vendor
 node_modules
 *.map

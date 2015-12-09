@@ -13,9 +13,14 @@ Template Name: Landing
         <div>
             <header>
 
-                    <img src="http://clement-vidal.fr.dev/wp-content/uploads/2015/11/profile_picture_1.png"
-                    alt="Clement Vidal Developeur Web Freelance Marseille Aix"
-                    class="chi-round-img-300 center-block alignnone size-full wp-image-120">
+                    <div>
+                        <img src="http://clement-vidal.fr.dev/wp-content/uploads/2015/11/profile_picture_1.png"
+                        alt="Clement Vidal Developeur Web Freelance Marseille Aix"
+                        class="chi-round-img-300 center-block alignnone size-full wp-image-120">
+                        <img src="http://clement-vidal.fr.dev/wp-content/uploads/2015/12/logo.svg"
+                        alt="Clement Vidal Developeur Web Freelance Marseille Aix"
+                        class="chi-round-img-300">
+                    </div>
 
                     <h1>
                         <?php the_author_meta('first_name'); ?>
