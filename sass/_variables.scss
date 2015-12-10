@@ -13,11 +13,13 @@ $line-height:       pixel-to-rem( 34 );
 $icon-font-size: 2.5rem;
 
 // Sidebar
-$sidebar-hmargin: 1.0rem;
+$sidebar-offset: 0.5rem;
+$sidebar-content-offset: 0.0rem;
+$sidebar-block-offset: 1.0rem;
 $sidebar-width: 14rem;
-$sidebar-hpadding: 0.25rem;
+$sidebar-hpadding: 0.7rem;
 $sidebar-font-size: 1.3rem;
-$sidebar-color: #893202;
+$sidebar-color: #6b2702;
 $sidebar-font-color: white;
 $sidebar-font-color-dark: darken( $sidebar-font-color, 20% );
 $sidebar-font-color-ligth: lighten( $sidebar-font-color, 20% );

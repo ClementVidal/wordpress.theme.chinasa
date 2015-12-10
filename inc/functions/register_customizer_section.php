@@ -2,19 +2,40 @@
 
 function chinase_theme_customizer($wp_customize)
 {
-    $wp_customize->add_section('chi_logo_section', array(
-        'title' => __('Logo', 'chi'),
+    $wp_customize->add_section('chi_landing_page_section', array(
+        'title' => __('Landing page', 'chi'),
         'priority' => 30,
-        'description' => 'Upload a logo to replace the default site name and description in the header',
+        'description' => 'Settings related to the landing page',
     ));
 
-    $wp_customize->add_setting( 'chi_logo' );
+    $wp_customize->add_setting( 'chi_landing_page_title' );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'chi_landing_page_title', array(
+        'label'    => __( 'Titre', 'titre' ),
+        'section'  => 'chi_landing_page_section',
+        'settings' => 'chi_landing_page_title',
+    ) ) );
+    
+    $wp_customize->add_setting( 'chi_landing_page_subtitle' );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'chi_landing_page_subtitle', array(
+        'label'    => __( 'Sous titre', 'soustitre' ),
+        'section'  => 'chi_landing_page_section',
+        'settings' => 'chi_landing_page_subtitle',
+    ) ) );
 
+    $wp_customize->add_setting( 'chi_landing_page_logo' );
     $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'chi_logo', array(
         'label'    => __( 'Logo', 'chi' ),
-        'section'  => 'chi_logo_section',
-        'settings' => 'chi_logo',
+        'section'  => 'chi_landing_page_section',
+        'settings' => 'chi_landing_page_logo',
     ) ) );
+
+    $wp_customize->add_setting( 'chi_landing_page_image' );
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'chi_image', array(
+        'label'    => __( 'Image', 'chi' ),
+        'section'  => 'chi_landing_page_section',
+        'settings' => 'chi_landing_page_image',
+    ) ) );
+
 
 
     $wp_customize->add_section('chi_social_section', array(

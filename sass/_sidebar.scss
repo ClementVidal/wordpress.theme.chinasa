@@ -1,22 +1,24 @@
 #chi-sidebar {
 
-    $sidebar-content-top: 3rem;
+    $sidebar-content-top: 4.5rem;
     $sidebar-content-height: 30rem;
     $sidebar-overlap: 2rem;
-    z-index: 1000;
 
+    z-index: 1000;
     position: fixed;
-    left: 0.5rem;
+    left: $sidebar-offset;
+
     .chi-sidebar-bloc{
 
         padding: 1rem 2rem;
-        position: absolute;
+        position: relative;
         z-index: 1;
         height: $sidebar-content-top + $sidebar-overlap;
         width: $sidebar-width;
         background-color: darken( $sidebar-color, 6% );
         border-left: 1px solid $sidebar-color-dark;
         border-right: 1px solid $sidebar-color-dark;
+        left: $sidebar-block-offset;
 
         &:before {
             @include vertical-line( left, $sidebar-hpadding, $page-decoration, dashed );
@@ -31,43 +33,55 @@
 
         &.chi-sidebar-bottom{
             height: 100rem;
-            top: $sidebar-content-top + $sidebar-content-height - $sidebar-overlap;
+            top: -4*$sidebar-overlap;
         }
     }
 
     .chi-sidebar-shear {
         $color: darken( $sidebar-color, 12% );
-        $angle: 26deg;
-        position: absolute;
+        $angle: -26deg;
+        position: relative;
         z-index: 2;
         height: $sidebar-overlap;
         width: $sidebar-width;
         background-color: $color;
-        left: $sidebar-hmargin / 2;
+        left: $sidebar-block-offset - ( $sidebar-block-offset - $sidebar-content-offset ) / 2;
         border-left: 1px solid $sidebar-color-dark;
         border-right: 1px solid $sidebar-color-dark;
 
         &:before {
-            @include vertical-line( left, $sidebar-hpadding, darken( $color, 12% ), dashed );
+            @include vertical-line( right, $sidebar-hpadding, darken( $color, 12% ), dashed );
         }
 
         &.chi-sidebar-top{
-            top: $sidebar-content-top;
+            top: -$sidebar-overlap;
             transform: skewX( - $angle  );
         }
 
         &.chi-sidebar-bottom{
-            top: $sidebar-content-top + $sidebar-content-height - $sidebar-overlap;
+
+            top: -3*$sidebar-overlap;
             transform: skewX( $angle  );
         }
     }
 
-    .chi-sidebar-content {
-        @extend .hidden-md-down;
+    .chi-sidebar-logo {
+        $chi-sidebar-logo-size: 3.0rem;
         position: absolute;
+        width: $chi-sidebar-logo-size;
+        height: $chi-sidebar-logo-size;
+        top: $sidebar-content-top / 2 - $chi-sidebar-logo-size / 2;
+        left: $sidebar-block-offset + $sidebar-width / 2 - $chi-sidebar-logo-size / 2;
+        z-index: 1;
+    }
+
+    .chi-sidebar-content {
+
+        @extend .hidden-md-down;
+        position: relative;
         z-index: 3;
-        top: $sidebar-content-top;
-        left: $sidebar-hmargin;
+        top: - 2 * $sidebar-overlap ;
+        left: $sidebar-content-offset;
         width: $sidebar-width;
         height: $sidebar-content-height;
         padding: 1rem 2rem;
@@ -120,7 +134,7 @@
                 //@include outline-text(  );
                 margin: 0;
                 padding: 0;
-                border-left: pixel-to-rem( ) dashed transparentize( $page-decoration, 0.9);
+                border-left: pixel-to-rem( ) dashed  darken( $sidebar-color, 17% );
                 padding-left: 1.0rem;
                 margin-left: 0.5rem;
                 &.sub-menu {
@@ -142,7 +156,7 @@
                     display: inline-block;
                     text-decoration: inherit;
                     text-shadow: none;
-                    color: transparentize( $page-decoration, 0.8);
+                    color: darken( $sidebar-color, 17% );
                 }
             }
             a {

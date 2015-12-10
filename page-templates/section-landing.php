@@ -14,18 +14,17 @@ Template Name: Landing
             <header>
 
                     <div>
-                        <img src="http://clement-vidal.fr.dev/wp-content/uploads/2015/11/profile_picture_1.png"
-                        alt="Clement Vidal Developeur Web Freelance Marseille Aix"
-                        class="chi-round-img-300 center-block alignnone size-full wp-image-120">
-                        <img src="http://clement-vidal.fr.dev/wp-content/uploads/2015/12/logo.svg"
-                        alt="Clement Vidal Developeur Web Freelance Marseille Aix"
-                        class="chi-round-img-300">
+                        <?php if ( get_theme_mod( 'chi_image' ) ) : ?>
+                            <img class="chi-round-img-300 center-block " src='<?php echo esc_url( get_theme_mod( 'chi_landing_page_image' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'>
+                        <?php endif; ?>
+
+                        <?php if ( get_theme_mod( 'chi_logo' ) ) : ?>
+                            <img class="center-block " src='<?php echo esc_url( get_theme_mod( 'chi_landing_page_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'>
+                        <?php endif; ?>
                     </div>
 
                     <h1>
-                        <?php the_author_meta('first_name'); ?>
-
-                        <?php the_author_meta('last_name'); ?>
+                        <?php echo get_theme_mod('chi_landing_page_title' ); ?>
                     </h1>
 
 
@@ -34,7 +33,7 @@ Template Name: Landing
 
 
             <h2>
-                &laquo; <?php echo get_bloginfo( 'description' ); ?>  &raquo;
+                &laquo; <?php echo get_theme_mod('chi_landing_page_subtitle' ); ?> &raquo;
             </h2>
         </div>
 
