@@ -142,8 +142,11 @@
                 width: 300px;
                 height: 300px;
                 margin: auto;
+
+                $animation-delay: 1s;
+
                 img:nth-child(1) {
-                    @keyframes dropHeader1 {
+                    @keyframes hiddenToVisible {
                         0% {
                             opacity: 0;
                         }
@@ -153,16 +156,16 @@
                     }
 
                     opacity: 0;
-                    animation-name: dropHeader1;
+                    animation-name: hiddenToVisible;
                     animation-iteration-count: 1;
                     animation-timing-function: ease-in;
-                    animation-duration: 2.5s;
+                    animation-duration: 0.5s;
                     animation-fill-mode: forwards;
-                    animation-delay: 2s;
+                    animation-delay: $animation-delay;
 
                 }
                 img:nth-child(2) {
-                    @keyframes dropHeader2 {
+                    @keyframes visibleToHidden {
                         0% {
                             opacity: 1;
                         }
@@ -171,12 +174,12 @@
                         }
                     }
 
-                    animation-name: dropHeader2;
+                    animation-name: visibleToHidden;
                     animation-iteration-count: 1;
-                    animation-timing-function: ease-in;
-                    animation-duration: 2.5s;
+                    animation-timing-function: ease-out;
+                    animation-duration: 0.5s;
                     animation-fill-mode: forwards;
-                    animation-delay: 2s;
+                    animation-delay: $animation-delay;
 
                 }
                 img {
