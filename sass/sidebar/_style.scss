@@ -58,13 +58,13 @@
 
         &.chi-sidebar-top{
             top: -$sidebar-overlap;
-            @include enlargeAnim( skewX( - $angle  ) );
+            @include enlargeAnim( -$angle );
         }
 
         &.chi-sidebar-bottom{
 
             top: -3*$sidebar-overlap;
-            @include enlargeAnim( skewX( $angle  ) );
+            @include enlargeAnim( $angle );
         }
     }
 
