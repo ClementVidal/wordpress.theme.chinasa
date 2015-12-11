@@ -23,9 +23,9 @@
         animation-delay: 0.7s;
 }
 
-@mixin upAndBounceAnim( ) {
+@mixin logoUpAndBounceAnim( ) {
 
-    @keyframes upAndBounce {
+    @keyframes logoUpAndBounce {
         0% {
             opacity: 0;
         }
@@ -36,14 +36,41 @@
 
         15% {transform: translateY(0);}
         23% {transform: translateY(-0.3rem);}
-        39% {transform: translateY(0.2rem);}
+        39% {transform: translateY(0.5rem);}
         47% {transform: translateY(0rem);}
     }
 
-    animation-name: upAndBounce;
+    top: $sidebar-content-top / 2 - $sidebar-logo-size / 2 + $sidebar-logo-size/1.2;
+    animation-name: logoUpAndBounce;
     animation-iteration-count: 1;
     animation-timing-function: ease-out;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
     animation-delay: 1.5s;
+}
+
+@mixin footerUpAndBounceAnim( ) {
+
+    @keyframes footerUpAndBounce {
+        0% {
+            opacity: 0;
+        }
+        15%, 100% {
+            opacity: 1;
+            bottom:-0rem;
+        }
+
+        15% {transform: translateY(0);}
+        23% {transform: translateY(0.5rem);}
+        39% {transform: translateY(-0.2rem);}
+        47% {transform: translateY(0rem);}
+    }
+
+    bottom:-4rem;
+    animation-name: footerUpAndBounce;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 1.9s;
 }

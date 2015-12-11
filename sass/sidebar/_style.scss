@@ -73,12 +73,11 @@
         position: absolute;
         width: $sidebar-logo-size;
         height: $sidebar-logo-size;
-        top: $sidebar-content-top / 2 - $sidebar-logo-size / 2 + $sidebar-logo-size/1.2;
         left: $sidebar-block-offset + $sidebar-width / 2 - $sidebar-logo-size / 2;
         z-index: 1;
         opacity: 0;
 
-        @include upAndBounceAnim;
+        @include logoUpAndBounceAnim;
     }
 
     .chi-sidebar-content {
@@ -181,9 +180,14 @@
     }
     .chi-sidebar-foot {
         width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        padding: 1rem 2rem;
         line-height: 1rem;
         margin-top: 4rem;
         @include flex-box( row, space-between, center );
+        @include footerUpAndBounceAnim;
         & a {
             //@include outline-text(  );
             font-size: $icon-font-size;
