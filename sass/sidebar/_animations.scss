@@ -28,7 +28,7 @@
         }
         15%, 100% {
             opacity: 1;
-            top: $sidebar-content-top / 2 - $sidebar-logo-size / 2 + 1rem;
+            top: $sidebar-content-top / 2 - $sidebar-logo-size / 2 + 0.5rem;
         }
 
         15% {transform: translateY(0);}
@@ -37,7 +37,7 @@
         47% {transform: translateY(0rem);}
     }
 
-    top: $sidebar-content-top / 2 - $sidebar-logo-size / 2 + $sidebar-logo-size/1.2;
+    top: $sidebar-content-top / 2 - $sidebar-logo-size / 2 ;
     animation-name: logoUpAndBounce;
     animation-iteration-count: 1;
     animation-timing-function: ease-out;
