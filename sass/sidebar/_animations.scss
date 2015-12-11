@@ -32,8 +32,8 @@
         }
 
         15% {transform: translateY(0);}
-        23% {transform: translateY(-0.3rem);}
-        39% {transform: translateY(0.5rem);}
+        23% {transform: translateY(-0.5rem);}
+        39% {transform: translateY(0.2rem);}
         47% {transform: translateY(0rem);}
     }
 
@@ -43,7 +43,7 @@
     animation-timing-function: ease-out;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
-    animation-delay: 1.5s;
+    animation-delay: 2.0s;
 }
 
 @mixin footerUpAndBounceAnim( ) {
@@ -69,5 +69,5 @@
     animation-timing-function: ease-out;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
-    animation-delay: 1.9s;
+    animation-delay: 1.5s;
 }

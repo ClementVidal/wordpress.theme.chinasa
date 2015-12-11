@@ -24,7 +24,7 @@
 
             <li class="panel panel-default">
                 <div role="tab" id="headingOne">
-                    <a  du-scrollspy  data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+                    <a class="chi-menu-header" du-scrollspy  data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
                         data-href-hidden="#collapseOne" data-href-shown="#chi-section-landing">
                             <?php echo $menu->name; ?>
                     </a>
