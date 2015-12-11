@@ -1,0 +1,29 @@
+#chi-section-contact {
+    article>ul {
+        vertical-align: top;
+    }
+    li {
+        list-style: none;
+    }
+    form {
+        margin-top: 2rem;
+        >div {
+            @extend .form-group;
+            @extend .row;
+            input,
+            textarea {
+                @extend .form-control;
+            }
+            >label {
+                @extend .col-md-3;
+            }
+            >span {
+                @extend .col-md-9;
+            }
+        }
+        input[type="submit"] {
+            @extend .btn;
+            @extend .btn-secondary;
+        }
+    }
+}

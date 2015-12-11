@@ -1,0 +1,10 @@
+#chi-section-front-end {
+    position: relative;
+    overflow: hidden;
+    & .chi-card {
+        @include translate-on-visible("X", 2rem);
+    }
+    & #chi-bg-shapes {
+        @include chi-bg-shapes( 50rem, 50rem, 0rem, initial, 0rem, initial );
+    }
+}

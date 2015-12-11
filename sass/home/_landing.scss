@@ -1,0 +1,86 @@
+// Per section settings
+#chi-section-landing {
+    overflow: hidden;
+    opacity: 1.0;
+    section {
+        >#chi-bg-shapes {
+            transform: rotateZ(45deg);
+            transform-origin: center center;
+            position: absolute;
+            width: 300%;
+            height: 300%;
+            top: -100%;
+            left: -100%;
+            z-index: 0;
+            opacity: 0;
+            transition: opacity 2.0s ease;
+            &.visible {
+                opacity: 0.5;
+            }
+            background: url( data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAFCAYAAACXU8ZrAAAAHElEQVQIW2NkQAMsssb//zw+y4gsjMIBSQwCRQAHyRQGOT1yQAAAAABJRU5ErkJggg== ) repeat;
+        }
+        position: relative;
+        @include flex-box( column, space-around, center );
+        >div {
+            z-index: 1;
+        }
+        header {
+            width: 40rem;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 1rem;
+            border-bottom: pixel-to-rem() solid $page-decoration;
+            margin-bottom: 1rem;
+            text-align: center;
+            h1 {
+                @include outline-text( );
+                display: inline;
+                text-align: left;
+                margin-bottom: 0;
+                font-weight: bold;
+                font-size: $section-landing-h1-size;
+                color: $section-landing-h1-color;
+            }
+            div {
+                position: relative;
+                width: 300px;
+                height: 300px;
+                margin: auto;
+                img:nth-child(1) {
+                    @include hiddenToVisibleAnim;
+                }
+                img:nth-child(2) {
+                    @include visibleToHiddenAnim;
+                }
+                img {
+                    position: absolute;
+                    left: 0;
+                    width: 300px;
+                    height: 300px;
+                    margin-bottom: 3rem;
+                }
+            }
+        }
+        h2 {
+            @include outline-text();
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 2.5rem;
+            font-family: $font-family-cursive;
+            font-size: $section-landing-h2-size;
+            color: $section-landing-h2-color;
+        }
+        .chi-icon {
+            bottom: 0;
+            margin-bottom: 1rem;
+            position: absolute;
+            left: 49%;
+            i {
+
+                @include outline-text( );
+                font-size: $icon-font-size;
+                animation: arrowAnim 2s ease-in-out 0s infinite alternate;
+            }
+        }
+    }
+}

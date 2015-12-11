@@ -1,0 +1,31 @@
+#chi-section-competences {
+    & ul {
+        margin: 0;
+        margin-top:1rem;
+        padding: 0;
+
+        @extend .row;
+        list-style-type: none;
+        &>li {
+            @extend .col-sm-2;
+            min-width: 11rem;
+            margin-bottom: 1rem;
+            & span {
+                display: inline;
+                font-size: 1rem;
+            }
+
+            & i {
+                width: 1.2rem;
+                color: $section-kill-stars-color;
+            }
+
+            & img {
+                border: pixel-to-rem( ) solid $page-decoration;
+                border-radius: pixel-to-rem( 4 );
+            }
+
+            @include translate-on-visible();
+        }
+    }
+}

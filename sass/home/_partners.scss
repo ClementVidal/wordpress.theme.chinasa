@@ -1,0 +1,30 @@
+#chi-section-partenaires {
+
+    section:first-child {
+        text-align: center;
+    }
+
+
+    & article {
+        @include translate-on-visible();
+
+        border-radius: pixel-to-rem( 4 );
+        border-top: none;
+        & div {
+            margin: 1rem;
+            text-align: center;
+            margin-top: 1rem;
+            padding-bottom: 1rem;
+            border-top: pixel-to-rem() solid $page-decoration;
+            & span {
+                font-size: $font-h2-size;
+            }
+
+        }
+        & img {
+            margin: auto;
+            display: block;
+            @extend .chi-round-img-200 ;
+        }
+    }
+}

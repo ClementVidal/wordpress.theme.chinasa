@@ -17,11 +17,11 @@ Text Domain:
 @import 'mixins';
 @import 'variables';
 @import 'utilityclass';
-
-@import 'sidebar';
-@import 'home';
-@import 'blog';
 @import 'tag';
+
+@import 'sidebar/style';
+@import 'home/style';
+@import 'blog';
 
 #wpadminbar {
     bottom: 0;

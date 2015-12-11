@@ -1,0 +1,51 @@
+@mixin hiddenToVisibleAnim( ) {
+
+    @keyframes hiddenToVisible {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+
+    opacity: 0;
+    animation-name: hiddenToVisible;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+    animation-delay: 2.0s;
+}
+
+@mixin visibleToHiddenAnim( ) {
+
+    @keyframes visibleToHidden
+    {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+
+    opacity: 1;
+    animation-name: visibleToHidden;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-delay: 1.7s;
+}
+
+
+@keyframes arrowAnim {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.4;
+    }
+}

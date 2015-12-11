@@ -1,32 +1,8 @@
-@mixin applyEnlargeAnim( $additionalTransorm: translateX( 0 )) {
 
-        @keyframes elargeAndBounce {
-            0% {
-                transform: scaleX( 0 ) $additionalTransorm;
-            }
-            100% {
-                transform: scaleX( 1 ) $additionalTransorm;
-            }
-
-            15% {transform: scaleX(1) $additionalTransorm;}
-            25% {transform: scaleX(1.2) $additionalTransorm;}
-            42% {transform: scaleX(0.8) $additionalTransorm;}
-            50% {transform: scaleX(1) $additionalTransorm;}
-        }
-
-        transform: scaleX( 0 ) $additionalTransorm;
-        animation-name: elargeAndBounce;
-        animation-iteration-count: 1;
-        animation-timing-function: ease;
-        animation-duration: 0.7s;
-        animation-fill-mode: forwards;
-        animation-delay: 0.65s;
-}
+@import "animations";
 
 #chi-sidebar {
-    $sidebar-content-top: 4.5rem;
-    $sidebar-content-height: 30rem;
-    $sidebar-overlap: 2rem;
+
 
     z-index: 1000;
     position: fixed;
@@ -43,7 +19,7 @@
         border-left: 1px solid $sidebar-color-dark;
         border-right: 1px solid $sidebar-color-dark;
         left: $sidebar-block-offset;
-        @include applyEnlargeAnim;
+        @include enlargeAnim;
 
         &:before {
             @include vertical-line( left, $sidebar-hpadding, $page-decoration, dashed );
@@ -82,48 +58,27 @@
 
         &.chi-sidebar-top{
             top: -$sidebar-overlap;
-            @include applyEnlargeAnim( skewX( - $angle  ) );
+            @include enlargeAnim( skewX( - $angle  ) );
         }
 
         &.chi-sidebar-bottom{
 
             top: -3*$sidebar-overlap;
-            @include applyEnlargeAnim( skewX( $angle  ) );
+            @include enlargeAnim( skewX( $angle  ) );
         }
     }
 
     .chi-sidebar-logo {
-        $chi-sidebar-logo-size: 5.5rem;
+        $sidebar-logo-size: 5.5rem;
         position: absolute;
-        width: $chi-sidebar-logo-size;
-        height: $chi-sidebar-logo-size;
-        top: $sidebar-content-top / 2 - $chi-sidebar-logo-size / 2 + $chi-sidebar-logo-size/1.2;
-        left: $sidebar-block-offset + $sidebar-width / 2 - $chi-sidebar-logo-size / 2;
+        width: $sidebar-logo-size;
+        height: $sidebar-logo-size;
+        top: $sidebar-content-top / 2 - $sidebar-logo-size / 2 + $sidebar-logo-size/1.2;
+        left: $sidebar-block-offset + $sidebar-width / 2 - $sidebar-logo-size / 2;
         z-index: 1;
         opacity: 0;
 
-        @keyframes logoUpAndBounce {
-            0% {
-                opacity: 0;
-            }
-            15%, 100% {
-                opacity: 1;
-                top: $sidebar-content-top / 2 - $chi-sidebar-logo-size / 2 + 1rem;
-            }
-
-            15% {transform: translateY(0);}
-            23% {transform: translateY(-0.3rem);}
-            39% {transform: translateY(0.2rem);}
-            47% {transform: translateY(0rem);}
-        }
-
-        animation-name: logoUpAndBounce;
-        animation-iteration-count: 1;
-        animation-timing-function: ease-out;
-        animation-duration: 0.5s;
-        animation-fill-mode: forwards;
-        animation-delay: 2.5s;
-
+        @include upAndBounceAnim;
     }
 
     .chi-sidebar-content {
@@ -139,7 +94,7 @@
         background: $sidebar-color;
         border: 1px solid $sidebar-color-dark;
 
-        @include applyEnlargeAnim;
+        @include enlargeAnim;
         @include flex-box( column, space-between, center );
         &:before {
             @include vertical-line( left, $sidebar-hpadding, $page-decoration, dashed );
