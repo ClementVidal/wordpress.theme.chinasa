@@ -10,17 +10,19 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    box-shadow:0px 0px 0.4rem darken( $color, 80% );
+    box-shadow:0px 0px 0.4rem darken( $color, 10% );
     z-index:1;
+    $darken-precentage: 13%;
+    $lighten-precentage: 12%;
     @if $side == "right" {
         right: $gutter-space;
-        border-right: pixel-to-rem() $style $color;
-        border-left: pixel-to-rem() $style darken( $color, 50% );
+        border-right: pixel-to-rem() $style lighten( $color, $lighten-precentage );
+        border-left: pixel-to-rem() $style darken( $color, $darken-precentage );
     }
     @else if $side == "left" {
         left: $gutter-space;
-        border-right: pixel-to-rem() $style $color;
-        border-left: pixel-to-rem() $style darken( $color, 50% );
+        border-right: pixel-to-rem() $style lighten( $color, $lighten-precentage );
+        border-left: pixel-to-rem() $style darken( $color, $darken-precentage );
     }
 }
 @mixin outline-text( $color: black, $width: pixel-to-rem( 2 ) ){

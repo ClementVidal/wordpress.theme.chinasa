@@ -1,39 +1,108 @@
 var chinasa = angular.module('chinasa', ['duScroll']);
 
-chinasa.controller( 'bodyController', function bodyController( $scope, $compile ){
-    $scope.isInView = false;
+console.log( "Enter module definition");
 
-    var menu = [];
-    menu[0] = $('.chi-sidebar-menu>li:first-child');
-    menu[1] = $('.chi-sidebar-menu>li:last-child');
+chinasa.controller('bodyController', function bodyController($timeout, $scope, $compile) {
 
-    var onCallapseShown = function( collapse ) {
-        var a = collapse.querySelector('a');
-        a.setAttribute('href', "javascript:void(0)" );
-        a.removeAttribute( 'data-toggle' );
-        a.style.cursor ='default';
-        a.classList.add( 'visible' );
+        //$.fn.collapse.Constructor.TRANSITION_DURATION = 10000;
 
-    };
-    var onCallapseHidden = function( collapse ) {
-        var a = collapse.querySelector('a');
-        a.setAttribute('href', a.getAttribute('data-href-hidden'));
-        a.setAttribute( 'data-toggle', 'collapse' );
-        a.style.cursor ='initial';
-        a.classList.remove( 'visible' );
+        console.log( $.fn.collapse.Constructor );
 
-    };
+        $scope.isInView = false;
+
+        console.log( "Enter body controller");
+
+        var menu = $('.chi-menu');
+
+        var onCallapseShown = function(collapse) {
+            var a = collapse.querySelector('a');
+            a.setAttribute('href', "javascript:void(0)");
+            a.removeAttribute('data-toggle');
+            a.style.cursor = 'default';
+            a.classList.add('visible');
+
+        };
+        var onCallapseHidden = function(collapse) {
+            var a = collapse.querySelector('a');
+            a.setAttribute('href', a.getAttribute('data-href-hidden'));
+            a.setAttribute('data-toggle', 'collapse');
+            a.style.cursor = 'initial';
+            a.classList.remove('visible');
+        };
+
+        menu.on('show.bs.collapse', function() {
+            onCallapseShown(this);
+
+        });
+        menu.on('hide.bs.collapse', function() {
+            onCallapseHidden(this);
+        });
 
 
-    menu[0].on('show.bs.collapse', function(){ onCallapseShown( this ); } );
-    menu[0].on('hide.bs.collapse', function(){ onCallapseHidden( this ); } );
+        onCallapseShown(menu.get(0));
 
-    menu[1].on('show.bs.collapse', function(){ onCallapseShown( this ); } );
-    menu[1].on('hide.bs.collapse', function(){ onCallapseHidden( this ); } );
-
-    onCallapseShown( menu[0].get(0) );
-
+//    });
 });
+;(function() {
+    'use strict';
+    angular
+        .module('chinasa')
+        .directive('chiMenuContainer', chiMenuContainer);
+
+    function chiMenuContainer($window, $document) {
+
+        var keyframesTemplate = "@keyframes disapear{ \
+                0% { height: {{height}};  } \
+                100% {  height: 0;  }\
+            }"
+        var replacementPattern = /\{\{height\}\}/g;
+
+        function insertKeyframes( height ) {
+
+            var styleElement = angular.element("<style/>")[0];
+            styleElement.appendChild(document.createTextNode(keyframesTemplate));
+            console.log( "1New stylesheet: ", styleElement );
+            document.head.appendChild(styleElement);
+            /*
+            styleElement.textContent = keyframesTemplate.replace(replacementPattern, height + 'px');
+            console.log( "Insert keyframe: ", styleElement, styleElement.textContent );
+            $document[0].head.appendChild(styleElement[0]);
+            */
+        }
+
+        function removeElement(event) {
+          if (event.animationName === 'disapear') {
+            event.target.parentNode.removeChild(event.target);
+          }
+        }
+
+
+
+        return {
+            restrict: 'A',
+            link: function(scope, element, attrs, graphNode) {
+
+                var menusContainer = $document[0].querySelector(".chi-menu-container");
+                var menus = element[0].querySelectorAll(".chi-menu>div");
+                var headers = element[0].querySelectorAll(".chi-menu>a");
+
+                var onClick = function( e ) {
+
+                    var menu = event.target.parentElement.querySelector( "div" );
+                    insertKeyframes( menu.clientHeight );
+                    menu.classList.add( 'chi-removed' );
+
+                    menusContainer.addEventListener('animationend',removeElement);
+                };
+
+                for (var i = 0; i < headers.length; i++) {
+                    headers[i].addEventListener('click', onClick);
+                }
+
+            }
+        };
+    }
+})();
 ;(function() {
     'use strict';
     angular
@@ -107,7 +176,6 @@ chinasa.controller( 'bodyController', function bodyController( $scope, $compile 
 
     function chiSnapToViewportBottom( $window, $document) {
 
-        console.log( "here" );
         return {
             restrict: 'A',
             link: function(scope, element, attrs, graphNode) {

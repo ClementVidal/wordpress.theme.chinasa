@@ -6,7 +6,6 @@
 
     function chiSnapToViewportBottom( $window, $document) {
 
-        console.log( "here" );
         return {
             restrict: 'A',
             link: function(scope, element, attrs, graphNode) {
