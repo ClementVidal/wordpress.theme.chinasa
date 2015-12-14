@@ -10,9 +10,8 @@
     @include footerUpAndBounceAnim;
     & a {
         font-size: $icon-font-size;
-        transition:  0.5s ease;
         transition: color 0.5s ease, margin 0.25s ease ;
-        color: darken( $sidebar-color, 17% );
+        color: $sidebar-color-foot;
         &:hover {
             margin-bottom: 0.5rem;
             color: $sidebar-font-color;

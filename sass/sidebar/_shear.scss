@@ -7,8 +7,8 @@
     width: $sidebar-width;
     background-color: $color;
     left: $sidebar-block-offset - ( $sidebar-block-offset - $sidebar-content-offset ) / 2;
-    border-left: 1px solid $sidebar-color-dark;
-    border-right: 1px solid $sidebar-color-dark;
+    border-left: 1px solid darken( $sidebar-color-border, 12% );
+    border-right: 1px solid darken( $sidebar-color-border, 12% );
 
 
     &:before {

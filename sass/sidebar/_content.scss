@@ -9,7 +9,7 @@
     height: $sidebar-content-height;
     padding: 1rem 2rem;
     background: $sidebar-color;
-    border: 1px solid $sidebar-color-dark;
+    border: 1px solid $sidebar-color-border;
 
     @include enlargeAnim;
     @include flex-box( column, space-between, center );
@@ -20,7 +20,8 @@
         @include vertical-line( right, $sidebar-hpadding, $page-decoration, dashed );
     }
 
-    .chi-sidebar-menu {
+    // Menu container
+    .chi-menu-container {
         width: 100%;
         height: 100%;
         margin: 1rem 0;
@@ -30,51 +31,90 @@
         line-height: initial;
         list-style-type: none;
 
-        // Main menu
-        .chi-menu-header {
-            margin-bottom: 0.5rem;
-            font-size: 1.7rem;
-            font-family: $font-family-cursive;
+        .chi-menu {
+            margin-bottom: 1rem;
 
-        }
-        ul {
-            margin: 0;
-            padding: 0;
-            border-left: pixel-to-rem( ) dashed  darken( $sidebar-color, 17% );
-            padding-left: 1.0rem;
-            margin-left: 0.5rem;
-            &.sub-menu {
-                padding-left: 1.0rem;
-                border-left: 0;
-                font-size: $sidebar-font-size / 1.2;
+            // Header
+            >a {
+                margin-bottom: 0.5rem;
+                font-size: $sidebar-font-size;
+                font-family: $font-family-cursive;
+
+                transition: all 0.3s ease;
+                color: $sidebar-font-color;
+
+                @include outline-text;
+
+                &.chi-visible {
+                    font-size: $sidebar-font-size * 1.5;
+                    color: $sidebar-font-color;
+                    //margin-left:
+                }
+                &:hover {
+                    color: $sidebar-font-color;
+                }
             }
-            >li {
-                margin-bottom: 0.7rem;
-                list-style-type: none;
-                & a.active::before {
-                    position: absolute;
-                    left: 1.5rem;
-                    content: "\f101";
-                    font-family: FontAwesome;
-                    font-weight: normal;
-                    font-style: normal;
-                    display: inline-block;
-                    text-decoration: inherit;
-                    text-shadow: none;
-                    color: darken( $sidebar-color, 17% );
+
+            // Content
+            >div {
+                opacity: 0;
+                transition: all 0.2s ease;
+                &.collapse.in {
+                    opacity: 1;
+
+                    &:before {
+                        content: " ";
+                        width: 100%;
+                        height: pixel-to-rem( 2 );
+                        background-color: $sidebar-color-decoration;
+                        display: block;
+                        margin-top: 0.1rem;
+                        margin-bottom: 0.5rem;
+                    }
+                }
+
+                ul {
+                    margin: 0;
+                    padding: 0;
+                    margin-left: 1.0rem;
+                    &.sub-menu {
+                        padding-left: 0.5rem;
+                        border-left: 0;
+                        font-size: $sidebar-font-size / 1.2;
+                        &>li {
+                            margin-top: 0.2rem;
+                            margin-bottom: 0.0rem;
+                        }
+                    }
+                    >li {
+                        margin-bottom: 0.7rem;
+                        list-style-type: none;
+
+                        a {
+                            transition: margin 0.25s ease;
+                            color: $sidebar-font-color;
+                            &:hover {
+                                color: $sidebar-font-color-hover;
+                                margin-left: 0.5rem;
+                            }
+
+                            &.active::before {
+                                position: absolute;
+                                left: 1.5rem;
+                                content: "\f101";
+                                font-family: FontAwesome;
+                                font-weight: normal;
+                                font-style: normal;
+                                display: inline-block;
+                                text-decoration: inherit;
+                                text-shadow: none;
+                                color: $sidebar-color-decoration;
+                            }
+                        }
+
+                    }
                 }
             }
         }
-        a {
-            transition: all 0.5s ease;
-            color: $sidebar-font-color-dark;
-            &.visible {
-                color: $sidebar-font-color;
-            }
-            &:hover {
-                color: $sidebar-font-color;
-            }
-        }
     }
-
 }

@@ -14,7 +14,7 @@
 
 
         <?php $locations = get_nav_menu_locations(); ?>
-        <ul id="accordion" role="tablist" class="chi-sidebar-menu">
+        <div id="accordion" role="tablist" class="chi-menu-container">
             <?php
             $menu_name = 'primary';
             if( array_key_exists( $menu_name, $locations ) && $locations[ $menu_name ] ) :
@@ -22,13 +22,11 @@
                 $menu=wp_get_nav_menu_object($menu_id);
              ?>
 
-            <li class="panel panel-default">
-                <div role="tab" id="headingOne">
-                    <a class="chi-menu-header" du-scrollspy  data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
-                        data-href-hidden="#collapseOne" data-href-shown="#chi-section-landing">
-                            <?php echo $menu->name; ?>
-                    </a>
-                </div>
+            <div class="chi-menu panel panel-default">
+                <a du-scrollspy  data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+                    data-href-hidden="#collapseOne" data-href-shown="#chi-section-landing">
+                        <?php echo $menu->name; ?>
+                </a>
                 <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel">
                     <?php
                     $defaults = array(
@@ -41,7 +39,7 @@
                     wp_nav_menu($defaults);
                     ?>
                 </div>
-            </li>
+            </div>
             <?php endif;?>
 
             <?php
@@ -50,13 +48,11 @@
                 $menu_id = $locations[ $menu_name ] ;
                 $menu=wp_get_nav_menu_object($menu_id);
              ?>
-            <li class="panel panel-default">
-                <div role="tab" id="headingTwo">
-                    <a  du-scrollspy data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"
-                        data-href-hidden="#collapseTwo" data-href-shown="#chi-section-landing">
-                            <?php echo $menu->name; ?>
-                    </a>
-                </div>
+            <div class="chi-menu panel panel-default">
+                <a du-scrollspy data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"
+                    data-href-hidden="#collapseTwo" data-href-shown="#chi-section-landing">
+                        <?php echo $menu->name; ?>
+                </a>
                 <div id="collapseTwo" class=" panel-collapse collapse" role="tabpanel">
                     <?php
                     $defaults = array(
@@ -69,10 +65,10 @@
                     wp_nav_menu($defaults);
                     ?>
                 </div>
-            </li>
+            </div>
             <?php endif;?>
 
-        </ul>
+        </div>
 
 
 
