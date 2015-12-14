@@ -107,7 +107,6 @@ chinasa.controller( 'bodyController', function bodyController( $scope, $compile 
 
     function chiSnapToViewportBottom( $window, $document) {
 
-        console.log( "here" );
         return {
             restrict: 'A',
             link: function(scope, element, attrs, graphNode) {

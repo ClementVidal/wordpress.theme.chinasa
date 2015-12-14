@@ -1,9 +1,8 @@
 .chi-sidebar-content {
-
     @extend .hidden-md-down;
     position: relative;
     z-index: 3;
-    top: - 2 * $sidebar-overlap ;
+    top: - 2 * $sidebar-overlap;
     left: $sidebar-content-offset;
     width: $sidebar-width;
     height: $sidebar-content-height;
@@ -14,10 +13,10 @@
     @include enlargeAnim;
     @include flex-box( column, space-between, center );
     &:before {
-        @include vertical-line( left, $sidebar-hpadding, $page-decoration, dashed );
+        @include vertical-line( left, $sidebar-hpadding, $sidebar-color, dashed );
     }
     &:after {
-        @include vertical-line( right, $sidebar-hpadding, $page-decoration, dashed );
+        @include vertical-line( right, $sidebar-hpadding, $sidebar-color, dashed );
     }
 
     // Menu container
@@ -115,6 +114,7 @@
                     }
                 }
             }
+
         }
     }
 }

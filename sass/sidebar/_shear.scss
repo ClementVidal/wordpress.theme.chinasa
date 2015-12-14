@@ -12,7 +12,7 @@
 
 
     &:before {
-        @include vertical-line( right, $sidebar-hpadding, darken( $color, 12% ), dashed );
+        @include vertical-line( right, $sidebar-hpadding, darken( $sidebar-color, 12% ), dashed );
     }
 
     &.chi-sidebar-top{

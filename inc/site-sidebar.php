@@ -11,8 +11,6 @@
 
     <div class="chi-sidebar-content">
 
-
-
         <?php $locations = get_nav_menu_locations(); ?>
         <div id="accordion" role="tablist" class="chi-menu-container">
             <?php
@@ -42,6 +40,9 @@
             </div>
             <?php endif;?>
 
+            <?/*
+            Test if secondary menu exist,
+            and display it*/?>
             <?php
             $menu_name = 'secondary';
             if( array_key_exists( $menu_name, $locations ) && $locations[ $menu_name ] ) :
@@ -83,5 +84,6 @@
             <a href="<?php echo get_theme_mod('chi_social_pinterest');?>"><i class="fa fa-pinterest"></i></a>
         </div>
     </div>
+
 
 </div>

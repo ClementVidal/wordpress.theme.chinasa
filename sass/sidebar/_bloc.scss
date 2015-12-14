@@ -1,5 +1,6 @@
 .chi-sidebar-bloc{
 
+    $color: darken( $sidebar-color, 6% );
     padding: 1rem 2rem;
     position: relative;
     z-index: 1;
@@ -12,10 +13,10 @@
     @include enlargeAnim;
 
     &:before {
-        @include vertical-line( left, $sidebar-hpadding, $page-decoration, dashed );
+        @include vertical-line( left, $sidebar-hpadding, $color, dashed );
     }
     &:after {
-        @include vertical-line( right, $sidebar-hpadding, $page-decoration, dashed );
+        @include vertical-line( right, $sidebar-hpadding, $color, dashed );
     }
 
     &.chi-sidebar-top{

@@ -6,6 +6,10 @@
             </h1>
         <?php endif; ?>
 
-        <?php echo $page->post_content;?>
+        <?php
+        $content = apply_filters( 'the_content', $page->post_content );
+        $content = str_replace( ']]>', ']]&gt;', $content );
+        echo $content;
+        ?>
     </section>
 </div>

@@ -14,7 +14,7 @@
     animation-name: hiddenToVisible;
     animation-iteration-count: 1;
     animation-timing-function: ease-out;
-    animation-duration: 0.2s;
+    animation-duration: 0.35s;
     animation-fill-mode: forwards;
     animation-delay: 2.4s;
 }
@@ -35,7 +35,7 @@
     animation-name: visibleToHidden;
     animation-iteration-count: 1;
     animation-timing-function: ease-in-out;
-    animation-duration: 0.1s;
+    animation-duration: 0.2s;
     animation-fill-mode: forwards;
     animation-delay: 2.3s;
 }
