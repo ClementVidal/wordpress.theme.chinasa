@@ -27,8 +27,8 @@ $sidebar-color: #6b2702;
 $sidebar-font-color: white;
 $sidebar-font-color-hover: white;
 $sidebar-color-border: darken( $sidebar-color, 10% );
-$sidebar-color-foot: darken( $sidebar-color, 17% );
-$sidebar-color-decoration: transparentize( darken( $sidebar-color, 17% ), 0.7 );
+$sidebar-color-dark: darken( $sidebar-color, 17% );
+$sidebar-color-decoration: transparentize( $sidebar-color-dark, 0.7 );
 
 // Section
 $section-hmargin: 4.5rem;

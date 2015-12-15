@@ -2,7 +2,12 @@
 get_template_part( '/inc/site', 'header' );
 
 
-echo 'You were not suposed to be here !';
+?>
+<div chi-smooth-apparition id="chi-section" >
+    <section chi-resize-to-full-screen>
+        You were not suposed to be here !
+    </section>
+</div>
 
-
+<?php
 get_template_part( '/inc/site', 'footer' );

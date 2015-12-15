@@ -19,9 +19,10 @@ Text Domain:
 @import 'utilityclass';
 @import 'tag';
 
+@import 'common/style';
 @import 'sidebar/style';
 @import 'home/style';
-@import 'blog';
+@import 'blog/style';
 
 #wpadminbar {
     bottom: 0;

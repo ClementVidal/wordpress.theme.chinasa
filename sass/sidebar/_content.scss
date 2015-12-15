@@ -61,6 +61,7 @@
                 &.collapse.in {
                     opacity: 1;
 
+                    // Separator below header
                     &:before {
                         content: " ";
                         width: 100%;
@@ -90,23 +91,21 @@
                         list-style-type: none;
 
                         a {
-                            transition: margin 0.25s ease;
+                            transition: all 0.25s ease;
                             color: $sidebar-font-color;
                             &:hover {
-                                color: $sidebar-font-color-hover;
-                                margin-left: 0.5rem;
+                                color: $section-background-color2;
+                                //margin-left: 0.5rem;
                             }
+
 
                             &.active::before {
                                 position: absolute;
                                 left: 1.5rem;
                                 content: "\f101";
                                 font-family: FontAwesome;
-                                font-weight: normal;
-                                font-style: normal;
                                 display: inline-block;
-                                text-decoration: inherit;
-                                text-shadow: none;
+                                line-height: 2rem;
                                 color: $sidebar-color-decoration;
                             }
                         }
