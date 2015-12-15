@@ -1,4 +1,4 @@
-var chinasa = angular.module('chinasa', ['duScroll']);
+var chinasa = angular.module('chinasa', ['duScroll', 'ngCookies']);
 
 chinasa.controller( 'bodyController', function bodyController( $scope, $compile ){
     $scope.isInView = false;
@@ -13,7 +13,6 @@ chinasa.controller( 'bodyController', function bodyController( $scope, $compile 
         a.removeAttribute( 'data-toggle' );
         a.style.cursor ='default';
         a.classList.add( 'chi-visible' );
-
     };
     var onCallapseHidden = function( collapse ) {
         var a = collapse.querySelector('a');
@@ -21,7 +20,6 @@ chinasa.controller( 'bodyController', function bodyController( $scope, $compile 
         a.setAttribute( 'data-toggle', 'collapse' );
         a.style.cursor ='initial';
         a.classList.remove( 'chi-visible' );
-
     };
 
 

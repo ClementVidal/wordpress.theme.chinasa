@@ -1,15 +1,14 @@
 .chi-sidebar-shear {
     $color: darken( $sidebar-color, 12% );
-    $angle: -26deg;
+    $angle: 26deg;
     position: relative;
     z-index: 2;
     height: $sidebar-overlap;
-    width: $sidebar-width;
+    width: 100%;
     background-color: $color;
     left: $sidebar-block-offset - ( $sidebar-block-offset - $sidebar-content-offset ) / 2;
     border-left: 1px solid darken( $sidebar-color-border, 12% );
     border-right: 1px solid darken( $sidebar-color-border, 12% );
-
 
     &:before {
         @include vertical-line( right, $sidebar-hpadding, darken( $sidebar-color, 12% ), dashed );
@@ -17,12 +16,11 @@
 
     &.chi-sidebar-top{
         top: -$sidebar-overlap;
-        @include enlargeAnim( -$angle );
+        transform:  skewX( $angle );
     }
 
     &.chi-sidebar-bottom{
-
         top: -3*$sidebar-overlap;
-        @include enlargeAnim( $angle );
+        transform:  skewX( - $angle );
     }
 }

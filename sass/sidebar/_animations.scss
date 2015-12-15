@@ -1,18 +1,18 @@
-@mixin enlargeAnim( $skew: 0 ) {
+@mixin enlargeAnim() {
 
-        @keyframes elargeAndBounce#{$skew} {
-            0% {transform: skewX( $skew ) scaleX( 0 ) ;}
+        @keyframes elargeAndBounce {
+            0% {transform: scaleX( 0 ) ;}
 
+            15% {transform: scaleX(1);}
+            25% {transform: scaleX(1.2) ;}
+            42% {transform: scaleX(0.8);}
+            50% {transform: scaleX(1);}
 
-            15% {transform: skewX( $skew ) scaleX(1);}
-            25% {transform: skewX( $skew ) scaleX(1.2) ;}
-            42% {transform: skewX( $skew ) scaleX(0.8);}
-            50% {transform: skewX( $skew ) scaleX(1);}
-            100% {transform: skewX( $skew )}
+            100% {transform: scaleX(1);}
         }
 
-        transform: scaleX( 0 ) skewX( $skew );
-        animation-name: elargeAndBounce#{$skew};
+        transform: scaleX( 0 );
+        animation-name: elargeAndBounce;
         animation-iteration-count: 1;
         animation-timing-function: ease;
         animation-duration: 0.8s;

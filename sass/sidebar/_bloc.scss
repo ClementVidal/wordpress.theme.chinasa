@@ -5,12 +5,11 @@
     position: relative;
     z-index: 1;
     height: $sidebar-content-top + $sidebar-overlap;
-    width: $sidebar-width;
+    width: 100%;
     background-color: darken( $sidebar-color, 6% );
     border-left: 1px solid darken( $sidebar-color-border, 6% );
     border-right: 1px solid darken( $sidebar-color-border, 6% );
     left: $sidebar-block-offset;
-    @include enlargeAnim;
 
     &:before {
         @include vertical-line( left, $sidebar-hpadding, $color, dashed );
