@@ -19,6 +19,23 @@
     margin-bottom: 2rem;
     border-top: pixel-to-rem(2) solid $page-decoration;
 }
+.chi-large-text {
+    font-size: $font-h3-size;
+}
+.chi-bold-text {
+    font-weight: bold;
+}
+.chi-float-right {
+    float: right;
+    margin-left: 2rem;
+}
+.chi-float-left {
+    float: left;
+    margin-right: 2rem;
+}
+.chi-clear-float {
+    clear: both;
+}
 .chi-section-sign {
     &:after {
         content: "\00a7";
@@ -26,7 +43,7 @@
         margin-bottom: 1rem;
         font-family: $font-family-cursive;
         font-size: 2rem;
-        width: 0rem;
+        width: 0;
         display: block;
         margin-left: auto;
         margin-right: auto;
