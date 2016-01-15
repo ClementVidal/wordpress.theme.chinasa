@@ -1,6 +1,10 @@
 var chinasa = angular.module('chinasa', ['duScroll', 'ngCookies']);
 
-chinasa.controller( 'bodyController', function bodyController( $scope, $compile ){
+chinasa.config( function($locationProvider){
+    $locationProvider.html5Mode(true);
+});
+
+chinasa.controller( 'bodyController', function bodyController( $scope, $compile, $location, $anchorScroll ){
     $scope.isInView = false;
 
     var menu = [];
@@ -30,6 +34,14 @@ chinasa.controller( 'bodyController', function bodyController( $scope, $compile 
     menu[1].on('hide.bs.collapse', function(){ onCallapseHidden( this ); } );
 
     onCallapseShown( menu[0].get(0) );
+
+    console.log( "$location.pathname:" );
+    console.log( $location.path() );
+
+    $scope.$on( '$locationChangeSuccess', function( angularEvent, newUrl ) {
+        console.log( newUrl );
+        $anchorScroll();
+    });
 
 });
 ;(function() {

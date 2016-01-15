@@ -21,11 +21,11 @@
              ?>
 
             <div class="chi-menu panel panel-default">
-                <a du-scrollspy  data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
-                    data-href-hidden="#collapseOne" data-href-shown="#chi-section-landing">
+                <a du-scrollspy  data-toggle="collapse" data-parent="#accordion" href="#menuCollapseOne"
+                    data-href-hidden="#menuCollapseOne" data-href-shown="#chi-section-landing">
                         <?php echo $menu->name; ?>
                 </a>
-                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel">
+                <div id="menuCollapseOne" class="panel-collapse collapse in" role="tabpanel">
                     <?php
                     $defaults = array(
                         'theme_location' => $menu_name,
@@ -50,11 +50,11 @@
                 $menu=wp_get_nav_menu_object($menu_id);
              ?>
             <div class="chi-menu panel panel-default">
-                <a du-scrollspy data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"
-                    data-href-hidden="#collapseTwo" data-href-shown="#chi-section-landing">
+                <a du-scrollspy data-toggle="collapse" data-parent="#accordion" href="#menuCollapseTwo"
+                    data-href-hidden="#menuCollapseTwo" data-href-shown="#chi-section-landing">
                         <?php echo $menu->name; ?>
                 </a>
-                <div id="collapseTwo" class=" panel-collapse collapse" role="tabpanel">
+                <div id="menuCollapseTwo" class=" panel-collapse collapse" role="tabpanel">
                     <?php
                     $defaults = array(
                         'theme_location' => $menu_name,

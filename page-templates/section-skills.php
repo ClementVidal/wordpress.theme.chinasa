@@ -12,41 +12,43 @@ Template Name: Skills
 
         <?php echo $page->post_content;?>
 
-        <ul>
+        <div class="container">
+            <ul>
 
-            <?php
-            $args = array( 'post_type' => 'skill', 'posts_per_page' => -1 );
-            $loop = new WP_Query( $args );
-            while ( $loop->have_posts() ) :
-                $loop->the_post();
-                ?>
+                <?php
+                $args = array( 'post_type' => 'skill', 'posts_per_page' => -1 );
+                $loop = new WP_Query( $args );
+                while ( $loop->have_posts() ) :
+                    $loop->the_post();
+                    ?>
 
-                <li chi-smooth-apparition chi-class="visible">
-                    <?php the_post_thumbnail( array(50, 50) );?>
-                    <span> <?php the_title(); ?> </span>
-                    <div>
-                        <?php
+                    <li chi-smooth-apparition chi-class="visible">
+                        <?php the_post_thumbnail( array(50, 50) );?>
+                        <span> <?php the_title(); ?> </span>
+                        <div>
+                            <?php
 
-                        // Loop over each stars
-                        $level = get_post_meta( get_the_ID(), 'chi_skill_level', true );
-                        $maxLevel = 6;
+                            // Loop over each stars
+                            $level = get_post_meta( get_the_ID(), 'chi_skill_level', true );
+                            $maxLevel = 6;
 
-                        if($level > $maxLevel ) $level = $maxLevel;
-                        if($level < 0 ) $level = 0;
+                            if($level > $maxLevel ) $level = $maxLevel;
+                            if($level < 0 ) $level = 0;
 
-                        for( $i=1; $i<=$level; $i++ ){
-                            echo '<i class="fa fa-star"></i>';
-                        }
-                        for( $i=$level+1; $i<=$maxLevel; $i++ ){
-                            echo '<i class="fa fa-star-o"></i>';
-                        }
+                            for( $i=1; $i<=$level; $i++ ){
+                                echo '<i class="fa fa-star"></i>';
+                            }
+                            for( $i=$level+1; $i<=$maxLevel; $i++ ){
+                                echo '<i class="fa fa-star-o"></i>';
+                            }
 
-                        ?>
-                    </div>
-                </li>
+                            ?>
+                        </div>
+                    </li>
 
-            <?php endwhile;?>
+                <?php endwhile;?>
 
-        </ul>
+            </ul>
+        </div>
     </section>
 </div>

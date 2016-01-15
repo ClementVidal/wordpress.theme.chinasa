@@ -14,7 +14,7 @@ Template Name: Partners
     </section>
 
     <section>
-        <div class="container-fluid">
+        <div class="container">
 
             <?php
             $args = array( 'post_type' => 'partner', 'posts_per_page' => -1 );
