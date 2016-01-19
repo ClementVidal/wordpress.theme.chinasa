@@ -4,6 +4,9 @@
     }
     li {
         list-style: none;
+        &:before {
+            content: none;
+        }
     }
     form {
         margin-top: 2rem;

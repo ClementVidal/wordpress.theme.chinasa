@@ -36,7 +36,7 @@
             // Header
             >a {
                 margin-bottom: 0.5rem;
-                font-size: $sidebar-font-size;
+                font-size: $sidebar-font-size * 1.5;
                 font-family: $font-family-cursive;
 
                 transition: all 0.3s ease;
@@ -45,9 +45,7 @@
                 @include outline-text;
 
                 &.chi-visible {
-                    font-size: $sidebar-font-size * 1.5;
                     color: $sidebar-font-color;
-                    //margin-left:
                 }
                 &:hover {
                     color: $sidebar-font-color;

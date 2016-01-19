@@ -1,4 +1,4 @@
-<div id="chi-sidebar">
+<div id="chi-sidebar" ng-cloak>
 
     <div class="chi-sidebar-bloc chi-sidebar-top">
 
@@ -21,11 +21,10 @@
              ?>
 
             <div class="chi-menu panel panel-default">
-                <a du-scrollspy  data-toggle="collapse" data-parent="#accordion" href="#menuCollapseOne"
-                    data-href-hidden="#menuCollapseOne" data-href-shown="#chi-section-landing">
+                <a du-scrollspy  data-toggle="collapse" data-parent="#accordion" href="#menuCollapseOne" data-href-hidden="#menuCollapseOne">
                         <?php echo $menu->name; ?>
                 </a>
-                <div id="menuCollapseOne" class="panel-collapse collapse in" role="tabpanel">
+                <div id="menuCollapseOne" class="panel-collapse collapse" role="tabpanel">
                     <?php
                     $defaults = array(
                         'theme_location' => $menu_name,
@@ -50,8 +49,7 @@
                 $menu=wp_get_nav_menu_object($menu_id);
              ?>
             <div class="chi-menu panel panel-default">
-                <a du-scrollspy data-toggle="collapse" data-parent="#accordion" href="#menuCollapseTwo"
-                    data-href-hidden="#menuCollapseTwo" data-href-shown="#chi-section-landing">
+                <a du-scrollspy data-toggle="collapse" data-parent="#accordion" href="#menuCollapseTwo" data-href-hidden="#menuCollapseTwo" >
                         <?php echo $menu->name; ?>
                 </a>
                 <div id="menuCollapseTwo" class=" panel-collapse collapse" role="tabpanel">
@@ -77,7 +75,7 @@
 
     <div class="chi-sidebar-shear chi-sidebar-bottom"></div>
     <div chi-snap-to-viewport-bottom class="chi-sidebar-bloc chi-sidebar-bottom">
-        <div class='chi-sidebar-foot'>
+        <div class='chi-sidebar-footer'>
             <a href="<?php echo get_theme_mod('chi_social_github');?>"><i class="fa fa-github"></i></a>
             <a href="<?php echo get_theme_mod('chi_social_linkedin');?>"><i class="fa fa-linkedin"></i></a>
             <a href="<?php echo get_theme_mod('chi_social_twitter');?>"><i class="fa fa-twitter"></i></a>

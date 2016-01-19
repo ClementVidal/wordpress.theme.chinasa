@@ -23,16 +23,19 @@
     color: $section-font-color;
 
     // Attributes for small font
-    small {
-        font-size: $font-size-small;
-    }
 
 
     >section {
         @include content-container();
-        text-align: justify;
         font-size: $font-size;
         line-height: $line-height;
+
+        small {
+            display: block;
+            font-size: $font-size-small;
+            line-height: $line-height-small;
+        }
+
         >h1 {
             margin-top: 2rem;
         }
@@ -57,9 +60,17 @@
         ul {
             margin-top: 1.5rem;
             margin-bottom: 1.5rem;
-            >li i {
-                width: 2rem;
+            list-style: none;
+            >li {
+                &:before {
+                    content: "• ";
+                    color: transparentize( $section-font-color, 0.2 );
+                }
+                i {
+                   width: 2rem;
+                }
             }
+
         }
         p {
             text-indent: 1.5rem;

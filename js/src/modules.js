@@ -1,10 +1,10 @@
 var chinasa = angular.module('chinasa', ['duScroll', 'ngCookies']);
 
 chinasa.config( function($locationProvider){
-    $locationProvider.html5Mode(true);
+    //$locationProvider.html5Mode(true);
 });
 
-chinasa.controller( 'bodyController', function bodyController( $scope, $compile, $location, $anchorScroll ){
+chinasa.controller( 'bodyController', function bodyController( $scope, $compile, $location, $anchorScroll, $cookies ){
     $scope.isInView = false;
 
     var menu = [];
@@ -14,14 +14,12 @@ chinasa.controller( 'bodyController', function bodyController( $scope, $compile,
     var onCallapseShown = function( collapse ) {
         var a = collapse.querySelector('a');
         a.setAttribute('href', "javascript:void(0)" );
-        a.removeAttribute( 'data-toggle' );
         a.style.cursor ='default';
         a.classList.add( 'chi-visible' );
     };
     var onCallapseHidden = function( collapse ) {
         var a = collapse.querySelector('a');
         a.setAttribute('href', a.getAttribute('data-href-hidden'));
-        a.setAttribute( 'data-toggle', 'collapse' );
         a.style.cursor ='initial';
         a.classList.remove( 'chi-visible' );
     };
@@ -33,14 +31,24 @@ chinasa.controller( 'bodyController', function bodyController( $scope, $compile,
     menu[1].on('show.bs.collapse', function(){ onCallapseShown( this ); } );
     menu[1].on('hide.bs.collapse', function(){ onCallapseHidden( this ); } );
 
-    onCallapseShown( menu[0].get(0) );
 
-    console.log( "$location.pathname:" );
-    console.log( $location.path() );
+    // select which menu to open according to the current page state
+    if( window.location.pathname === '/' ){
+        onCallapseShown( menu[0].get(0) );
+        menu[0].get(0).querySelector('div').classList.add('in');
 
-    $scope.$on( '$locationChangeSuccess', function( angularEvent, newUrl ) {
-        console.log( newUrl );
-        $anchorScroll();
-    });
+    } else {
+        onCallapseShown( menu[1].get(0) );
+        menu[1].get(0).querySelector('div').classList.add('in');
+    }
+
+    // Play animation if necessary
+    if( !$cookies.get( 'animAlreadyPlayed' ) ) {
+        $cookies.put( 'animAlreadyPlayed', 'true' );
+        $('#chi-sidebar').get(0).classList.add( 'chi-enlarge-anim' );
+        $('.chi-sidebar-footer').get(0).classList.add( 'chi-footer-up-and-bounce-anim' );
+        $('.chi-sidebar-logo').get(0).classList.add( 'chi-logo-up-and-bounce-anim' );
+    }
+
 
 });

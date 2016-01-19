@@ -18,7 +18,6 @@
                 var w = angular.element($window);
 
                 w.bind('resize', function () {
-                    console.log('resize');
                     snap();
                 });
 

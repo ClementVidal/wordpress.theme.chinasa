@@ -3,10 +3,7 @@
     z-index: 1000;
     position: fixed;
     left: $sidebar-offset;
-
     width: $sidebar-width;
-    
-    @include enlargeAnim;
 
     @import "bloc";
     @import "shear";

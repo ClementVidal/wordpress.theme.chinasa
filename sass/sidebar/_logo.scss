@@ -4,9 +4,9 @@
     position: absolute;
     width: $sidebar-logo-size;
     height: $sidebar-logo-size;
+
+    top: $sidebar-content-top / 2 - $sidebar-logo-size / 2 + 0.5rem;
     left: $sidebar-block-offset + $sidebar-width / 2 - $sidebar-logo-size / 2;
     z-index: 1;
-    opacity: 0;
-    @include logoUpAndBounceAnim;
 
 }

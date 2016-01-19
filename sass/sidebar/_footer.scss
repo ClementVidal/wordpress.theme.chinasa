@@ -1,4 +1,4 @@
-.chi-sidebar-foot {
+.chi-sidebar-footer {
     width: 100%;
     position: absolute;
     left: 0;
@@ -7,7 +7,7 @@
     line-height: 1rem;
     margin-top: 4rem;
     @include flex-box( row, space-between, flex-end );
-    @include footerUpAndBounceAnim;
+
     & a {
         font-size: $icon-font-size;
         transition: color 0.5s ease, margin 0.25s ease ;

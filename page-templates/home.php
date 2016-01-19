@@ -5,14 +5,6 @@ Template Name: Home
 ?>
 
 <?php
-function renderSection( $page ) {
-	$templatePath = get_post_meta( $page->ID, '_wp_page_template', true );
-	if( $templatePath == "default" ) {
-		include( "section-default.php");
-	} else  {
-		include( pathinfo( $templatePath ) ['basename'] );
-	}
-}
 
 get_template_part( '/inc/site', 'header' );
 
@@ -24,7 +16,12 @@ $pages = get_pages($args);
 
 // Display them
 foreach( $pages as $page ) {
-	renderSection( $page );
+	$templatePath = get_post_meta( $page->ID, '_wp_page_template', true );
+	if( $templatePath == "default" ) {
+		include( "section-default.php");
+	} else  {
+		include( pathinfo( $templatePath ) ['basename'] );
+	}
 }
 
 get_template_part( '/inc/site', 'footer' );
