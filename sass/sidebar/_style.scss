@@ -1,10 +1,11 @@
 @import "animations";
 #chi-sidebar {
+    @extend .hidden-md-down;
     z-index: 1000;
     position: fixed;
     left: $sidebar-offset;
     width: $sidebar-width;
-    
+
 
     @import "bloc";
     @import "shear";

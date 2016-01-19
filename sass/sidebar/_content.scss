@@ -1,5 +1,4 @@
 .chi-sidebar-content {
-    @extend .hidden-md-down;
     position: relative;
     z-index: 3;
     top: - 2 * $sidebar-overlap;
