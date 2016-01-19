@@ -14,11 +14,11 @@ Template Name: Landing
             <header>
 
                     <div>
-                        <?php if ( get_theme_mod( 'chi_image' ) ) : ?>
+                        <?php if ( get_theme_mod( 'chi_landing_page_image' ) ) : ?>
                             <img class="chi-round-img-300 center-block" src='<?php echo esc_url( get_theme_mod( 'chi_landing_page_image' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'>
                         <?php endif; ?>
 
-                        <?php if ( get_theme_mod( 'chi_logo' ) ) : ?>
+                        <?php if ( get_theme_mod( 'chi_landing_page_logo' ) ) : ?>
                             <img class="chi-round-img-300 center-block" src='<?php echo esc_url( get_theme_mod( 'chi_landing_page_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'>
                         <?php endif; ?>
                     </div>
