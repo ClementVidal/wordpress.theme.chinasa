@@ -3,7 +3,7 @@
 
 <head>
     <title>
-        <?php bloginfo( 'name' ); ?>
+        <?php wp_title( '|', true, 'right' ); ?>
     </title>
 
     <base href="/">

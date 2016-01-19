@@ -1,10 +1,10 @@
 <?php
 
-function chi_skill_metabox_cb()
+function chi_skill_metabox_cb( $post )
 {
     $values = get_post_custom( $post->ID );
-    $chi_skill_level = isset( $values['chi_skill_level'] ) ? esc_attr( $values['chi_skill_level'][0] ) : ”;
-    $chi_skill_minor = isset( $values['chi_skill_minor'] ) ? esc_attr( $values['chi_skill_minor'][0] ) : ”;
+    $chi_skill_level = isset( $values['chi_skill_level'] ) ? esc_attr( $values['chi_skill_level'][0] ) : "";
+    $chi_skill_minor = isset( $values['chi_skill_minor'] ) ? esc_attr( $values['chi_skill_minor'][0] ) : "";
 
     // We'll use this nonce field later on when saving.
     wp_nonce_field( 'my_meta_box_nonce', 'meta_box_nonce' );
