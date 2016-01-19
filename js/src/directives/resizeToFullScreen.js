@@ -14,7 +14,6 @@
                 // Do not resize if the full screen height is less than the container original size
                 if( clh > element.height() ){
                     element.innerHeight( clh );
-                    console.log( "set height: ", clh);
                 }
             }
         };

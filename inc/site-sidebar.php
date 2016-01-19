@@ -5,9 +5,9 @@
     </div>
     <div class="chi-sidebar-shear chi-sidebar-top"></div>
 
-    <img src="http://clement-vidal.fr.dev/wp-content/uploads/2015/12/logo-dark.svg"
-    alt="Clement Vidal Developeur Web Freelance Marseille Aix"
-    class="chi-sidebar-logo">
+    <?php if ( get_theme_mod( 'chi_sidebar_logo' ) ) : ?>
+        <img class="chi-sidebar-logo" src='<?php echo esc_url( get_theme_mod( 'chi_sidebar_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'>
+    <?php endif; ?>
 
     <div class="chi-sidebar-content">
 

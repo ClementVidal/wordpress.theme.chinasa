@@ -2,6 +2,21 @@
 
 function chinase_theme_customizer($wp_customize)
 {
+    // SideBar
+    $wp_customize->add_section('chi_sidebar_section', array(
+        'title' => __('Sidebar', 'chi'),
+        'priority' => 30,
+        'description' => 'Settings related to the sidebar',
+    ));
+
+    $wp_customize->add_setting( 'chi_sidebar_logo' );
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'chi_sidebar_logo', array(
+        'label'    => __( 'Logo', 'chi' ),
+        'section'       => 'chi_sidebar_section',
+        'settings' => 'chi_sidebar_logo',
+    ) ) );
+
+    //  Landing page
     $wp_customize->add_section('chi_landing_page_section', array(
         'title' => __('Landing page', 'chi'),
         'priority' => 30,
@@ -43,7 +58,6 @@ function chinase_theme_customizer($wp_customize)
         'priority' => 30,
         'description' => 'Social settings',
     ));
-
 
     // Add setting to existing Site identity
     $wp_customize->add_setting( 'chi_social_twitter' );
