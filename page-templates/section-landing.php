@@ -5,7 +5,7 @@ Template Name: Landing
 ?>
 <div  id="chi-section-landing" class="chi-visible">
 
-    <section chi-resize-to-full-screen>
+    <section chi-resize-to-full-screen ng-cloak>
 
         <div chi-smooth-apparition id="chi-bg-shapes">
 
@@ -15,11 +15,11 @@ Template Name: Landing
 
                     <div>
                         <?php if ( get_theme_mod( 'chi_image' ) ) : ?>
-                            <img class="chi-round-img-300 center-block " src='<?php echo esc_url( get_theme_mod( 'chi_landing_page_image' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'>
+                            <img class="chi-round-img-300 center-block" src='<?php echo esc_url( get_theme_mod( 'chi_landing_page_image' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'>
                         <?php endif; ?>
 
                         <?php if ( get_theme_mod( 'chi_logo' ) ) : ?>
-                            <img class="center-block " src='<?php echo esc_url( get_theme_mod( 'chi_landing_page_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'>
+                            <img class="chi-round-img-300 center-block" src='<?php echo esc_url( get_theme_mod( 'chi_landing_page_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'>
                         <?php endif; ?>
                     </div>
 

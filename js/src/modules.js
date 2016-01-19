@@ -15,13 +15,11 @@ chinasa.controller( 'bodyController', function bodyController( $scope, $compile,
         var a = collapse.querySelector('a');
         a.setAttribute('href', "javascript:void(0)" );
         a.style.cursor ='default';
-        a.classList.add( 'chi-visible' );
     };
     var onCallapseHidden = function( collapse ) {
         var a = collapse.querySelector('a');
         a.setAttribute('href', a.getAttribute('data-href-hidden'));
         a.style.cursor ='initial';
-        a.classList.remove( 'chi-visible' );
     };
 
 
@@ -43,7 +41,7 @@ chinasa.controller( 'bodyController', function bodyController( $scope, $compile,
     }
 
     // Play animation if necessary
-    if( !$cookies.get( 'animAlreadyPlayed' ) ) {
+    if( ! $cookies.get( 'animAlreadyPlayed' ) ) {
         $cookies.put( 'animAlreadyPlayed', 'true' );
         $('#chi-sidebar').get(0).classList.add( 'chi-enlarge-anim' );
         $('.chi-sidebar-footer').get(0).classList.add( 'chi-footer-up-and-bounce-anim' );

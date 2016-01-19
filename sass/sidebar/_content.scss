@@ -9,6 +9,7 @@
     padding: 1rem 2rem;
     background: $sidebar-color;
     border: 1px solid $sidebar-color-border;
+    box-shadow: 0 0 pixel-to-rem(130) rgba(0, 0, 0, 0.8);
 
     @include flex-box( column, space-between, center );
     &:before {

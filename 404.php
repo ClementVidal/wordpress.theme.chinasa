@@ -4,7 +4,7 @@ get_template_part( '/inc/site', 'header' );
 
 ?>
 <div chi-smooth-apparition id="chi-section" >
-    <section chi-resize-to-full-screen>
+    <section chi-resize-to-full-screen ng-cloak>
         Error 404 !
     </section>
 </div>
