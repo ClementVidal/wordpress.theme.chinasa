@@ -4,7 +4,11 @@
         height: 100%;
     }
     position: absolute;
-    width: $width;
+    width: $width / 2;
+    @include media-breakpoint-up(md) {
+        width: $width ;
+    }
+
     height: $height;
     bottom: $bottom;
     left: $left;

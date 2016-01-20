@@ -18,10 +18,12 @@
                 @extend .form-control;
             }
             >label {
-                @extend .col-md-3;
+                @extend .col-xs-12;
+                @extend .col-lg-3;
             }
             >span {
-                @extend .col-md-9;
+                @extend .col-xs-12;
+                @extend .col-lg-9;
             }
         }
         input[type="submit"] {
