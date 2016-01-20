@@ -26,7 +26,7 @@ Template Name: Landing
 
 
             <h2>
-                &laquo; <?php echo get_theme_mod('chi_landing_page_subtitle' ); ?> &raquo;
+                 <?php echo get_theme_mod('chi_landing_page_subtitle' ); ?>
             </h2>
         </header>
 
