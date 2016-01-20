@@ -1,5 +1,6 @@
 .chi-sidebar-bloc{
 
+    @extend .sidebar-shadow;
     $color: darken( $sidebar-color, 6% );
     padding: 1rem 2rem;
     position: relative;

@@ -35,6 +35,10 @@
     margin-left: 2 * $sidebar-content-offset + $sidebar-width;
     margin-right: $sidebar-content-offset;
     padding: 2rem 4rem;
+    @include media-breakpoint-down(md) {
+        padding: 1rem 0rem;
+        margin-left: 0;
+    }
 }
 @mixin translate-on-visible( $axis:"Y", $offset:4rem ) {
 

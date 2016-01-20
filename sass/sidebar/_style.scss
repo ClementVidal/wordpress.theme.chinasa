@@ -6,6 +6,10 @@
     left: $sidebar-offset;
     width: $sidebar-width;
 
+    .sidebar-shadow {
+        box-shadow: 0 0 pixel-to-rem(130) rgba(0, 0, 0, 0.8);
+    }
+
 
     @import "bloc";
     @import "shear";

@@ -7,35 +7,28 @@ Template Name: Landing
 
     <section chi-resize-to-full-screen ng-cloak>
 
-        <div chi-smooth-apparition id="chi-bg-shapes">
+        <div chi-smooth-apparition id="chi-bg-shapes"></div>
 
-        </div>
-        <div>
-            <header>
+        <header class="container">
+            <div>
+                <?php if ( get_theme_mod( 'chi_landing_page_image' ) ) : ?>
+                    <img class="chi-round-img-300 center-block" src='<?php echo esc_url( get_theme_mod( 'chi_landing_page_image' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'>
+                <?php endif; ?>
 
-                    <div>
-                        <?php if ( get_theme_mod( 'chi_landing_page_image' ) ) : ?>
-                            <img class="chi-round-img-300 center-block" src='<?php echo esc_url( get_theme_mod( 'chi_landing_page_image' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'>
-                        <?php endif; ?>
+                <?php if ( get_theme_mod( 'chi_landing_page_logo' ) ) : ?>
+                    <img class="chi-round-img-300 center-block" src='<?php echo esc_url( get_theme_mod( 'chi_landing_page_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'>
+                <?php endif; ?>
+            </div>
 
-                        <?php if ( get_theme_mod( 'chi_landing_page_logo' ) ) : ?>
-                            <img class="chi-round-img-300 center-block" src='<?php echo esc_url( get_theme_mod( 'chi_landing_page_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'>
-                        <?php endif; ?>
-                    </div>
-
-                    <h1>
-                        <?php echo get_theme_mod('chi_landing_page_title' ); ?>
-                    </h1>
-
-
-
-            </header>
+            <h1>
+                <?php echo get_theme_mod('chi_landing_page_title' ); ?>
+            </h1>
 
 
             <h2>
                 &laquo; <?php echo get_theme_mod('chi_landing_page_subtitle' ); ?> &raquo;
             </h2>
-        </div>
+        </header>
 
         <div>
             <?php echo $page->post_content;?>
@@ -44,7 +37,6 @@ Template Name: Landing
         <div class="chi-icon">
             <i class="fa fa-arrow-down" ></i>
         </div>
-
 
     </section>
 

@@ -4,14 +4,16 @@ $brand-secondary-color: #744500;
 
 // Global
 $font-family-cursive:           'Satisfy', cursive;
+
+
 $font-h1-size:      pixel-to-rem( 55 );
 $font-h2-size:      pixel-to-rem( 34 );
 $font-h3-size:      pixel-to-rem( 27 );
 $font-size:         pixel-to-rem( 21 );
 $font-size-small:   pixel-to-rem( 17 );
 $line-height:       pixel-to-rem( 34 );
-$line-height-small:       pixel-to-rem( 21 );
-$icon-font-size: 2.5rem;
+$line-height-small: pixel-to-rem( 21 );
+$icon-font-size:    pixel-to-rem( 40 );
 
 // Sidebar
 $sidebar-offset: 0.5rem;

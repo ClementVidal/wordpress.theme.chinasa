@@ -25,27 +25,14 @@
             z-index: 1;
         }
         header {
-            width: 40rem;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 1rem;
-            border-bottom: pixel-to-rem() solid $page-decoration;
-            margin-bottom: 1rem;
-            text-align: center;
-            h1 {
-                @include outline-text( );
-                display: inline;
-                text-align: left;
-                margin-bottom: 0;
-                font-weight: bold;
-                font-size: $section-landing-h1-size;
-                color: $section-landing-h1-color;
-            }
-            div {
+            z-index: 1;
+
+            >div {
+                margin: auto;
                 position: relative;
                 width: 300px;
                 height: 300px;
-                margin: auto;
+                margin-bottom: 3rem;
                 img:nth-child(1) {
                     @include hiddenToVisibleAnim;
                 }
@@ -57,30 +44,43 @@
                     left: 0;
                     width: 300px;
                     height: 300px;
-                    margin-bottom: 3rem;
                     box-shadow: 0 0 pixel-to-rem(130) rgba(0, 0, 0, 0.8);
                 }
             }
-        }
-        h2 {
-            @include outline-text();
-            text-align: center;
-            margin-top: 2rem;
-            font-size: 2.5rem;
-            font-family: $font-family-cursive;
-            font-size: $section-landing-h2-size;
-            color: $section-landing-h2-color;
-        }
-        .chi-icon {
-            bottom: 0;
-            margin-bottom: 1rem;
-            position: absolute;
-            left: 49%;
-            i {
-
+            h1 {
                 @include outline-text( );
-                font-size: $icon-font-size;
-                animation: arrowAnim 2s ease-in-out 0s infinite alternate;
+                text-align: center;;
+                margin-bottom: 0;
+                font-weight: bold;
+                font-size: $section-landing-h1-size;
+                color: $section-landing-h1-color;
+                @include media-breakpoint-down(md) {
+                    font-size: $section-landing-h1-size / 1.5;
+                }
+            }
+            h2 {
+                @include outline-text();
+                text-align: center;
+                margin-top: 2rem;
+                font-size: 2.5rem;
+                font-family: $font-family-cursive;
+                font-size: $section-landing-h2-size;
+                @include media-breakpoint-down(md) {
+                    font-size: $section-landing-h2-size / 1.5;
+                }
+                color: $section-landing-h2-color;
+            }
+            .chi-icon {
+                bottom: 0;
+                margin-bottom: 1rem;
+                position: absolute;
+                left: 49%;
+                i {
+
+                    @include outline-text( );
+                    font-size: $icon-font-size;
+                    animation: arrowAnim 2s ease-in-out 0s infinite alternate;
+                }
             }
         }
     }

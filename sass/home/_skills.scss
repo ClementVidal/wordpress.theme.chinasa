@@ -1,5 +1,5 @@
 #chi-section-competences {
-    & ul {
+     ul {
         margin: 0;
         margin-top:1rem;
         padding: 0;
@@ -7,24 +7,28 @@
         @extend .row;
         list-style-type: none;
         &>li {
-            @extend .col-sm-2;
-            min-width: 11rem;
+            @extend .col-xs-6;
+            @extend .col-sm-4;
+            @extend .col-md-3;
+            @extend .col-lg-2;
+            
+            min-width: 10rem;
             margin-bottom: 1rem;
 
             &:before {
                 content: none;
             }
-            & span {
+            span {
                 display: inline;
                 font-size: 1rem;
             }
 
-            & i {
+            i {
                 width: 1.2rem;
                 color: $section-kill-stars-color;
             }
 
-            & img {
+            img {
                 border: pixel-to-rem( ) solid $page-decoration;
                 border-radius: pixel-to-rem( 4 );
             }

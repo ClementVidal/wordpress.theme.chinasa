@@ -22,8 +22,6 @@
     overflow: hidden;
     color: $section-font-color;
 
-    // Attributes for small font
-
 
     >section {
         @include content-container();
@@ -76,10 +74,5 @@
             text-indent: 1.5rem;
         }
     }
-    @include media-breakpoint-down(md) {
-        >section {
-            padding: 1rem;
-            margin-left: $sidebar-content-offset;
-        }
-    }
+
 }
