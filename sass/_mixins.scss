@@ -29,7 +29,7 @@
     text-shadow: 0 0 $width $color, 0 0 $width $color;
 }
 @mixin content-container() {
-    @extend .container-fluid;
+    @extend .container;
     margin-top:0;
     margin-bottom: 0;
     margin-left: 2 * $sidebar-content-offset + $sidebar-width;
@@ -39,6 +39,11 @@
         padding: 1rem 0rem;
         margin-left: 0;
     }
+
+    >.container {
+        padding-left: 2.6rem;
+    }
+
 }
 @mixin translate-on-visible( $axis:"Y", $offset:4rem ) {
 
