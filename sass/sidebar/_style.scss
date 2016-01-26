@@ -8,6 +8,9 @@
 
     .sidebar-shadow {
         box-shadow: 0 0 pixel-to-rem(130) rgba(0, 0, 0, 0.8);
+        @include media-breakpoint-down(md) {
+            box-shadow: none;
+        }
     }
 
 

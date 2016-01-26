@@ -5,11 +5,12 @@
 
         top: 0;
         height: 100%;
+        left: 0;
 
-        left: -$sidebar-width + 1;
-        transition: left 0.3s ease-in-out;
+        transform: translateX( -$sidebar-width + 1 );
+        transition: transform 0.3s ease-in-out;
         &.chi-visible{
-            left: 0;
+            transform: translateX( 0 );
         }
 
         .chi-sidebar-shear{
