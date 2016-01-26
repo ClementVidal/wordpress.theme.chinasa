@@ -7,9 +7,11 @@
 function chinasa_scripts()
 {
     wp_enqueue_script('chi-jquery', get_template_directory_uri().'/vendor/jquery/dist/jquery.js' );
+    wp_enqueue_script('chi-tether', get_template_directory_uri().'/vendor/tether/dist/js/tether.min.js' );
     wp_enqueue_script('chi-bootstrap', get_template_directory_uri().'/vendor/bootstrap/dist/js/bootstrap.min.js' );
     wp_enqueue_script('chi-angular', get_template_directory_uri().'/vendor/angular/angular.min.js' );
     wp_enqueue_script('chi-angular-cookies', get_template_directory_uri().'/vendor/angular-cookies/angular-cookies.min.js' );
+    wp_enqueue_script('chi-angular-touch', get_template_directory_uri().'/vendor/angular-touch/angular-touch.min.js' );
     wp_enqueue_script('chi-angular-scroll', get_template_directory_uri().'/vendor/angular-scroll/angular-scroll.min.js' );
     wp_enqueue_script('chi-chinasa', get_template_directory_uri().'/js/dist/chinasa.js' );
 }

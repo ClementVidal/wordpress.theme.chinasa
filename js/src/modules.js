@@ -1,46 +1,55 @@
-var chinasa = angular.module('chinasa', ['duScroll', 'ngCookies']);
+var chinasa = angular.module('chinasa', ['duScroll', 'ngCookies', 'ngTouch']);
 
-chinasa.config( function($locationProvider){
-    //$locationProvider.html5Mode(true);
-});
 
-chinasa.controller( 'bodyController', function bodyController( $scope, $compile, $location, $anchorScroll, $cookies ){
-    $scope.isInView = false;
+var attachSidebarFunction = function($scope, $rootScope, $document) {
+    $scope.sidebarVisible = false;
 
-    var menu = [];
-    menu[0] = $('.chi-menu:first-child');
-    menu[1] = $('.chi-menu:last-child');
-
-    var onCallapseShown = function( collapse ) {
-        var a = collapse.querySelector('a');
-        a.setAttribute('href', "javascript:void(0)" );
-        a.style.cursor ='default';
-    };
-    var onCallapseHidden = function( collapse ) {
-        var a = collapse.querySelector('a');
-        a.setAttribute('href', a.getAttribute('data-href-hidden'));
-        a.style.cursor ='initial';
+    $scope.showSidebar = function() {
+        if( !$scope.sidebarVisible ) {
+            $scope.sidebarVisible = true;
+        }
     };
 
+    $scope.hideSidebar = function() {
+        if( $scope.sidebarVisible ) {
+            $scope.sidebarVisible = false;
+        }
+    };
 
-    menu[0].on('show.bs.collapse', function(){ onCallapseShown( this ); } );
-    menu[0].on('hide.bs.collapse', function(){ onCallapseHidden( this ); } );
+    $scope.toggleSidebar = function() {
+        if( $scope.sidebarVisible ) {
+            $scope.sidebarVisible = false;
+        } else {
+            $scope.sidebarVisible = true;
+        }
+    };
 
-    menu[1].on('show.bs.collapse', function(){ onCallapseShown( this ); } );
-    menu[1].on('hide.bs.collapse', function(){ onCallapseHidden( this ); } );
+    // Setup event handler to handle click in the document or press on escape
+    // This is catched and hide the sidebar
+    $rootScope.$on("documentClicked", _close);
+    $rootScope.$on("escapePressed", _close);
 
-
-    // select which menu to open according to the current page state
-    if( window.location.pathname === '/' ){
-        onCallapseShown( menu[0].get(0) );
-        menu[0].get(0).querySelector('div').classList.add('in');
-
-    } else {
-        onCallapseShown( menu[1].get(0) );
-        menu[1].get(0).querySelector('div').classList.add('in');
+    function _close() {
+        $scope.$apply(function() {
+            $scope.hideSidebar();
+        });
     }
 
-    // Play animation if necessary
+    $document[0].addEventListener("keyup", function(e) {
+        if (e.keyCode === 27)
+            $rootScope.$broadcast("escapePressed", e.target);
+    });
+
+    $document[0].addEventListener("click", function(e) {
+        $rootScope.$broadcast("documentClicked", e.target);
+    });
+};
+
+
+
+chinasa.controller( 'bodyController', function bodyController( $scope, $rootScope, $compile, $cookies, $document ){
+
+    // Play CSS animation if necessary based on cookie.
     if( ! $cookies.get( 'animAlreadyPlayed' ) ) {
         $cookies.put( 'animAlreadyPlayed', 'true' );
         $('#chi-sidebar').get(0).classList.add( 'chi-enlarge-anim' );
@@ -48,5 +57,5 @@ chinasa.controller( 'bodyController', function bodyController( $scope, $compile,
         $('.chi-sidebar-logo').get(0).classList.add( 'chi-logo-up-and-bounce-anim' );
     }
 
-
+    attachSidebarFunction($scope, $rootScope, $document);
 });

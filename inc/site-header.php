@@ -26,4 +26,4 @@
 
     <?php get_template_part( '/inc/site', 'sidebar' ); ?>
 
-    <div id="chi-body" >
+    <div id="chi-body" ng-swipe-left="hideSidebar()" ng-swipe-right="showSidebar()">

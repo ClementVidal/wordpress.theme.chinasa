@@ -65,10 +65,10 @@
                 font-size: 2.5rem;
                 font-family: $font-family-cursive;
                 font-size: $section-landing-h2-size;
+                color: $section-landing-h2-color;
                 @include media-breakpoint-down(md) {
                     font-size: $section-landing-h2-size / 1.5;
                 }
-                color: $section-landing-h2-color;
             }
             .chi-icon {
                 bottom: 0;

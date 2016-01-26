@@ -1,4 +1,10 @@
-<div id="chi-sidebar" ng-cloak>
+<chi-sidebar id="chi-sidebar" ng-cloak sidebar-visible="sidebarVisible">
+
+    <button class="chi-sidebar-button" type="button" ng-click="toggleSidebar()" ng-class='{ "chi-open": sidebarVisible }'>
+        <span> </span>
+        <span> </span>
+        <span> </span>
+    </button>
 
     <div class="chi-sidebar-bloc chi-sidebar-top">
 
@@ -9,7 +15,7 @@
         <img class="chi-sidebar-logo" src='<?php echo esc_url( get_theme_mod( 'chi_sidebar_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'>
     <?php endif; ?>
 
-    <div class="chi-sidebar-content">
+    <div class="chi-sidebar-content" >
 
         <?php $locations = get_nav_menu_locations(); ?>
         <div id="accordion" role="tablist" class="chi-menu-container">
@@ -84,4 +90,4 @@
     </div>
 
 
-</div>
+</chi-sidebar>

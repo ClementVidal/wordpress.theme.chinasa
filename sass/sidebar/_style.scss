@@ -1,6 +1,6 @@
 @import "animations";
 #chi-sidebar {
-    @extend .hidden-md-down;
+
     z-index: 1000;
     position: fixed;
     left: $sidebar-offset;
@@ -16,4 +16,9 @@
     @import "logo";
     @import "content";
     @import "footer";
+    @import "button";
+
 }
+
+
+@import "small";

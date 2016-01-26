@@ -1,0 +1,38 @@
+#chi-sidebar {
+
+
+    @include media-breakpoint-down(md) {
+
+        top: 0;
+        height: 100%;
+
+        left: -$sidebar-width + 1;
+        transition: left 0.3s ease-in-out;
+        &.chi-visible{
+            left: 0;
+        }
+
+        .chi-sidebar-shear{
+            @extend .hidden-md-down;
+        }
+
+        .chi-sidebar-bloc{
+            @extend .hidden-md-down;
+        }
+
+        .chi-sidebar-logo {
+            left: $sidebar-width / 2 - $sidebar-logo-size / 2;
+            z-index: 4;
+        }
+
+        .chi-sidebar-content{
+            padding-top: 6rem;
+            top: 0;
+            height: 100%;
+        }
+    }
+
+
+
+
+}
