@@ -38,12 +38,14 @@
     @include media-breakpoint-down(md) {
         padding: 1rem 0rem;
         margin-left: 0;
+
+        >.container {
+            padding-right: 0rem;
+            padding-left: 2.0rem;
+        }        
     }
 
-    >.container {
-        padding-right: 0rem;
-        padding-left: 2.0rem;
-    }
+
 
 }
 
