@@ -13,7 +13,7 @@
             font-size: $icon-font-size;
             animation: arrowAnim 2s ease-in-out 0s infinite alternate;
         }
-    }    
+    }
     section {
         >#chi-bg-shapes {
             transform: rotateZ(45deg);
@@ -29,7 +29,7 @@
             &.visible {
                 opacity: 0.5;
             }
-            background: url( data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAFCAYAAACXU8ZrAAAAHElEQVQIW2NkQAMsssb//zw+y4gsjMIBSQwCRQAHyRQGOT1yQAAAAABJRU5ErkJggg== ) repeat;
+            background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAFCAYAAACXU8ZrAAAAHElEQVQIW2NkQAMsssb//zw+y4gsjMIBSQwCRQAHyRQGOT1yQAAAAABJRU5ErkJggg==) repeat;
         }
         position: relative;
         @include flex-box( column, space-around, center );

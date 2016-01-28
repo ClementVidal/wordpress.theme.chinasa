@@ -1,5 +1,5 @@
 var chinasa = angular.module('chinasa', ['duScroll', 'ngCookies', 'ngTouch']);
-
+chinasa.controller( 'bodyController', chiBodyController );
 
 var attachSidebarFunction = function($scope, $rootScope, $document) {
     $scope.sidebarVisible = false;
@@ -46,8 +46,8 @@ var attachSidebarFunction = function($scope, $rootScope, $document) {
 };
 
 
-
-chinasa.controller( 'bodyController', function bodyController( $scope, $rootScope, $compile, $cookies, $document ){
+chiBodyController.$inject = ['$scope', '$rootScope', '$document', '$cookies' ];
+function chiBodyController( $scope, $rootScope, $document, $cookies ){
 
     // Play CSS animation if necessary based on cookie.
     if( ! $cookies.get( 'animAlreadyPlayed' ) ) {
@@ -58,13 +58,14 @@ chinasa.controller( 'bodyController', function bodyController( $scope, $rootScop
     }
 
     attachSidebarFunction($scope, $rootScope, $document);
-});
+}
 ;(function() {
     'use strict';
     angular
         .module('chinasa')
         .directive('chiResizeToFullScreen', chiResizeToFullScreen);
 
+    chiResizeToFullScreen.$inject = ['$window', '$document'];
     function chiResizeToFullScreen($window, $document) {
 
         return {
@@ -86,6 +87,7 @@ chinasa.controller( 'bodyController', function bodyController( $scope, $rootScop
         .module('chinasa')
         .directive('chiSidebar', chiSidebar);
 
+    chiSidebar.$inject = [];
     function chiSidebar() {
 
         return {
@@ -142,6 +144,7 @@ chinasa.controller( 'bodyController', function bodyController( $scope, $rootScop
         .module('chinasa')
         .directive('chiSmoothApparition', chiSmoothApparition);
 
+    chiSmoothApparition.$inject = ['$window', '$document'];
     function chiSmoothApparition($window, $document) {
         function isVisible(el) {
             var rect = el.getBoundingClientRect();
@@ -158,7 +161,7 @@ chinasa.controller( 'bodyController', function bodyController( $scope, $rootScop
                 if( ! angular.isDefined( scope.class ) ) {
                     scope.class = "visible";
                 }
-                
+
                 scope.isVisible = false;
 
                 // Attach event handler
@@ -185,6 +188,7 @@ chinasa.controller( 'bodyController', function bodyController( $scope, $rootScop
         .module('chinasa')
         .directive('chiSnapToViewportBottom', chiSnapToViewportBottom);
 
+    chiSnapToViewportBottom.$inject = ['$window', '$document'];
     function chiSnapToViewportBottom( $window, $document) {
 
         return {

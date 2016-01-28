@@ -4,6 +4,7 @@
         .module('chinasa')
         .directive('chiSidebar', chiSidebar);
 
+    chiSidebar.$inject = [];
     function chiSidebar() {
 
         return {

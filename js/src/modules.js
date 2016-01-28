@@ -1,5 +1,5 @@
 var chinasa = angular.module('chinasa', ['duScroll', 'ngCookies', 'ngTouch']);
-
+chinasa.controller( 'bodyController', chiBodyController );
 
 var attachSidebarFunction = function($scope, $rootScope, $document) {
     $scope.sidebarVisible = false;
@@ -46,8 +46,8 @@ var attachSidebarFunction = function($scope, $rootScope, $document) {
 };
 
 
-
-chinasa.controller( 'bodyController', function bodyController( $scope, $rootScope, $compile, $cookies, $document ){
+chiBodyController.$inject = ['$scope', '$rootScope', '$document', '$cookies' ];
+function chiBodyController( $scope, $rootScope, $document, $cookies ){
 
     // Play CSS animation if necessary based on cookie.
     if( ! $cookies.get( 'animAlreadyPlayed' ) ) {
@@ -58,4 +58,4 @@ chinasa.controller( 'bodyController', function bodyController( $scope, $rootScop
     }
 
     attachSidebarFunction($scope, $rootScope, $document);
-});
+}

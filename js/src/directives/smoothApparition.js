@@ -4,6 +4,7 @@
         .module('chinasa')
         .directive('chiSmoothApparition', chiSmoothApparition);
 
+    chiSmoothApparition.$inject = ['$window', '$document'];
     function chiSmoothApparition($window, $document) {
         function isVisible(el) {
             var rect = el.getBoundingClientRect();
@@ -20,7 +21,7 @@
                 if( ! angular.isDefined( scope.class ) ) {
                     scope.class = "visible";
                 }
-                
+
                 scope.isVisible = false;
 
                 // Attach event handler

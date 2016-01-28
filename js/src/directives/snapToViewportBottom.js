@@ -4,6 +4,7 @@
         .module('chinasa')
         .directive('chiSnapToViewportBottom', chiSnapToViewportBottom);
 
+    chiSnapToViewportBottom.$inject = ['$window', '$document'];
     function chiSnapToViewportBottom( $window, $document) {
 
         return {
