@@ -2,6 +2,18 @@
 #chi-section-landing {
     overflow: hidden;
     opacity: 1.0;
+    .chi-icon {
+        bottom: 0;
+        margin-bottom: 1rem;
+        position: absolute;
+        left: 49%;
+        i {
+
+            @include outline-text( );
+            font-size: $icon-font-size;
+            animation: arrowAnim 2s ease-in-out 0s infinite alternate;
+        }
+    }    
     section {
         >#chi-bg-shapes {
             transform: rotateZ(45deg);
@@ -73,18 +85,7 @@
                     font-size: $section-landing-h2-size / 1.5;
                 }
             }
-            .chi-icon {
-                bottom: 0;
-                margin-bottom: 1rem;
-                position: absolute;
-                left: 49%;
-                i {
 
-                    @include outline-text( );
-                    font-size: $icon-font-size;
-                    animation: arrowAnim 2s ease-in-out 0s infinite alternate;
-                }
-            }
         }
     }
 }
