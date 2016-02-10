@@ -5,7 +5,8 @@
         .directive('chiSnapToViewportBottom', chiSnapToViewportBottom);
 
     chiSnapToViewportBottom.$inject = ['$window', '$document'];
-    function chiSnapToViewportBottom( $window, $document) {
+
+    function chiSnapToViewportBottom($window, $document) {
 
         return {
             restrict: 'A',
@@ -13,12 +14,12 @@
 
                 var snap = function() {
                     var height = $window.innerHeight - element[0].offsetTop;
-                    element.innerHeight( height );
+                    element.innerHeight(height);
                 };
 
                 var w = angular.element($window);
 
-                w.bind('resize', function () {
+                w.bind('resize', function() {
                     snap();
                 });
 

@@ -57,8 +57,8 @@ function chiBodyController($scope, $rootScope, $document, $cookies, $timeout) {
     $timeout(function() {
 
         // Play CSS animation if necessary based on cookie.
-        if (true){//} || !$cookies.get('animAlreadyPlayed')) {
-            //$cookies.put('animAlreadyPlayed', 'true');
+        if (!$cookies.get('animAlreadyPlayed')) {
+            $cookies.put('animAlreadyPlayed', 'true');
 
             if (isBreakpoint('lg')) {
                 $('#chi-sidebar').get(0).classList.add('chi-enlarge-anim');

@@ -57,8 +57,8 @@ function chiBodyController($scope, $rootScope, $document, $cookies, $timeout) {
     $timeout(function() {
 
         // Play CSS animation if necessary based on cookie.
-        if (true){//} || !$cookies.get('animAlreadyPlayed')) {
-            //$cookies.put('animAlreadyPlayed', 'true');
+        if (!$cookies.get('animAlreadyPlayed')) {
+            $cookies.put('animAlreadyPlayed', 'true');
 
             if (isBreakpoint('lg')) {
                 $('#chi-sidebar').get(0).classList.add('chi-enlarge-anim');
@@ -208,7 +208,8 @@ function chiBodyController($scope, $rootScope, $document, $cookies, $timeout) {
         .directive('chiSnapToViewportBottom', chiSnapToViewportBottom);
 
     chiSnapToViewportBottom.$inject = ['$window', '$document'];
-    function chiSnapToViewportBottom( $window, $document) {
+
+    function chiSnapToViewportBottom($window, $document) {
 
         return {
             restrict: 'A',
@@ -216,12 +217,12 @@ function chiBodyController($scope, $rootScope, $document, $cookies, $timeout) {
 
                 var snap = function() {
                     var height = $window.innerHeight - element[0].offsetTop;
-                    element.innerHeight( height );
+                    element.innerHeight(height);
                 };
 
                 var w = angular.element($window);
 
-                w.bind('resize', function () {
+                w.bind('resize', function() {
                     snap();
                 });
 
