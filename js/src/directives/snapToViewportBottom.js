@@ -19,7 +19,7 @@
 
                 var w = angular.element($window);
 
-                w.bind('resize scroll', function() {
+                w.bind('resize', function() {
                     snap();
                 });
 
