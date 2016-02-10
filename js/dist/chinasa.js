@@ -50,14 +50,21 @@ chiBodyController.$inject = ['$scope', '$rootScope', '$document', '$cookies', '$
 
 function chiBodyController($scope, $rootScope, $document, $cookies, $timeout) {
 
+    function isBreakpoint(alias) {
+        return $('.device-' + alias).is(':visible');
+    }
+
     $timeout(function() {
 
         // Play CSS animation if necessary based on cookie.
-        if (!$cookies.get('animAlreadyPlayed')) {
-            $cookies.put('animAlreadyPlayed', 'true');
-            $('#chi-sidebar').get(0).classList.add('chi-enlarge-anim');
-            $('.chi-sidebar-footer').get(0).classList.add('chi-footer-up-and-bounce-anim');
-            $('.chi-sidebar-logo').get(0).classList.add('chi-logo-up-and-bounce-anim');
+        if (true){//} || !$cookies.get('animAlreadyPlayed')) {
+            //$cookies.put('animAlreadyPlayed', 'true');
+
+            if (isBreakpoint('lg')) {
+                $('#chi-sidebar').get(0).classList.add('chi-enlarge-anim');
+                $('.chi-sidebar-footer').get(0).classList.add('chi-footer-up-and-bounce-anim');
+                $('.chi-sidebar-logo').get(0).classList.add('chi-logo-up-and-bounce-anim');
+            }
         }
 
         attachSidebarFunction($scope, $rootScope, $document);
@@ -70,16 +77,17 @@ function chiBodyController($scope, $rootScope, $document, $cookies, $timeout) {
         .directive('chiResizeToFullScreen', chiResizeToFullScreen);
 
     chiResizeToFullScreen.$inject = ['$window', '$document'];
+
     function chiResizeToFullScreen($window, $document) {
 
         return {
             restrict: 'A',
             link: function(scope, element, attrs, graphNode) {
-                var clh = ( $window.innerHeight );
+                var clh = ($window.innerHeight);
 
                 // Do not resize if the full screen height is less than the container original size
-                if( clh > element.height() ){
-                    element.innerHeight( clh );
+                if (clh > element.height()) {
+                    element.innerHeight(clh);
                 }
             }
         };
@@ -92,6 +100,7 @@ function chiBodyController($scope, $rootScope, $document, $cookies, $timeout) {
         .directive('chiSidebar', chiSidebar);
 
     chiSidebar.$inject = [];
+
     function chiSidebar() {
 
         return {
@@ -100,7 +109,7 @@ function chiBodyController($scope, $rootScope, $document, $cookies, $timeout) {
             transclude: true,
             replace: true,
             scope: {
-                sidebarVisible: "="
+                sidebarVisible: '='
             },
             link: link
         };
@@ -110,32 +119,38 @@ function chiBodyController($scope, $rootScope, $document, $cookies, $timeout) {
             menu[0] = $('.chi-menu:first-child');
             menu[1] = $('.chi-menu:last-child');
 
-            var onCallapseShown = function( collapse ) {
+            var onCallapseShown = function(collapse) {
                 var a = collapse.querySelector('a');
-                a.setAttribute('href', "javascript:void(0)" );
-                a.style.cursor ='default';
+                a.setAttribute('href', 'javascript:void(0)');
+                a.style.cursor = 'default';
             };
-            var onCallapseHidden = function( collapse ) {
+            var onCallapseHidden = function(collapse) {
                 var a = collapse.querySelector('a');
                 a.setAttribute('href', a.getAttribute('data-href-hidden'));
-                a.style.cursor ='initial';
+                a.style.cursor = 'initial';
             };
 
+            menu[0].on('show.bs.collapse', function() {
+                onCallapseShown(this);
+            });
+            menu[0].on('hide.bs.collapse', function() {
+                onCallapseHidden(this);
+            });
 
-            menu[0].on('show.bs.collapse', function(){ onCallapseShown( this ); } );
-            menu[0].on('hide.bs.collapse', function(){ onCallapseHidden( this ); } );
-
-            menu[1].on('show.bs.collapse', function(){ onCallapseShown( this ); } );
-            menu[1].on('hide.bs.collapse', function(){ onCallapseHidden( this ); } );
-
+            menu[1].on('show.bs.collapse', function() {
+                onCallapseShown(this);
+            });
+            menu[1].on('hide.bs.collapse', function() {
+                onCallapseHidden(this);
+            });
 
             // select which menu to open in the sidebar according to the current page state
-            if( window.location.pathname === '/' ){
-                onCallapseShown( menu[0].get(0) );
+            if (window.location.pathname === '/') {
+                onCallapseShown(menu[0].get(0));
                 menu[0].get(0).querySelector('div').classList.add('in');
 
             } else {
-                onCallapseShown( menu[1].get(0) );
+                onCallapseShown(menu[1].get(0));
                 menu[1].get(0).querySelector('div').classList.add('in');
             }
         }

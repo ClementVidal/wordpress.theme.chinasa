@@ -50,14 +50,21 @@ chiBodyController.$inject = ['$scope', '$rootScope', '$document', '$cookies', '$
 
 function chiBodyController($scope, $rootScope, $document, $cookies, $timeout) {
 
+    function isBreakpoint(alias) {
+        return $('.device-' + alias).is(':visible');
+    }
+
     $timeout(function() {
 
         // Play CSS animation if necessary based on cookie.
-        if (!$cookies.get('animAlreadyPlayed')) {
-            $cookies.put('animAlreadyPlayed', 'true');
-            $('#chi-sidebar').get(0).classList.add('chi-enlarge-anim');
-            $('.chi-sidebar-footer').get(0).classList.add('chi-footer-up-and-bounce-anim');
-            $('.chi-sidebar-logo').get(0).classList.add('chi-logo-up-and-bounce-anim');
+        if (true){//} || !$cookies.get('animAlreadyPlayed')) {
+            //$cookies.put('animAlreadyPlayed', 'true');
+
+            if (isBreakpoint('lg')) {
+                $('#chi-sidebar').get(0).classList.add('chi-enlarge-anim');
+                $('.chi-sidebar-footer').get(0).classList.add('chi-footer-up-and-bounce-anim');
+                $('.chi-sidebar-logo').get(0).classList.add('chi-logo-up-and-bounce-anim');
+            }
         }
 
         attachSidebarFunction($scope, $rootScope, $document);
