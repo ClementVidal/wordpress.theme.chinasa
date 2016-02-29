@@ -4,7 +4,9 @@
     @include media-breakpoint-down(md) {
 
         top: 0;
-        height: 100%;
+        // 120 pour déborder en bas et éviter le probleme d'affichage lié
+        // a la barre d'adresse qui se cache et s'affiche sous chrome android
+        height: 120%;
         left: 0;
 
         transform: translateX( -$sidebar-width + 1 );
