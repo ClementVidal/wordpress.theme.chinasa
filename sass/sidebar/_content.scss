@@ -1,7 +1,7 @@
 .chi-sidebar-content {
-    position: relative;
+    position: absolute;
     z-index: 3;
-    top: - 2 * $sidebar-overlap;
+    top: $sidebar-content-top;
     left: $sidebar-content-offset;
     width: 100%;
     height: $sidebar-content-height;

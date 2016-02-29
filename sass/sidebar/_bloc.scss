@@ -3,9 +3,8 @@
     @extend .sidebar-shadow;
     $color: darken( $sidebar-color, 6% );
     padding: 1rem 2rem;
-    position: relative;
+    position: absolute;
     z-index: 1;
-    height: $sidebar-content-top + $sidebar-overlap;
     width: 100%;
     background-color: darken( $sidebar-color, 6% );
     border-left: 1px solid darken( $sidebar-color-border, 6% );
@@ -21,11 +20,13 @@
 
     &.chi-sidebar-top{
         top: 0;
+        height: $sidebar-content-top + $sidebar-overlap;
     }
 
     &.chi-sidebar-bottom{
         //height: 100rem;
-        top: -4*$sidebar-overlap;
+        top: $sidebar-content-top + $sidebar-content-height - $sidebar-overlap;
+        bottom: 0;
     }
 
 }

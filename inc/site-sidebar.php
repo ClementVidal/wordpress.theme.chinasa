@@ -80,7 +80,7 @@
     </div>
 
     <div class="chi-sidebar-shear chi-sidebar-bottom"></div>
-    <div chi-snap-to-viewport-bottom class="chi-sidebar-bloc chi-sidebar-bottom">
+    <div class="chi-sidebar-bloc chi-sidebar-bottom">
         <div class='chi-sidebar-footer'>
             <a href="<?php echo get_theme_mod('chi_social_github');?>"><i class="fa fa-github"></i></a>
             <a href="<?php echo get_theme_mod('chi_social_linkedin');?>"><i class="fa fa-linkedin"></i></a>

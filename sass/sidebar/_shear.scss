@@ -15,12 +15,12 @@
     }
 
     &.chi-sidebar-top{
-        top: -$sidebar-overlap;
+        top: $sidebar-content-top ;
         transform:  skewX( $angle );
     }
 
     &.chi-sidebar-bottom{
-        top: -3*$sidebar-overlap;
+        top: $sidebar-content-top + $sidebar-content-height -  2*$sidebar-overlap;
         transform:  skewX( - $angle );
     }
 }

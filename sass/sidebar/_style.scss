@@ -5,6 +5,7 @@
     position: fixed;
     left: $sidebar-offset;
     width: $sidebar-width;
+    height: 100%;
 
     .sidebar-shadow {
         box-shadow: 0 0 pixel-to-rem(130) rgba(0, 0, 0, 0.8);
